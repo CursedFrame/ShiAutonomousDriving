@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - CityGen3D
   layers:
   - Default
   - TransparentFX
@@ -13,29 +14,29 @@ TagManager:
   - UI
   - Steering Wheel
   - 
+  - PostProcessing
   - 
   - 
   - 
   - 
   - 
   - 
+  - Landscape
+  - Map Surface
+  - Map Road
+  - Map Building
+  - Map Tree
+  - Map Entity
+  - Map Feature
   - 
   - 
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Feature
+  - Entity
+  - Building
+  - Highway
   - 
   m_SortingLayers:
   - name: Default
