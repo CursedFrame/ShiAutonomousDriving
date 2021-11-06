@@ -3,3 +3,6 @@ DrivingSimulation/Assets/CityGen3D/Facades/Textures/Facade_Stone_01_normal.png f
 DrivingSimulation/Assets/CityGen3D/Skybox/Cubemaps/Cold filter=lfs diff=lfs merge=lfs -text
 Sunset.png filter=lfs diff=lfs merge=lfs -text
 DrivingSimulation/Library/ArtifactDB filter=lfs diff=lfs merge=lfs -text
+DrivingSimulation/Assets/Scenes/Key filter=lfs diff=lfs merge=lfs -text
+Biscayne.unity filter=lfs diff=lfs merge=lfs -text
+DrivingSimulation/Assets/Scenes/KeyBiscayne.unity filter=lfs diff=lfs merge=lfs -text

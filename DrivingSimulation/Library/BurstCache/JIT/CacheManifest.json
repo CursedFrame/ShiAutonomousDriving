@@ -56,6 +56,19 @@
       ]
     },
     {
+      "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<CityGen3D.EditorExtension.Generator/SpherecastMapJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
+      "ModuleOptionsHash": 11834165633931345063,
+      "ModuleHash": "2946af34b2f1ff7c8b7a21bc0e949d9f",
+      "LinkName": "F31FF4D8DD1DC61B",
+      "AssemblyDependencyIndices": [
+        2,
+        3,
+        4,
+        1,
+        5
+      ]
+    },
+    {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<CityGen3D.EditorExtension.Generator/RaycastMapJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
       "ModuleHash": "b66772074254fa95f1e0e8d01801dc99",
@@ -67,19 +80,6 @@
         1,
         5,
         6
-      ]
-    },
-    {
-      "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<CityGen3D.EditorExtension.Generator/SpherecastMapJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
-      "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "2946af34b2f1ff7c8b7a21bc0e949d9f",
-      "LinkName": "F31FF4D8DD1DC61B",
-      "AssemblyDependencyIndices": [
-        2,
-        3,
-        4,
-        1,
-        5
       ]
     },
     {
