@@ -38,7 +38,7 @@ MonoBehaviour:
       viewLaneChanges: 1
     moveTool: 1
     maxSpeed: 50
-    globalCarList: 
+    globalCarList: 00000000
   roadDefaults:
     nrOfLanes: 2
     laneWidth: 3.5
