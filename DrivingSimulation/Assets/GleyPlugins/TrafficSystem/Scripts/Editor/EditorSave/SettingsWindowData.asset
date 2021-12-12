@@ -60,12 +60,12 @@ MonoBehaviour:
     speedColor: {r: 1, g: 1, b: 1, a: 1}
     carsColor: {r: 0, g: 1, b: 0, a: 1}
   allWaypointsSettings:
-    showConnections: 0
+    showConnections: 1
     showOtherLanes: 0
     showSpeed: 0
     showCars: 0
   disconnectedWaypointsSettings:
-    showConnections: 0
+    showConnections: 1
     showOtherLanes: 0
     showSpeed: 0
     showCars: 0
@@ -103,7 +103,7 @@ MonoBehaviour:
     - {r: 1, g: 1, b: 1, a: 1}
     active: 01
   intersectionSave:
-    showAll: 0
+    showAll: 1
     showExit: 1
     priorityColor: {r: 0, g: 1, b: 0, a: 1}
     lightsColor: {r: 0, g: 1, b: 1, a: 1}
