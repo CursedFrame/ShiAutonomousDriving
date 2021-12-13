@@ -18,13 +18,13 @@ MonoBehaviour:
     m_Bits: 1073774592
   trafficLayers:
     serializedVersion: 2
-    m_Bits: 1073774592
+    m_Bits: 1024
   buildingsLayers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 536870912
   obstaclesLayers:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 402653184
   playerLayers:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 2048
