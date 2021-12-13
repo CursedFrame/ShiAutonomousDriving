@@ -187,6 +187,7 @@ namespace GleyTrafficSystem
 
             //compute total wheels
             trafficVehicles = gameObject.AddComponent<TrafficVehicles>().Initialize(vehiclePool, nrOfVehicles, layerSetup.buildingsLayers, layerSetup.obstaclesLayers, layerSetup.playerLayers, masterVolume);
+            Debug.Log("Number of vehicles: " + nrOfVehicles);
             List<VehicleComponent> traffic = trafficVehicles.GetVehicleList();
             for (int i = 0; i < traffic.Count; i++)
             {
@@ -849,6 +850,7 @@ namespace GleyTrafficSystem
             }
 
 #region WheelUpdate
+            Debug.Log(totalWheels);
             //update wheel graphics
             for (int i = 0; i < totalWheels; i++)
             {
