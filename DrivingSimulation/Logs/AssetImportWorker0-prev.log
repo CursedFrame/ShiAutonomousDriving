@@ -15,11 +15,11 @@ C:/Users/yha088/Documents/GitHub/ShiAutonomousDriving/DrivingSimulation
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-54544
+61539
 Successfully changed project path to: C:/Users/yha088/Documents/GitHub/ShiAutonomousDriving/DrivingSimulation
 C:/Users/yha088/Documents/GitHub/ShiAutonomousDriving/DrivingSimulation
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 91.72 ms, found 7 plugins.
+Refreshing native plugins compatible for Editor in 89.09 ms, found 7 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.20f1 (41c4e627c95f)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/Resources/UnitySubsystems
@@ -35,7 +35,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56948
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56960
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
@@ -43,37 +43,37 @@ Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.20f1/
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.20f1/Editor/Data/PlaybackEngines/LuminSupport/UnityEditor.Lumin.Extensions.dll
-Registered in 0.001728 seconds.
+Registered in 0.001821 seconds.
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 76.93 ms, found 7 plugins.
+Refreshing native plugins compatible for Editor in 79.40 ms, found 7 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.014 seconds
+- Completed reload, in  1.173 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1014ms)
+	ReloadAssembly (1173ms)
 		BeginReloadAssembly (29ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (0ms)
-		EndReloadAssembly (283ms)
-			LoadAssemblies (28ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (289ms)
+			LoadAssemblies (29ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
 			SetupTypeCache (82ms)
 			ReleaseScriptCaches (0ms)
 			RebuildScriptCaches (15ms)
-			SetupLoadedEditorAssemblies (146ms)
+			SetupLoadedEditorAssemblies (150ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (77ms)
+				RefreshPlugins (79ms)
 				BeforeProcessingInitializeOnLoad (5ms)
-				ProcessInitializeOnLoadAttributes (45ms)
+				ProcessInitializeOnLoadAttributes (46ms)
 				ProcessInitializeOnLoadMethodAttributes (15ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -81,119 +81,119 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003586 seconds.
+Registered in 0.003937 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-000002B17C55C0B0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file data-0000020A93A56030 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17BBAEC20 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file data-0000020A9371F040 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17D106030 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-0000020A8D5D4F90 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B177026480 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Sysroot.Linux_x86_64.dll
+Symbol file data-0000020A8D5A8020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Sysroot.Linux_x86_64.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B1770F74D0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file data-0000020A935E5850 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B1770F74D0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file data-0000020A935E5850 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Timeline.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17BA29020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file data-0000020A92927020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.TextMeshPro.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17D106030 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Burst.Editor.dll
+Symbol file data-0000020A8D5D4F90 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Burst.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B1777049F0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file data-0000020A92955230 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B177433430 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Csg.dll
+Symbol file data-0000020A8DE08420 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Csg.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B1770211B0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll
+Symbol file data-0000020A8D5A8020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B1777049F0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.dll
+Symbol file data-0000020A91FB0020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B1777049F0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll
+Symbol file data-0000020A91FB0020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17D106030 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file data-0000020A8D5D4F90 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEditor.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B1773DFBF0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file data-0000020A91FB0020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17CC629C0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file data-0000020A8DE73020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Rider.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17D106030 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll
+Symbol file data-0000020A8D5D4F90 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B1773F8800 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file data-0000020A9297B020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEngine.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17773B020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Poly2Tri.dll
+Symbol file data-0000020A93A56030 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Poly2Tri.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17710CFA0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file data-0000020A8D713D20 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B177258720 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file data-0000020A92160010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Mathematics.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17740C480 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.KdTree.dll
+Symbol file data-0000020A8D9F4030 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.KdTree.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17704D020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Burst.dll
+Symbol file data-0000020A9222A010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Burst.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B1770F74D0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll
+Symbol file data-0000020A91F37A30 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17C55C0B0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll
+Symbol file data-0000020A92965240 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B1771C82D0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Stl.dll
+Symbol file data-0000020A8D657C60 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Stl.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17BB38030 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file data-0000020A91F40E40 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Settings.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B176E8B9F0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Toolchain.Win-x86_64-Linux-x86_64.dll
+Symbol file data-0000020A8D5A8020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Toolchain.Win-x86_64-Linux-x86_64.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17C05F020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file data-0000020A92CAE010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17BA4B230 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-0000020A9267F420 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B1772574C0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file data-0000020A9395C020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17C55C0B0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.SysrootPackage.Editor.dll
+Symbol file data-0000020A91F40E40 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.SysrootPackage.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 77.29 ms, found 7 plugins.
+Refreshing native plugins compatible for Editor in 79.72 ms, found 7 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.046 seconds
+- Completed reload, in  1.080 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1046ms)
-		BeginReloadAssembly (80ms)
+	ReloadAssembly (1081ms)
+		BeginReloadAssembly (85ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (11ms)
-		EndReloadAssembly (930ms)
-			LoadAssemblies (52ms)
+		EndReloadAssembly (957ms)
+			LoadAssemblies (56ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (167ms)
+			SetupTypeCache (169ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (29ms)
-			SetupLoadedEditorAssemblies (612ms)
+			RebuildScriptCaches (32ms)
+			SetupLoadedEditorAssemblies (626ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (77ms)
-				BeforeProcessingInitializeOnLoad (39ms)
-				ProcessInitializeOnLoadAttributes (485ms)
-				ProcessInitializeOnLoadMethodAttributes (3ms)
+				RefreshPlugins (80ms)
+				BeforeProcessingInitializeOnLoad (38ms)
+				ProcessInitializeOnLoadAttributes (498ms)
+				ProcessInitializeOnLoadMethodAttributes (2ms)
 				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.92 ms, found 7 plugins.
+Refreshing native plugins compatible for Editor in 0.93 ms, found 7 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2386 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 150.0 MB.
-System memory in use after: 150.1 MB.
+System memory in use after: 150.2 MB.
 
 Unloading 27 unused Assets to reduce memory usage. Loaded Objects now: 2974.
-Total: 2.137500 ms (FindLiveObjects: 0.135700 ms CreateObjectMapping: 0.050700 ms MarkObjects: 1.761500 ms  DeleteObjects: 0.188900 ms)
+Total: 2.280400 ms (FindLiveObjects: 0.133600 ms CreateObjectMapping: 0.051000 ms MarkObjects: 1.912000 ms  DeleteObjects: 0.183100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -207,436 +207,264 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/GleyPlugins/TrafficSystem/Example/PlayerCar/PlayerCar.prefab
-  artifactKey: Guid(56726f7c6e5254348b86fcf28347696d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Example/PlayerCar/PlayerCar.prefab using Guid(56726f7c6e5254348b86fcf28347696d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89b8a6de5a23eaa52c37e98b43be4c3e') in 0.092796 seconds 
-  Import took 0.095936 seconds .
+  path: Assets/Scenes/Master Object.prefab
+  artifactKey: Guid(ef317a10f3cfc3246bfc981007c4a68b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Master Object.prefab using Guid(ef317a10f3cfc3246bfc981007c4a68b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6808510a16798ceaa7ea20f4107c4e86') in 0.138546 seconds 
+  Import took 0.142978 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 13.503973 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs
-  artifactKey: Guid(95d90342d40188d49911d51282e3a0a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs using Guid(95d90342d40188d49911d51282e3a0a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '59ff9210f7fd44d8e7862823e8a5c666') in 0.005699 seconds 
-  Import took 0.008540 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.122815 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/SmallSedanBody.prefab
-  artifactKey: Guid(a81df44c829d82e4eae8a8e2fbc40dd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/SmallSedanBody.prefab using Guid(a81df44c829d82e4eae8a8e2fbc40dd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '75e64a3d024a049b0bb63b62c5736890') in 0.047139 seconds 
-  Import took 0.050125 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000180 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/SmallSedanWheel.prefab
-  artifactKey: Guid(75ec5bb894a469549b67825367bfd185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/SmallSedanWheel.prefab using Guid(75ec5bb894a469549b67825367bfd185) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e144ea4d94a05f9f2f414f6a17ea358') in 0.016840 seconds 
-  Import took 0.019781 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.502067 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles
-  artifactKey: Guid(61fa819eb58d2c347a4cb6d5c3798be3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles using Guid(61fa819eb58d2c347a4cb6d5c3798be3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe64711d8c4516e4330c71c36e001ada') in 0.004911 seconds 
-  Import took 0.007967 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.087538 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/OriginalSmallSedan.prefab
-  artifactKey: Guid(436a70b435c93d74e9d4b0f983c528ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/OriginalSmallSedan.prefab using Guid(436a70b435c93d74e9d4b0f983c528ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f1e742ee8626d91d2d5e07fc907f00ff') in 0.017885 seconds 
-  Import took 0.021120 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000277 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/SmallSedanPurple.prefab
-  artifactKey: Guid(29d708a1b868be2429142343fabd2479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/SmallSedanPurple.prefab using Guid(29d708a1b868be2429142343fabd2479) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '60b5438eadc6c99fc9d7b48505afd7e1') in 0.021634 seconds 
-  Import took 0.025128 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000221 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/SmallSedanGrey.prefab
-  artifactKey: Guid(bd914e090ad41f24fa6075b67c56ce4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/SmallSedanGrey.prefab using Guid(bd914e090ad41f24fa6075b67c56ce4c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22e890650070feb9f75faeda2e52d932') in 0.034625 seconds 
-  Import took 0.038009 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000179 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/SmallSedanYellow1.prefab
-  artifactKey: Guid(8893ebfb272c22a4da7ed1eb4ad7d504) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/SmallSedanYellow1.prefab using Guid(8893ebfb272c22a4da7ed1eb4ad7d504) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '19e2aa79443999e87219e9d9d599a107') in 0.052307 seconds 
-  Import took 0.055596 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000226 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/SmallSedanGreen2.prefab
-  artifactKey: Guid(77cfbbb08fbe7ce48815e58e93317a84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/SmallSedanGreen2.prefab using Guid(77cfbbb08fbe7ce48815e58e93317a84) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28199ada78b4cacbc878eb4757e9236e') in 0.036938 seconds 
-  Import took 0.040310 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000214 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/SmallSedanWhite.prefab
-  artifactKey: Guid(91f4e76ce771bf04790af018ea70d4b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/SmallSedanWhite.prefab using Guid(91f4e76ce771bf04790af018ea70d4b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '33e29d40ba0e8ae39e778d3819fc7a33') in 0.038235 seconds 
-  Import took 0.041507 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000219 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/SmallSedanYellow2.prefab
-  artifactKey: Guid(315badbed2066c04a9a12036052ed382) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/SmallSedanYellow2.prefab using Guid(315badbed2066c04a9a12036052ed382) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb0b0284a2f61fbcae122e2fd56d06c5') in 0.038014 seconds 
-  Import took 0.041226 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000219 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/SmallSedanGreen1.prefab
-  artifactKey: Guid(9eaca35863f48a14a9d3e14d5f0b4fcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/SmallSedanGreen1.prefab using Guid(9eaca35863f48a14a9d3e14d5f0b4fcb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58dfb3ccdcd74e01bbcbd961955bda27') in 0.038252 seconds 
-  Import took 0.041437 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000179 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/SmallSedanBlue2.prefab
-  artifactKey: Guid(e346d262823259a4dab7190352aaab57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/SmallSedanBlue2.prefab using Guid(e346d262823259a4dab7190352aaab57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50dc8a22aca388dfbd1c6f933df2a160') in 0.038690 seconds 
-  Import took 0.041916 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000187 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/SmallSedanRed.prefab
-  artifactKey: Guid(cb9f4755c036058478601dc4f14628a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Prefabs/CompleteVehicles/SmallSedanRed.prefab using Guid(cb9f4755c036058478601dc4f14628a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ba435b7e35dd3a69a598581bf03d47d') in 0.026978 seconds 
-  Import took 0.030252 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.646374 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedan.mat
-  artifactKey: Guid(b422fc9563a92dd4ea5dae44cbeb4b5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedan.mat using Guid(b422fc9563a92dd4ea5dae44cbeb4b5c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd561a7474550f133857dafd00df2d180') in 0.047459 seconds 
-  Import took 0.050607 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000215 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedanPaintRed.mat
-  artifactKey: Guid(b4c08cc8034ee3e4791b70960a1c22da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedanPaintRed.mat using Guid(b4c08cc8034ee3e4791b70960a1c22da) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd47ad89c90a5edc85bfe08399260c9a3') in 0.103575 seconds 
-  Import took 0.106274 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000237 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedanPaintGrey.mat
-  artifactKey: Guid(e890021665f47f94f82b6005185e1ef4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedanPaintGrey.mat using Guid(e890021665f47f94f82b6005185e1ef4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5696ef2b0c0b47a7311a43f22a734e17') in 0.022111 seconds 
-  Import took 0.025123 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000219 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedanPaintPurple.mat
-  artifactKey: Guid(aed9fbf8ee9ce1247b40228b59bfddea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedanPaintPurple.mat using Guid(aed9fbf8ee9ce1247b40228b59bfddea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '587e79e27a1a85b7571211d7b472765d') in 0.074419 seconds 
-  Import took 0.077862 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000290 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedanPaintBlue1.mat
-  artifactKey: Guid(a2f8a991a736fad4d86c26cf416d2314) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedanPaintBlue1.mat using Guid(a2f8a991a736fad4d86c26cf416d2314) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1af3548a6466f2e7d14330f38d6b2b8e') in 0.059930 seconds 
-  Import took 0.062599 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000298 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedanPaintBlue2.mat
-  artifactKey: Guid(ebb90aad542fe794bb752d7c8476714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedanPaintBlue2.mat using Guid(ebb90aad542fe794bb752d7c8476714b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bffe8f836be8746c30af0c123683de45') in 0.020854 seconds 
-  Import took 0.023636 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000205 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedanPaintGreen1.mat
-  artifactKey: Guid(6f7a842d3f8799844b7644583d474853) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedanPaintGreen1.mat using Guid(6f7a842d3f8799844b7644583d474853) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b62666655c70dfe13041eb5b2805b6bc') in 0.014299 seconds 
-  Import took 0.017191 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000271 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedanLights.mat
-  artifactKey: Guid(06f130fc51e20f143ab11b2608957099) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedanLights.mat using Guid(06f130fc51e20f143ab11b2608957099) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'be2cc5a2e9815f975f20e15d28a98d3f') in 0.018764 seconds 
-  Import took 0.021850 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000145 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedanPaintWhite.mat
-  artifactKey: Guid(5c6f22f5d69ac0344b0aa97f5c543b33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedanPaintWhite.mat using Guid(5c6f22f5d69ac0344b0aa97f5c543b33) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3aeaec2ad3b0faa0b3d052d5164d27c7') in 0.015875 seconds 
-  Import took 0.018987 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000154 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedanPaintYellow2.mat
-  artifactKey: Guid(2f7cc936ebfa28e4b89b9eca7437de9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedanPaintYellow2.mat using Guid(2f7cc936ebfa28e4b89b9eca7437de9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e5d9b44636a51f0b0223c4e0d67305f') in 0.017310 seconds 
-  Import took 0.020310 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000154 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedanPaintGreen2.mat
-  artifactKey: Guid(0e4447618cd9b214f8b8681f628d0ccf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedanPaintGreen2.mat using Guid(0e4447618cd9b214f8b8681f628d0ccf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '059002e71cf42093cc0dc49b844f3ff9') in 0.018028 seconds 
-  Import took 0.020922 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000173 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedanPaintYellow1.mat
-  artifactKey: Guid(4769175574b38a74c90638275c130a75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Materials/SmallSedanPaintYellow1.mat using Guid(4769175574b38a74c90638275c130a75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1134cdbc229c996430f270f29fbfb75c') in 0.014561 seconds 
-  Import took 0.017513 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.403537 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Meshes/SmallSedanBody.fbx
-  artifactKey: Guid(9673d1ebd4acfeb42bf46ebcb3779410) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Meshes/SmallSedanBody.fbx using Guid(9673d1ebd4acfeb42bf46ebcb3779410) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6df50a501cc4e024faa31e6f0ebbb3f') in 0.124233 seconds 
-  Import took 0.127169 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000180 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Meshes/SmallSedanWheel.fbx
-  artifactKey: Guid(e5d32b5cbe5d017479526edd5bee10e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Meshes/SmallSedanWheel.fbx using Guid(e5d32b5cbe5d017479526edd5bee10e4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '156f280ac7b8e51108b3e0d1cd625cd1') in 0.015537 seconds 
-  Import took 0.018339 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000224 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Meshes/SmallSedanLights.fbx
-  artifactKey: Guid(0ba989b53ccb3d347963742d3f1ee395) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Meshes/SmallSedanLights.fbx using Guid(0ba989b53ccb3d347963742d3f1ee395) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdcca69834f25ae5a225decdde5267d9') in 0.059247 seconds 
-  Import took 0.062453 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.706061 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Meshes/Materials
-  artifactKey: Guid(93444be3ac53d3e479777457b59ec43f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Meshes/Materials using Guid(93444be3ac53d3e479777457b59ec43f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d1a3ed5559777cf4fa31e86b43629b1') in 0.004520 seconds 
-  Import took 0.007586 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.074588 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Meshes/Materials/CAT_Small_Sedan.mat
-  artifactKey: Guid(1a60e09a013993c4383096b99a40510d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Meshes/Materials/CAT_Small_Sedan.mat using Guid(1a60e09a013993c4383096b99a40510d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2be12cf0b8056c7ffa9c5dcad9db0c9a') in 0.013265 seconds 
-  Import took 0.016086 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000198 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Meshes/Materials/CAT_Small_Sedan_Paint.mat
-  artifactKey: Guid(b94db9111a4ecf24787a1e3c7a028d4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Meshes/Materials/CAT_Small_Sedan_Paint.mat using Guid(b94db9111a4ecf24787a1e3c7a028d4d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '038173ca453c0a30777c72b54e6efb70') in 0.009436 seconds 
-  Import took 0.012304 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000230 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Meshes/Materials/CAT_Small_Sedan_Lights_MAT.mat
-  artifactKey: Guid(e86ee6ffce7b62442a5fe1389e285f97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Meshes/Materials/CAT_Small_Sedan_Lights_MAT.mat using Guid(e86ee6ffce7b62442a5fe1389e285f97) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c5087e0dcad7bbeddee39b002c2b3b3') in 0.010117 seconds 
-  Import took 0.013002 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.653226 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Sounds/EngineSound.ogg
-  artifactKey: Guid(4feb099015c2f5b4195d27538e4c8f02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Sounds/EngineSound.ogg using Guid(4feb099015c2f5b4195d27538e4c8f02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '227c1592c9d9bfc3131e9601425f666b') in 0.062424 seconds 
-  Import took 0.065278 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.948726 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Textures/Shadow.tga
-  artifactKey: Guid(8cb0bec3335b5bc4fa6f5f8c8c36bc1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Textures/Shadow.tga using Guid(8cb0bec3335b5bc4fa6f5f8c8c36bc1c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eda4526641d7c6b8d9b85cb976bfc52d') in 0.016035 seconds 
-  Import took 0.018766 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000276 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Textures/SmallSedanAlbedo.tga
-  artifactKey: Guid(3739448eb2390c545b115a8c96726a55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Textures/SmallSedanAlbedo.tga using Guid(3739448eb2390c545b115a8c96726a55) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40b3433ca64d9aaf618ef6025a2be7f4') in 0.009901 seconds 
-  Import took 0.012627 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000250 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Textures/SmallSedanEmission.png
-  artifactKey: Guid(8cc6babf6c4427a4f9e9de9c11b15b42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Textures/SmallSedanEmission.png using Guid(8cc6babf6c4427a4f9e9de9c11b15b42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0458ed6508199fc5b02b236e7857e4a1') in 0.019407 seconds 
-  Import took 0.022152 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000218 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Textures/SmallSedanMetalicSmoothness.tga
-  artifactKey: Guid(e2c8782160e8429499549979837bfb00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Textures/SmallSedanMetalicSmoothness.tga using Guid(e2c8782160e8429499549979837bfb00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8813115417ff747b280031d961c82352') in 0.063966 seconds 
-  Import took 0.066879 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000244 seconds.
-  path: Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Textures/SmallSedanNormal.tga
-  artifactKey: Guid(b0258ba256ae51849865bcd220787fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/GleyPlugins/TrafficSystem/Graphics/Vehicle/Textures/SmallSedanNormal.tga using Guid(b0258ba256ae51849865bcd220787fa2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3705fe4fbdf9b8119b8ce53fad787bf') in 0.014080 seconds 
-  Import took 0.016989 seconds .
+  Time since last request: 9.314496 seconds.
+  path: Assets/Vehicle Physics Pro/Sample Assets/Scenes/Playground 1k - Sandbox - Creating Vehicles tutorial completed.unity
+  artifactKey: Guid(918c0c1f4c9a7ac4c8c0583de1bef0d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Vehicle Physics Pro/Sample Assets/Scenes/Playground 1k - Sandbox - Creating Vehicles tutorial completed.unity using Guid(918c0c1f4c9a7ac4c8c0583de1bef0d2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1ec724afe88f06769363d22b6a66f90') in 0.006095 seconds 
+  Import took 0.008874 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.068243 seconds.
+Registered in 0.004621 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-000002B17C55C0B0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file data-0000020A963D7C20 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17B822020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file data-0000020AC0474010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17F4FC020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-0000020A92BAC020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B182ABC8E0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Sysroot.Linux_x86_64.dll
+Symbol file data-0000020AC05CC5C0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Sysroot.Linux_x86_64.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17B822020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file data-0000020A966FC010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17B822020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file data-0000020A8D5F0010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Timeline.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17BCA4010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file data-0000020A8D607F10 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.TextMeshPro.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17F4FC020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Burst.Editor.dll
+Symbol file data-0000020A92BAC020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Burst.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17F703020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file data-0000020A95CF2030 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17B906010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Csg.dll
+Symbol file data-0000020A9C48A7C0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Csg.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B176E45890 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll
+Symbol file data-0000020A9C2F4340 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17BD56020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.dll
+Symbol file data-0000020A8D607F10 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17BA29020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll
+Symbol file data-0000020A935CB040 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17F4FC020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file data-0000020A95C35E40 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEditor.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17704D020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file data-0000020A935CB040 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17F4FC020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file data-0000020A93432020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Rider.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17F4FC020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll
+Symbol file data-0000020A92BAC020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002AF8074DC40 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file data-0000020A8D607F10 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEngine.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17C081230 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Poly2Tri.dll
+Symbol file data-0000020A920E4020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Poly2Tri.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B1828654B0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file data-0000020A9C366CD0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B177258720 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file data-0000020A920FB010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Mathematics.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17D66AAA0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.KdTree.dll
+Symbol file data-0000020AC0301EE0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.KdTree.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17BD56020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Burst.dll
+Symbol file data-0000020A8D607F10 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Burst.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17CAE4020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll
+Symbol file data-0000020A966FC010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17C55C0B0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll
+Symbol file data-0000020A963D7C20 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17B6C78A0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Stl.dll
+Symbol file data-00000208FD239870 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Stl.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17B82F040 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file data-0000020A96824470 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Settings.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B182C550B0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Toolchain.Win-x86_64-Linux-x86_64.dll
+Symbol file data-0000020A9C2F7D00 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Toolchain.Win-x86_64-Linux-x86_64.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B176E47940 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file data-0000020A9227E010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17E8A0080 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-0000020AC0474010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17D3D2020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file data-0000020A8DA6D050 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17C55C0B0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.SysrootPackage.Editor.dll
+Symbol file data-0000020A963D7C20 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.SysrootPackage.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.95 ms, found 7 plugins.
+Refreshing native plugins compatible for Editor in 1.12 ms, found 7 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.681 seconds
+- Completed reload, in  0.839 seconds
 Domain Reload Profiling:
-	ReloadAssembly (681ms)
-		BeginReloadAssembly (85ms)
+	ReloadAssembly (839ms)
+		BeginReloadAssembly (93ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (29ms)
+		EndReloadAssembly (700ms)
+			LoadAssemblies (69ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (225ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (42ms)
+			SetupLoadedEditorAssemblies (288ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (48ms)
+				ProcessInitializeOnLoadAttributes (227ms)
+				ProcessInitializeOnLoadMethodAttributes (2ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.97 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2319 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.0 MB.
+System memory in use after: 147.1 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2985.
+Total: 2.355500 ms (FindLiveObjects: 0.136700 ms CreateObjectMapping: 0.047100 ms MarkObjects: 2.032200 ms  DeleteObjects: 0.138500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 667.909462 seconds.
+  path: Assets/Scenes/KeyBiscayne.unity
+  artifactKey: Guid(d998352785a0fcf4b9022f1d7b6816d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/KeyBiscayne.unity using Guid(d998352785a0fcf4b9022f1d7b6816d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '950accd27f60cc2d2d684b5e97f50865') in 0.019528 seconds 
+  Import took 0.022364 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003788 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000020A8DD2F700 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A97DC3030 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A9B52B730 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020AC05DEAE0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Sysroot.Linux_x86_64.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A9816E000 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A8D5F0010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A99D8E6E0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A99EDE200 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Burst.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A9829EDF0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A9C025D60 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Csg.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020AC280F370 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A997D8FD0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A935CB040 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A990E0080 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A994830D0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A8D5070D0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A9B52B730 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A980BDB50 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A9AEC8020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Poly2Tri.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020AC36A0490 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A9B610080 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020AC31A1C80 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.KdTree.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A997D8FD0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Burst.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A980B1ED0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A97BE8DD0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A990EA360 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Stl.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A9A854EA0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020AC280A670 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Toolchain.Win-x86_64-Linux-x86_64.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A99847850 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A980B1ED0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A8837AC10 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A8DD2F700 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.SysrootPackage.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for Lumin target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.98 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.716 seconds
+Domain Reload Profiling:
+	ReloadAssembly (717ms)
+		BeginReloadAssembly (84ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (2ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (23ms)
-		EndReloadAssembly (562ms)
-			LoadAssemblies (50ms)
+		EndReloadAssembly (598ms)
+			LoadAssemblies (58ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (195ms)
+			SetupTypeCache (176ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (29ms)
-			SetupLoadedEditorAssemblies (234ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (258ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (38ms)
-				ProcessInitializeOnLoadAttributes (185ms)
+				BeforeProcessingInitializeOnLoad (39ms)
+				ProcessInitializeOnLoadAttributes (207ms)
 				ProcessInitializeOnLoadMethodAttributes (2ms)
 				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (3ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.98 ms, found 7 plugins.
+Refreshing native plugins compatible for Editor in 0.95 ms, found 7 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2319 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 147.3 MB.
-System memory in use after: 147.4 MB.
+System memory in use before: 147.0 MB.
+System memory in use after: 147.2 MB.
 
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 3024.
-Total: 2.068600 ms (FindLiveObjects: 0.138600 ms CreateObjectMapping: 0.050200 ms MarkObjects: 1.731100 ms  DeleteObjects: 0.148000 ms)
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2987.
+Total: 2.346600 ms (FindLiveObjects: 0.138800 ms CreateObjectMapping: 0.047500 ms MarkObjects: 2.002000 ms  DeleteObjects: 0.157200 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -651,116 +479,240 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003678 seconds.
+Registered in 0.004234 seconds.
 Begin MonoManager ReloadAssembly
-Symbol file data-000002B17C114840 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file data-0000020A8DD2F700 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17F31EEF0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file data-0000020A98504EF0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17BA53210 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file data-0000020A8D728010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B1A7C1E650 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Sysroot.Linux_x86_64.dll
+Symbol file data-0000020A9BA594B0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Sysroot.Linux_x86_64.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17CC5A020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file data-0000020A950E2020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17B822020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file data-0000020A97F0DA90 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Timeline.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B1770DCCC0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file data-0000020A9BC5C5F0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.TextMeshPro.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B1771CDF40 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Burst.Editor.dll
+Symbol file data-0000020A9250C020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Burst.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B1A3407910 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file data-0000020A9C027C90 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002AF802D0710 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Csg.dll
+Symbol file data-0000020A96E6D100 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Csg.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B177249920 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll
+Symbol file data-0000020A9BB41C10 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17732C020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.dll
+Symbol file data-0000020A8D607F10 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17C0D5010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll
+Symbol file data-0000020A9849F060 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17BA53210 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file data-0000020A8D728010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEditor.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17D34E440 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file data-0000020A9849F060 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17D38A040 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file data-0000020A93568050 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Rider.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B1771CDF40 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll
+Symbol file data-0000020A9250C020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B177001020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file data-0000020A983A98B0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEngine.UI.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B1774639B0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Poly2Tri.dll
+Symbol file data-0000020A91F47E20 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Poly2Tri.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B1A7A749F0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file data-0000020AC43DED50 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17C480020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file data-0000020A9B610080 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Mathematics.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17BD2B6C0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.KdTree.dll
+Symbol file data-0000020A9C0444C0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.KdTree.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17732C020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Burst.dll
+Symbol file data-0000020A8D607F10 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Burst.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17B822020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll
+Symbol file data-0000020A950E2020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002AF80768450 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll
+Symbol file data-0000020A8DD2F700 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17B6C78A0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Stl.dll
+Symbol file data-0000020AC205CC70 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Stl.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B1A37BD470 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file data-0000020A9AB1DEC0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Settings.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B1A3C22A80 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Toolchain.Win-x86_64-Linux-x86_64.dll
+Symbol file data-0000020A9BB3E720 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Toolchain.Win-x86_64-Linux-x86_64.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B1A3178670 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file data-0000020A8D79DFA0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17CAE4020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file data-0000020A950E2020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17F51A020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file data-0000020A8837BAA0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-000002B17C54A640 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.SysrootPackage.Editor.dll
+Symbol file data-0000020A8DD2F700 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.SysrootPackage.Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
 Native extension for Lumin target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.95 ms, found 7 plugins.
+Refreshing native plugins compatible for Editor in 0.97 ms, found 7 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.735 seconds
+- Completed reload, in  0.749 seconds
 Domain Reload Profiling:
-	ReloadAssembly (735ms)
-		BeginReloadAssembly (90ms)
+	ReloadAssembly (749ms)
+		BeginReloadAssembly (85ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (3ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (26ms)
-		EndReloadAssembly (609ms)
-			LoadAssemblies (59ms)
+			CreateAndSetChildDomain (25ms)
+		EndReloadAssembly (621ms)
+			LoadAssemblies (60ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (176ms)
+			SetupTypeCache (193ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (41ms)
-			SetupLoadedEditorAssemblies (264ms)
+			RebuildScriptCaches (34ms)
+			SetupLoadedEditorAssemblies (271ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (43ms)
-				ProcessInitializeOnLoadAttributes (207ms)
-				ProcessInitializeOnLoadMethodAttributes (3ms)
-				AfterProcessingInitializeOnLoad (5ms)
+				BeforeProcessingInitializeOnLoad (47ms)
+				ProcessInitializeOnLoadAttributes (212ms)
+				ProcessInitializeOnLoadMethodAttributes (2ms)
+				AfterProcessingInitializeOnLoad (3ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 1.02 ms, found 7 plugins.
+Refreshing native plugins compatible for Editor in 0.94 ms, found 7 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 2319 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 147.3 MB.
-System memory in use after: 147.5 MB.
+System memory in use before: 147.0 MB.
+System memory in use after: 147.2 MB.
 
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 3026.
-Total: 2.220900 ms (FindLiveObjects: 0.157500 ms CreateObjectMapping: 0.056300 ms MarkObjects: 1.843400 ms  DeleteObjects: 0.163100 ms)
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2989.
+Total: 2.729700 ms (FindLiveObjects: 0.149800 ms CreateObjectMapping: 0.057700 ms MarkObjects: 2.325700 ms  DeleteObjects: 0.195200 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.003777 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file data-0000020A99DB5A30 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.VSCode.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A97B294E0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A8D728010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A9321F5E0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Sysroot.Linux_x86_64.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A92CE2010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEngine.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A97B294E0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Timeline.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A9BC5C5F0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.TextMeshPro.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A9BCF2040 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Burst.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A982FDC00 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEditor.TestRunner.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A99DB5A30 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Csg.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A9BE040C0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.AddOns.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A991689E0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020AC09A2010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A8D728010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEditor.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A92526010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A99DB5A30 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Rider.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A9BCF2040 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Postprocessing.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A92877020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\UnityEngine.UI.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A99DB5A30 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Poly2Tri.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020AC71D0540 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A920FB010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Mathematics.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A95868AB0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.KdTree.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A991689E0 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Burst.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A92CE2010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Postprocessing.Runtime.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A95EA2010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.AssetIdRemapUtility.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A95741D20 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.ProBuilder.Stl.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A95EA2010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Settings.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A9BE09760 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Toolchain.Win-x86_64-Linux-x86_64.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020AC4B25020 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Timeline.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A92CE2010 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.CollabProxy.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A9B49A670 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Symbol file data-0000020A93568050 doesn't match image C:\Users\yha088\Documents\GitHub\ShiAutonomousDriving\DrivingSimulation\Library\ScriptAssemblies\Unity.SysrootPackage.Editor.dll
+Symbol file LoadedFromMemory is not a mono symbol file
+Native extension for Lumin target not found
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.29 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.737 seconds
+Domain Reload Profiling:
+	ReloadAssembly (737ms)
+		BeginReloadAssembly (76ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (3ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (24ms)
+		EndReloadAssembly (620ms)
+			LoadAssemblies (55ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (186ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (273ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (45ms)
+				ProcessInitializeOnLoadAttributes (213ms)
+				ProcessInitializeOnLoadMethodAttributes (2ms)
+				AfterProcessingInitializeOnLoad (4ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.94 ms, found 7 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2319 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.0 MB.
+System memory in use after: 147.2 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 2991.
+Total: 2.673800 ms (FindLiveObjects: 0.148700 ms CreateObjectMapping: 0.054200 ms MarkObjects: 2.313600 ms  DeleteObjects: 0.156100 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
