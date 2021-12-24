@@ -15,11 +15,11 @@ TagManager:
   - UI
   - Steering Wheel
   - 
-  - PostProcessing
-  - 
+  - Road
   - Traffic
+  - Buildings
+  - Obstacles
   - Player
-  - 
   - 
   - 
   - Landscape
