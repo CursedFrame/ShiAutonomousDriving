@@ -4,6 +4,7 @@ namespace GleyTrafficSystem
 	public enum VehicleTypes
 	{
 		Car,
+		AIPlayer,
 	}
 }
 #endif
