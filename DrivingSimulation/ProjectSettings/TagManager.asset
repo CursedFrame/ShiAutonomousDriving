@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - CityGen3D
+  - TrafficLight
   layers:
   - Default
   - TransparentFX
@@ -14,11 +15,11 @@ TagManager:
   - UI
   - Steering Wheel
   - 
-  - PostProcessing
-  - 
-  - 
-  - 
-  - 
+  - Road
+  - Traffic
+  - Buildings
+  - Obstacles
+  - Player
   - 
   - 
   - Landscape
