@@ -255,6 +255,19 @@ namespace GleyTrafficSystem
             TrafficManager.Instance.StopVehicleDriving(vehicle);
 #endif
         }
+        
+
+        /// <summary>
+        /// When this method is called, the vehicle passed as param is controlled by the traffic system 
+        /// until it is out of view and respawned
+        /// </summary>
+        /// <param name="vehicle"></param>
+        public static void StartVehicleDriving(GameObject vehicle)
+        {
+#if USE_GLEY_TRAFFIC
+            TrafficManager.Instance.StartVehicleDriving(vehicle);
+#endif
+        }
 
 
         /// <summary>

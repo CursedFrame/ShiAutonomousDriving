@@ -561,6 +561,20 @@ namespace GleyTrafficSystem
             }
         }
 
+        public void StartVehicleDriving(GameObject vehicle)
+        {
+            if (!initialized)
+                return;
+
+            for (int i = 0; i < vehicleRigidbody.Length; i++)
+            {
+                if (vehicleRigidbody[i].gameObject == vehicle)
+                {
+                    ignoreVehicle[i] = false;
+                }
+            }
+        }
+
 
         int GetVehicleIndex(GameObject vehicle)
         {
