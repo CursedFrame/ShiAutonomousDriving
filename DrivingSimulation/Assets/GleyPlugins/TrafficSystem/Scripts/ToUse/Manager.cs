@@ -368,6 +368,18 @@ namespace GleyTrafficSystem
 #endif
         }
 
+
+        /// <summary>
+        /// Set traffic vehicle to closest waypoint
+        /// </summary>
+        /// <param name="dynamicObjectInteraction"></param>
+        public static void SetTrafficVehicleToClosestForwardWaypoint(GameObject vehicle, Vector3 forwardPoint)
+        {
+#if USE_GLEY_TRAFFIC
+            TrafficManager.Instance.SetTrafficVehicleToClosestForwardWaypoint(vehicle, forwardPoint);
+#endif
+        }
+
         #endregion
     }
 }

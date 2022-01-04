@@ -450,6 +450,32 @@ namespace GleyTrafficSystem
             return waypointIndex;
         }
 
+        internal int GetClosestForwardWaypoint(Vector3 position, VehicleTypes type, Vector3 forwardPoint)
+        {
+            List<SpawnWaypoint> possibleWaypoints = waypointsGrid.GetCell(position.x, position.z).spawnWaypoints.Where(cond1 => cond1.allowedVehicles.Contains(type)).ToList();
+
+            if (possibleWaypoints.Count == 0)
+                return -1;
+
+            float distance = float.MaxValue;
+            int waypointIndex = -1;
+            for (int i = 0; i < possibleWaypoints.Count; i++)
+            {
+                Vector3 vehicleToWaypoint = GetWaypoint(possibleWaypoints[i].waypointIndex).position - position;
+                Vector3 vehicleDirection = (forwardPoint - position).normalized; 
+                Vector3 waypointDirection = vehicleToWaypoint.normalized;
+
+                float newDistance = Vector3.SqrMagnitude(vehicleToWaypoint);
+                bool isCorrectAngle = waypointDirection.x >= vehicleDirection.x - 0.25f && waypointDirection.x <= vehicleDirection.x + 0.25f;
+                if (newDistance < distance && isCorrectAngle)
+                {
+                    distance = newDistance;
+                    waypointIndex = possibleWaypoints[i].waypointIndex;
+                }
+            }
+            return waypointIndex;
+        }
+
 
         /// <summary>
         /// Get position of the target waypoint

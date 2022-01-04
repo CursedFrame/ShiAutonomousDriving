@@ -576,6 +576,22 @@ namespace GleyTrafficSystem
         }
 
 
+        public void SetTrafficVehicleToClosestForwardWaypoint(GameObject vehicle, Vector3 forwardPoint)
+        {
+            if (!initialized)
+                return;
+
+            int vehicleIndex = GetVehicleIndex(vehicle);
+            if (vehicleIndex == -1) return;
+
+            int waypointIndex = waypointManager.GetClosestForwardWaypoint(vehiclePosition[vehicleIndex], vehicleType[vehicleIndex], forwardPoint);
+            if (waypointIndex == -1) return;
+
+            waypointManager.RemoveTargetWaypoint(vehicleIndex);
+            waypointManager.SetNextWaypoint(vehicleIndex, waypointIndex);
+        }
+
+
         int GetVehicleIndex(GameObject vehicle)
         {
             for (int i = 0; i < vehicleRigidbody.Length; i++)

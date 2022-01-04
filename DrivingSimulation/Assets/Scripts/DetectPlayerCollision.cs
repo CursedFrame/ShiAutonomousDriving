@@ -9,7 +9,6 @@ public class DetectPlayerCollision : MonoBehaviour
     void OnTriggerEnter(Collider collider){
         if (collider.tag == "Player"){
             StartCoroutine(DoDelayed(() => {
-                Debug.Log("Player has collided! (enter)");
                 chunkManager.terrain.enabled = true;
                 for (int i = 0; i < parentChunk.transform.childCount; i++){
                     Transform child = parentChunk.transform.GetChild(i);
@@ -23,7 +22,6 @@ public class DetectPlayerCollision : MonoBehaviour
     void OnTriggerExit(Collider collider){
         if (collider.tag == "Player") {
             StartCoroutine(DoDelayed(() => {
-                Debug.Log("Player has collided! (exit)");
                 chunkManager.terrain.enabled = false;
                 for (int i = 0; i < parentChunk.transform.childCount; i++){
                     Transform child = parentChunk.transform.GetChild(i);
