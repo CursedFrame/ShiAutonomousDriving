@@ -380,6 +380,50 @@ namespace GleyTrafficSystem
 #endif
         }
 
+        /// <summary>
+        /// Set traffic vehicle to closest waypoint
+        /// </summary>
+        /// <param name="dynamicObjectInteraction"></param>
+        public static Waypoint GetClosestForwardWaypoint(GameObject vehicle, Vector3 forwardPoint)
+        {
+#if USE_GLEY_TRAFFIC
+            return TrafficManager.Instance.GetClosestForwardWaypoint(vehicle, forwardPoint);
+#endif
+        }
+
+        /// <summary>
+        /// Get closest waypoint to vehicle
+        /// </summary>
+        /// <param name="dynamicObjectInteraction"></param>
+        public static Waypoint GetClosestWaypoint(GameObject vehicle)
+        {
+#if USE_GLEY_TRAFFIC
+            return TrafficManager.Instance.GetClosestWaypoint(vehicle);
+#endif
+        }
+
+        /// <summary>
+        /// Get closest waypoint to position
+        /// </summary>
+        /// <param name="dynamicObjectInteraction"></param>
+        public static Waypoint GetClosestWaypoint(Vector3 position)
+        {
+#if USE_GLEY_TRAFFIC
+            return TrafficManager.Instance.GetClosestWaypoint(position);
+#endif
+        }
+
+        /// <summary>
+        /// Set traffic vehicle to closest waypoint
+        /// </summary>
+        /// <param name="dynamicObjectInteraction"></param>
+        public static void SetNextWaypoint(GameObject vehicle, Waypoint waypoint)
+        {
+#if USE_GLEY_TRAFFIC
+            TrafficManager.Instance.SetNextWaypoint(vehicle, waypoint);
+#endif
+        }
+
         #endregion
     }
 }

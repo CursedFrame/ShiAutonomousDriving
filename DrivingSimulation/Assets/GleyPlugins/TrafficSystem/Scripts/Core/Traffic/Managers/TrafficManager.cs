@@ -591,6 +591,60 @@ namespace GleyTrafficSystem
             waypointManager.SetNextWaypoint(vehicleIndex, waypointIndex);
         }
 
+        public void SetNextWaypoint(GameObject vehicle, Waypoint waypoint){
+            if (!initialized)
+                return;
+
+            int vehicleIndex = GetVehicleIndex(vehicle);
+            if (vehicleIndex == -1) return;
+
+            waypointManager.RemoveTargetWaypoint(vehicleIndex);
+            waypointManager.SetNextWaypoint(vehicleIndex, waypoint.listIndex);
+        }
+
+        public Waypoint GetClosestWaypoint(GameObject vehicle){
+            if (!initialized)
+                return new Waypoint();
+
+            int vehicleIndex = GetVehicleIndex(vehicle);
+            if (vehicleIndex == -1) return new Waypoint();
+
+            int waypointIndex = waypointManager.GetClosestWayoint(vehiclePosition[vehicleIndex], vehicleType[vehicleIndex]);
+            if (waypointIndex == -1){
+                return new Waypoint();
+            } else {
+                return waypointManager.GetWaypoint(waypointIndex);
+            }
+        }
+
+        public Waypoint GetClosestWaypoint(Vector3 position){
+            if (!initialized)
+                return new Waypoint();
+
+            int waypointIndex = waypointManager.GetClosestWayoint(position, VehicleTypes.Car);
+            if (waypointIndex == -1){
+                return new Waypoint();
+            } else {
+                return waypointManager.GetWaypoint(waypointIndex);
+            }
+        }
+
+        public Waypoint GetClosestForwardWaypoint(GameObject vehicle, Vector3 forwardPoint)
+        {
+            if (!initialized)
+                return new Waypoint();
+
+            int vehicleIndex = GetVehicleIndex(vehicle);
+            if (vehicleIndex == -1) return new Waypoint();
+
+            int waypointIndex = waypointManager.GetClosestForwardWaypoint(vehiclePosition[vehicleIndex], vehicleType[vehicleIndex], forwardPoint);
+            if (waypointIndex == -1){
+                return new Waypoint();
+            } else {
+                return waypointManager.GetWaypoint(waypointIndex);
+            }
+        }
+
 
         int GetVehicleIndex(GameObject vehicle)
         {
