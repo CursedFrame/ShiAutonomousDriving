@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using GleyTrafficSystem;
 using Priority_Queue;
-public class Pathfinding : MonoBehaviour
+public class Pathfinding
 {
     private int numNodes;
     private Dictionary<Waypoint, Node> nodes;
@@ -45,7 +45,6 @@ public class Pathfinding : MonoBehaviour
         start.g = 0;
         start.f = start.g + GetDistanceBetween(start, end);
         openList.Enqueue(start, start.f);
-        Debug.Log("Enqueuing start node");
         while(openList.Count > 0){
             Node current = openList.First;
             if (current == end) return GetPath(end);
@@ -58,7 +57,6 @@ public class Pathfinding : MonoBehaviour
                     neighbor.f = gScore + GetDistanceBetween(neighbor, end);
                     if (!openList.Contains(neighbor)) {
                         openList.Enqueue(neighbor, neighbor.f);
-                        Debug.Log("Enqueud new neighbor");
                     }
                 }
             }
