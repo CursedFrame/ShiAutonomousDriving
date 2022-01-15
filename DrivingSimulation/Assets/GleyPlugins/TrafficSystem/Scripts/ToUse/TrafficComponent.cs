@@ -24,7 +24,7 @@ namespace GleyTrafficSystem
         public float yellowLightTime = -1;
         [Tooltip("How long green light is on (if = -1 the value from the intersection component will be used)")]
         public float greenLightTime = -1;
-        public Dijkstra pathfinding;
+        public Pathfinding pathfinding;
 
         private static TrafficComponent _instance;
         public static TrafficComponent Instance { get {return _instance; } }
@@ -41,7 +41,7 @@ namespace GleyTrafficSystem
         void Start()
         {
             Manager.Initialize(player, nrOfVehicles, vehiclePool, minDistanceToAdd, distanceToRemove, greenLightTime, yellowLightTime);
-            pathfinding = new Dijkstra(CurrentSceneData.GetSceneInstance().allWaypoints.ToList<Waypoint>());
+            pathfinding = new Pathfinding(CurrentSceneData.GetSceneInstance().allWaypoints.ToList<Waypoint>());
 
             //Uncomment this and a new traffic car will be added in front of your car most of the time
             //Manager.SetSpawnWaypointSelectorDelegate(GetBestNeighbor.GetForwardSpawnWaypoint);

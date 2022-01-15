@@ -1,43 +1,45 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Priority_Queue;
 
 namespace GleyTrafficSystem {
-    public class Dijkstra : MonoBehaviour {
+    // // very inefficient version of djikstras
+    public class Dijkstra {
         public class Edge
         {
-            public int originIndex, destinationIndex;
+            public Waypoint origin, destination;
             public float distance;
         }
-        private List<Waypoint> nodes;
         private List<Edge> edges = new List<Edge>();
-        private List<Waypoint> basis, allWaypoints;
+        private List<Waypoint> basis;
         private Dictionary<string, float> dist;
         private Dictionary<string, Waypoint> previous;
         public bool pathCalculated = false, calculatingPath = false;
 
         public Dijkstra(List<Waypoint> nodes) {
-            this.nodes = nodes;
             basis = new List<Waypoint>();
-            allWaypoints = new List<Waypoint>();
             dist = new Dictionary<string, float>();
             previous = new Dictionary<string, Waypoint>();
-
-            foreach (Waypoint n in nodes){
-                foreach (int r in n.neighbors){
-                    Edge e = new Edge();
-                    e.originIndex = n.listIndex;
-                    e.destinationIndex = r;
-                }
-            }
 
             // record node 
             foreach (Waypoint n in nodes)
             {
-                previous.Add(n.name + n.position.ToString(), null);
-                basis.Add(n);
-                allWaypoints.Add(n);
-                dist.Add(n.name + n.position.ToString(), float.MaxValue);
+                if (!dist.ContainsKey(n.name)){
+                    previous.Add(n.name, null);
+                    basis.Add(n);
+                    dist.Add(n.name, float.MaxValue);
+                }
+            }
+
+            foreach (Waypoint n in basis){
+                foreach (int r in n.neighbors){
+                    Edge e = new Edge();
+                    e.origin = n;
+                    e.destination = nodes[r];
+                    e.distance = Vector3.Distance(e.origin.position, e.destination.position);
+                    edges.Add(e);
+                }
             }
             Debug.Log("Finished constructing Dijkstra");
         }
@@ -46,10 +48,10 @@ namespace GleyTrafficSystem {
         ///  to all other nodes
         public void CalculateDistance(Waypoint start) {
             calculatingPath = true;
-            dist[start.name + start.position.ToString()] = 0;
+            dist[start.name] = 0;
             while (basis.Count > 0)
             {
-                Waypoint u = GetNodeWithSmallestDistance();
+                Waypoint u = GetWaypointWithSmallestDistance();
                 if (u == null)
                 {
                     basis.Clear();
@@ -58,11 +60,11 @@ namespace GleyTrafficSystem {
                 {
                     foreach (Waypoint v in GetNeighbors(u))
                     {
-                        float alt = dist[u.name + u.position.ToString()] + GetDistanceBetween(u, v);
-                        if (alt < dist[v.name + v.position.ToString()])
+                        float alt = dist[u.name] + GetDistanceBetween(u, v);
+                        if (alt < dist[v.name])
                         {
-                            dist[v.name + v.position.ToString()] = alt;
-                            previous[v.name + v.position.ToString()] = u;
+                            dist[v.name] = alt;
+                            previous[v.name] = u;
                         }
                     }
                     basis.Remove(u);
@@ -70,6 +72,7 @@ namespace GleyTrafficSystem {
             }
             calculatingPath = false;
             pathCalculated = true;
+            Debug.Log("pathCalculated");
         }
 
         public List<Waypoint> GetPathTo(Waypoint d) {
@@ -77,24 +80,24 @@ namespace GleyTrafficSystem {
 
             path.Insert(0, d);
 
-            while (previous[d.name + d.position.ToString()] != null)
+            while (previous[d.name] != null)
             {
-                d = previous[d.name + d.position.ToString()];
+                d = previous[d.name];
                 path.Insert(0, d);
             }
 
             return path;
         }
 
-        public Waypoint GetNodeWithSmallestDistance() {
+        public Waypoint GetWaypointWithSmallestDistance() {
             float distance = float.MaxValue;
             Waypoint smallest = null;
 
             foreach (Waypoint n in basis)
             {
-                if (dist[n.name + n.position.ToString()] < distance)
+                if (dist[n.name] < distance)
                 {
-                    distance = dist[n.name + n.position.ToString()];
+                    distance = dist[n.name];
                     smallest = n;
                 }
             }
@@ -108,9 +111,9 @@ namespace GleyTrafficSystem {
 
             foreach (Edge e in edges)
             {
-                if (e.originIndex.Equals(n.listIndex) && basis.Contains(n))
+                if (e.origin.Equals(n) && basis.Contains(n))
                 {
-                    neighbors.Add(allWaypoints[e.destinationIndex]);
+                    neighbors.Add(e.destination);
                 }
             }
 
@@ -120,7 +123,7 @@ namespace GleyTrafficSystem {
         public float GetDistanceBetween(Waypoint o, Waypoint d) {
             foreach (Edge e in edges)
             {
-                if (allWaypoints[e.originIndex].Equals(o) && allWaypoints[e.destinationIndex].Equals(d))
+                if (e.origin.Equals(o) && e.destination.Equals(d))
                 {
                     return e.distance;
                 }
