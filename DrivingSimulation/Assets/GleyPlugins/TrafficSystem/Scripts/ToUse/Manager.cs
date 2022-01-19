@@ -204,6 +204,18 @@ namespace GleyTrafficSystem
 #endif
         }
 
+        /// <summary>
+        /// Set how far away active intersections should be -> default is 1
+        /// If set is to 2 -> intersections will update on a 2 square distance from the player
+        /// </summary>
+        /// <param name="level">how many squares away should intersections be updated</param>
+        public static void SetVehicleBlinkerType(int vehicleIndex, BlinkType blinkType)
+        {
+#if USE_GLEY_TRAFFIC
+            TrafficManager.Instance.SetVehicleBlinkerType(vehicleIndex, blinkType);
+#endif
+        }
+
 
         /// <summary>
         /// Remove a specific vehicle from scene
@@ -243,6 +255,19 @@ namespace GleyTrafficSystem
 #endif
         }
 
+        /// <summary>
+        /// Add a traffic vehicle to the closest waypoint from the given position
+        /// This method will wait until that vehicle type will be available and the closest waypoint will be free to add a new vehicle on it.
+        /// The method will run in background until the new vehicle is added.
+        /// </summary>
+        /// <param name="position">the position where to add a new vehicle</param>
+        /// <param name="vehicleType">the type of vehicle to add</param>
+        public static void AddVehicleWithWaypoint(Vector3 vehiclePosition, VehicleTypes vehicleType, int waypointIndex, System.Action<int> callback = null)
+        {
+#if USE_GLEY_TRAFFIC
+            TrafficManager.Instance.AddVehicleWithWaypoint(vehiclePosition, vehicleType, waypointIndex, callback);
+#endif
+        }
 
         /// <summary>
         /// When this method is called, the vehicle passed as param is no longer controlled by the traffic system 
@@ -410,6 +435,13 @@ namespace GleyTrafficSystem
         {
 #if USE_GLEY_TRAFFIC
             return TrafficManager.Instance.GetClosestWaypoint(position);
+#endif
+        }
+
+        public static int GetClosestWaypointIndex(Vector3 position)
+        {
+#if USE_GLEY_TRAFFIC
+            return TrafficManager.Instance.GetClosestWaypointIndex(position);
 #endif
         }
 

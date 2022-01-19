@@ -341,6 +341,11 @@ namespace GleyTrafficSystem
             densityManager.AddVehicleAtPosition(position, type);
         }
 
+        internal void AddVehicleWithWaypoint(Vector3 position, VehicleTypes type, int waypointIndex, System.Action<int> callback = null)
+        {
+            densityManager.AddVehicleAtPositionWithTarget(position, type, waypointIndex, callback);
+        }
+
         internal void SetIntersectionRoadToGreen(string intersectionName, int roadIndex, bool doNotChangeAgain)
         {
             intersectionManager.SetRoadToGreen(intersectionName, roadIndex, doNotChangeAgain);
@@ -470,6 +475,18 @@ namespace GleyTrafficSystem
                 return;
 
             trafficVehicles.UpdateVehicleLights(on);
+        }
+
+        /// <summary>
+        /// Turn all vehicle lights on or off
+        /// </summary>
+        /// <param name="on">if true, lights are on</param>
+        public void SetVehicleBlinkerType(int vehicleIndex, BlinkType blinkType)
+        {
+            if (!initialized)
+                return;
+
+            trafficVehicles.SetBlinkLights(vehicleIndex, drivingAI.GetBlinkType(vehicleIndex));
         }
 
 
@@ -627,6 +644,13 @@ namespace GleyTrafficSystem
             } else {
                 return waypointManager.GetWaypoint(waypointIndex);
             }
+        }
+
+        public int GetClosestWaypointIndex(Vector3 position){
+            if (!initialized)
+                return -1;
+
+            return waypointManager.GetClosestWayoint(position, VehicleTypes.Car);
         }
 
         public Waypoint GetClosestForwardWaypoint(GameObject vehicle, Vector3 forwardPoint)

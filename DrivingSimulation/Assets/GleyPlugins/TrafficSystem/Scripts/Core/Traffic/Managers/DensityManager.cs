@@ -172,7 +172,16 @@ namespace GleyTrafficSystem
             }
         }
 
-        IEnumerator WaitForAddVehicle(Vector3 position, VehicleTypes type)
+        public void AddVehicleAtPositionWithTarget(Vector3 position, VehicleTypes type, int waypointIndex, System.Action<int> callback = null)
+        {
+            if (newVehicleRequested == false)
+            {
+                newVehicleRequested = true;
+                StartCoroutine(WaitForAddVehicle(position, type, waypointIndex, callback));
+            }
+        }
+
+        IEnumerator WaitForAddVehicle(Vector3 position, VehicleTypes type, int waypointIndex = -1, System.Action<int> callback = null)
         {
             int idleVehicleIndex = trafficVehicles.GetIdleVehicleIndex();
             while (idleVehicleIndex == -1)
@@ -182,10 +191,10 @@ namespace GleyTrafficSystem
                 idleVehicleIndex = trafficVehicles.GetIdleVehicleIndexOfType(type);
             }
 
-            
+            int vehicleIndex = -1;
 
             //get closest waypoint
-            int waypointIndex = waypointManager.GetClosestWayoint(position, type);
+            if (waypointIndex == -1) waypointIndex = waypointManager.GetClosestWayoint(position, type);
             if (waypointIndex == -1)
             {
                 Debug.Log("No waypoints found");
@@ -209,14 +218,18 @@ namespace GleyTrafficSystem
                 if (vehicle)
                 {
                     currentnrOfVehicles++;
-                    int index = vehicle.GetIndex();
-                    waypointManager.SetTargetWaypoint(index, waypointIndex);
-                    trafficVehicles.ActivateVehicle(vehicle, waypointManager.GetTargetPosition(index), waypointManager.GetTargetRotation(index));
-                    DensityEvents.TriggerVehicleAddedEvent(index);
+                    vehicleIndex = vehicle.GetIndex();
+                    waypointManager.SetTargetWaypoint(vehicleIndex, waypointIndex);
+                    trafficVehicles.ActivateVehicle(vehicle, waypointManager.GetTargetPosition(vehicleIndex), waypointManager.GetTargetRotation(vehicleIndex));
+                    DensityEvents.TriggerVehicleAddedEvent(vehicleIndex);
                     //Debug.Log("Vehicle added at position -> DONE");
                 }
             }
             newVehicleRequested = false;
+            if (callback != null && vehicleIndex != -1){
+                Debug.Log("Calling back");
+                callback(vehicleIndex);
+            } 
         }
 
 

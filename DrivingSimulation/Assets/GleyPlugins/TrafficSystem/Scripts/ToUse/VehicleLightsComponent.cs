@@ -26,6 +26,7 @@ namespace GleyTrafficSystem
         private bool updateLights;
         private bool leftBlink;
         private bool rightBlink;
+        private bool blinkerChangeDisabled = false;
 
 
         /// <summary>
@@ -138,6 +139,7 @@ namespace GleyTrafficSystem
         /// <param name="blinkType"></param>
         public void SetBlinker(BlinkType blinkType)
         {
+            if (blinkerChangeDisabled) return;
             if (blinkerLeft && blinkerRight)
             {
                 switch (blinkType)
@@ -172,8 +174,22 @@ namespace GleyTrafficSystem
                             leftBlink = false;
                         }
                         break;
+                    case BlinkType.Emergency:
+                        if (rightBlink == false)
+                        {
+                            rightBlink = true;
+                        }
+                        if (leftBlink == false)
+                        {
+                            leftBlink = true;
+                        }
+                        break;
                 }
             }
+        }
+
+        public void ToggleDisableChangeBlinker(){
+            blinkerChangeDisabled = !blinkerChangeDisabled;
         }
 
 

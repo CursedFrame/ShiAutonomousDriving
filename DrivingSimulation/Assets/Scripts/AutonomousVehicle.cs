@@ -9,7 +9,7 @@ namespace GleyTrafficSystem
         private bool autonomousEnabled = true, dijkstraTest = false, waypointSet = false, calculatedPath = false, movingToDestination = false;
         public Transform forwardPoint;
         private List<Waypoint> path;
-        public Vector3 eventPosition;
+        public Vector3 eventPosition, crashCarSpawnLocation, crashLocation;
         private int nextPathIndex = 0;
 
         IEnumerator PathfindingJob(){
@@ -37,6 +37,10 @@ namespace GleyTrafficSystem
 
             if (Input.GetKeyDown(KeyCode.Alpha8)){
                 dijkstraTest = !dijkstraTest;
+            }
+
+            if (Input.GetKeyDown(KeyCode.Alpha7)){
+                CrashEvent.StartCrashEvent(crashCarSpawnLocation, crashLocation);
             }
 
             if (dijkstraTest){

@@ -5,5 +5,6 @@
         Stop,
         BlinkLeft,
         BlinkRight,
+        Emergency
     }
 }
