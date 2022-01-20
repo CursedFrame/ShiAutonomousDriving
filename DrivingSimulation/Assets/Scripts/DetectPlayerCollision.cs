@@ -12,7 +12,7 @@ public class DetectPlayerCollision : MonoBehaviour
                 chunkManager.terrain.enabled = true;
                 for (int i = 0; i < parentChunk.transform.childCount; i++){
                     Transform child = parentChunk.transform.GetChild(i);
-                    if (child.name == ChunkManager.childColliderName) continue;
+                    if (child.name == ChunkManager.childColliderName || child.tag == "NonChunkEnable") continue;
                     child.gameObject.SetActive(true);
                 }
             }));
@@ -25,7 +25,7 @@ public class DetectPlayerCollision : MonoBehaviour
                 chunkManager.terrain.enabled = false;
                 for (int i = 0; i < parentChunk.transform.childCount; i++){
                     Transform child = parentChunk.transform.GetChild(i);
-                    if (child.name == ChunkManager.childColliderName) continue;
+                    if (child.name == ChunkManager.childColliderName || child.tag == "NonChunkEnable") continue;
                     child.gameObject.SetActive(false);
                 }
             }));

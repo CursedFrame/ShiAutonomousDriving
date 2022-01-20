@@ -336,14 +336,19 @@ namespace GleyTrafficSystem
             return trafficVehicles.GetVehicleList();
         }
 
+        internal VehicleComponent GetVehicle(int vehicleIndex)
+        {
+            return trafficVehicles.GetVehicle(vehicleIndex);
+        }
+
         internal void AddVehicle(Vector3 position, VehicleTypes type)
         {
             densityManager.AddVehicleAtPosition(position, type);
         }
 
-        internal void AddVehicleWithWaypoint(Vector3 position, VehicleTypes type, int waypointIndex, System.Action<int> callback = null)
+        internal void AddVehicleWithWaypoint(Vector3 position, VehicleTypes type, System.Action<int> callback = null)
         {
-            densityManager.AddVehicleAtPositionWithTarget(position, type, waypointIndex, callback);
+            densityManager.AddVehicleAtPositionWithCallback(position, type, callback);
         }
 
         internal void SetIntersectionRoadToGreen(string intersectionName, int roadIndex, bool doNotChangeAgain)
@@ -486,7 +491,7 @@ namespace GleyTrafficSystem
             if (!initialized)
                 return;
 
-            trafficVehicles.SetBlinkLights(vehicleIndex, drivingAI.GetBlinkType(vehicleIndex));
+            trafficVehicles.SetBlinkLights(vehicleIndex, blinkType);
         }
 
 
@@ -613,6 +618,16 @@ namespace GleyTrafficSystem
                 return;
 
             int vehicleIndex = GetVehicleIndex(vehicle);
+            if (vehicleIndex == -1) return;
+
+            waypointManager.RemoveTargetWaypoint(vehicleIndex);
+            waypointManager.SetNextWaypoint(vehicleIndex, waypoint.listIndex);
+        }
+
+        public void SetNextWaypoint(int vehicleIndex, Waypoint waypoint){
+            if (!initialized)
+                return;
+
             if (vehicleIndex == -1) return;
 
             waypointManager.RemoveTargetWaypoint(vehicleIndex);

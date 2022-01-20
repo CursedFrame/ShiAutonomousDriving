@@ -262,10 +262,10 @@ namespace GleyTrafficSystem
         /// </summary>
         /// <param name="position">the position where to add a new vehicle</param>
         /// <param name="vehicleType">the type of vehicle to add</param>
-        public static void AddVehicleWithWaypoint(Vector3 vehiclePosition, VehicleTypes vehicleType, int waypointIndex, System.Action<int> callback = null)
+        public static void AddVehicleWithWaypoint(Vector3 vehiclePosition, VehicleTypes vehicleType, System.Action<int> callback = null)
         {
 #if USE_GLEY_TRAFFIC
-            TrafficManager.Instance.AddVehicleWithWaypoint(vehiclePosition, vehicleType, waypointIndex, callback);
+            TrafficManager.Instance.AddVehicleWithWaypoint(vehiclePosition, vehicleType, callback);
 #endif
         }
 
@@ -453,6 +453,28 @@ namespace GleyTrafficSystem
         {
 #if USE_GLEY_TRAFFIC
             TrafficManager.Instance.SetNextWaypoint(vehicle, waypoint);
+#endif
+        }
+
+        /// <summary>
+        /// Set traffic vehicle to closest waypoint
+        /// </summary>
+        /// <param name="dynamicObjectInteraction"></param>
+        public static void SetNextWaypoint(int vehicleIndex, Waypoint waypoint)
+        {
+#if USE_GLEY_TRAFFIC
+            TrafficManager.Instance.SetNextWaypoint(vehicleIndex, waypoint);
+#endif
+        }
+
+        /// <summary>
+        /// Set traffic vehicle to closest waypoint
+        /// </summary>
+        /// <param name="dynamicObjectInteraction"></param>
+        public static VehicleComponent GetVehicle(int vehicleIndex)
+        {
+#if USE_GLEY_TRAFFIC
+            return TrafficManager.Instance.GetVehicle(vehicleIndex);
 #endif
         }
 

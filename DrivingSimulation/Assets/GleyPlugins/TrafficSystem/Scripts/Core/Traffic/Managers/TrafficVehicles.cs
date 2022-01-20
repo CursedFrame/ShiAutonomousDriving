@@ -233,6 +233,11 @@ namespace GleyTrafficSystem
             return idleVehicles[vehicleIndex].colliderWidth / 2;
         }
 
+        public VehicleComponent GetVehicle(int vehicleIndex)
+        {
+            return idleVehicles[vehicleIndex];
+        }
+
 
         /// <summary>
         /// Activate a vehicle on scene

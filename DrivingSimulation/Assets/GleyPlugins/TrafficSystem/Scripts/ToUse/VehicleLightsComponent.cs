@@ -183,15 +183,11 @@ namespace GleyTrafficSystem
                         {
                             leftBlink = true;
                         }
+                        blinkerChangeDisabled = true;
                         break;
                 }
             }
         }
-
-        public void ToggleDisableChangeBlinker(){
-            blinkerChangeDisabled = !blinkerChangeDisabled;
-        }
-
 
         /// <summary>
         /// Perform blinking

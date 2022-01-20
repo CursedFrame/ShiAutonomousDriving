@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CityGen3D
   - TrafficLight
+  - NonChunkEnable
   layers:
   - Default
   - TransparentFX
