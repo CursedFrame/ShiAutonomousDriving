@@ -28,7 +28,7 @@ public class EventManager : MonoBehaviour
     public void Initialize(AutonomousVehicle playerVehicle){
         this.playerVehicle = playerVehicle;
         indicatorEvent = new IndicatorEvent(playerVehicle.GetBatteryIndicator(), playerVehicle.GetBatteryIndicatorSound());
-        crashEvent = new CrashEvent();
+        crashEvent = new CrashEvent(playerVehicle);
         controlLossEvent = new ControlLossEvent(playerVehicle.GetPlayerGameObject());
         initialized = true;
     }
@@ -50,5 +50,10 @@ public class EventManager : MonoBehaviour
         
         indicatorEvent.UpdateIndicator();
         controlLossEvent.UpdateControlLoss();
+    }
+
+    // Allows for coroutines to be triggered from any class
+    public void StartChildCoroutine(IEnumerator coroutine){
+        StartCoroutine(coroutine);
     }
 }

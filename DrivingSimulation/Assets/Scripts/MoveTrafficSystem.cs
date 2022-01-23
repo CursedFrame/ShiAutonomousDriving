@@ -6,7 +6,8 @@ public class MoveTrafficSystem : MonoBehaviour
 {
     private static MoveTrafficSystem _instance;
     public static MoveTrafficSystem Instance { get {return _instance; } }
-    public Transform player;
+    private Transform player;
+    private bool initialized = false;
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -16,10 +17,15 @@ public class MoveTrafficSystem : MonoBehaviour
             _instance = this;
         }
     }
+    public void Initialize(Transform player){
+        this.player = player;
+        initialized = true;
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (player.position != null) transform.position = new Vector3(player.position.x, player.position.y + 50, player.position.z);
+        if (!initialized) return;
+        transform.position = new Vector3(player.position.x, player.position.y + 50, player.position.z);
     }
 }

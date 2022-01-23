@@ -6,6 +6,7 @@ public class ChunkManager : MonoBehaviour
 {
     public static string childColliderName = "CollisionDetection";
     public Terrain terrain;
+    public static float boundsMulti = 2.5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +30,7 @@ public class ChunkManager : MonoBehaviour
         // Adjust child collider bounds and properties
         TerrainCollider terrainCollider = gameObject.GetComponent<TerrainCollider>();
         Bounds terrainBounds = terrainCollider.bounds;
-        loadChunkCollider.size = new Vector3(terrainCollider.bounds.size.x * 3, 250, terrainCollider.bounds.size.z * 3);
+        loadChunkCollider.size = new Vector3(terrainCollider.bounds.size.x * boundsMulti, 250, terrainCollider.bounds.size.z * boundsMulti);
         loadChunkCollider.center = terrainCollider.bounds.center;
         loadChunkCollider.isTrigger = true;
     }
