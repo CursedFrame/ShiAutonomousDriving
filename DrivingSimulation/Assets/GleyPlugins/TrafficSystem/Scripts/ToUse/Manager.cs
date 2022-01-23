@@ -446,6 +446,17 @@ namespace GleyTrafficSystem
         }
 
         /// <summary>
+        /// Get closest waypoint to vehicle
+        /// </summary>
+        /// <param name="dynamicObjectInteraction"></param>
+        public static Waypoint GetRandomWaypoint()
+        {
+#if USE_GLEY_TRAFFIC
+            return TrafficManager.Instance.GetRandomWaypoint();
+#endif
+        }
+
+        /// <summary>
         /// Set traffic vehicle to closest waypoint
         /// </summary>
         /// <param name="dynamicObjectInteraction"></param>

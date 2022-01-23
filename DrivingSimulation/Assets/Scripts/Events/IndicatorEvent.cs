@@ -17,6 +17,7 @@ public class IndicatorEvent
     }
 
     public void ToggleIndicator(){
+        if (indicatorOn) indicator.SetActive(false);
         indicatorOn = !indicatorOn;
     }
 
@@ -35,9 +36,5 @@ public class IndicatorEvent
                 }
             }
         }
-    }
-
-    public bool GetIndicatorOn(){
-        return indicatorOn;
     }
 }

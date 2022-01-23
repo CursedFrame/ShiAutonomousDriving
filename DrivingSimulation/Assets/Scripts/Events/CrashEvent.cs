@@ -6,7 +6,7 @@ using GleyTrafficSystem;
 public class CrashEvent
 {
     public static string TAG = "CrashEvent";
-    
+
     public void StartCrashEvent(){
         GameObject railForCrash = GameObject.Find("Landscape/Landscape 709/Barriers");
         Vector3 crashCarSpawnLocation = new Vector3(2541.39f, 53.1f, 1998.23f);

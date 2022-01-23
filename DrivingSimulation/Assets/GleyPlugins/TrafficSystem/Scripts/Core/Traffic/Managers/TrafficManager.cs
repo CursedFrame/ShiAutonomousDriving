@@ -684,6 +684,18 @@ namespace GleyTrafficSystem
             }
         }
 
+        public Waypoint GetRandomWaypoint(){
+            if (!initialized)
+                return new Waypoint();
+
+            int waypointIndex = (int) UnityEngine.Random.Range(0, waypointManager.GetWaypointCount() - 1);
+            if (waypointIndex == -1){
+                return new Waypoint();
+            } else {
+                return waypointManager.GetWaypoint(waypointIndex);
+            }
+        }
+
 
         int GetVehicleIndex(GameObject vehicle)
         {

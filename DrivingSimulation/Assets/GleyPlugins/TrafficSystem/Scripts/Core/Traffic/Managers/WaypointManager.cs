@@ -551,6 +551,10 @@ namespace GleyTrafficSystem
             return Mathf.CeilToInt(lookDistance / waypointDistance);
         }
 
+        public int GetWaypointCount(){
+            return allWaypoints.Length;
+        }
+
 
         /// <summary>
         /// Switch the stop value of a waypoint

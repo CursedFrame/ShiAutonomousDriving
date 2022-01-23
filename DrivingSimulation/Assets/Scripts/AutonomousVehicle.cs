@@ -72,5 +72,12 @@ public class AutonomousVehicle : MonoBehaviour
     public AudioSource GetBatteryIndicatorSound(){
         return batteryIndicatorSound;
     }
+    public GameObject GetPlayerGameObject(){
+        return this.gameObject;
+    }
+
+    public bool IsInAutonomousMode(){
+        return autonomousEnabled;
+    }
 }
 
