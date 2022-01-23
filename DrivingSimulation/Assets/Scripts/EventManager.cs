@@ -25,7 +25,8 @@ public class EventManager : MonoBehaviour
         }
     }
 
-    public void Initialize(){
+    public void Initialize(AutonomousVehicle playerVehicle){
+        this.playerVehicle = playerVehicle;
         indicatorEvent = new IndicatorEvent(playerVehicle.GetBatteryIndicator(), playerVehicle.GetBatteryIndicatorSound());
         crashEvent = new CrashEvent();
         controlLossEvent = new ControlLossEvent(playerVehicle.GetPlayerGameObject());

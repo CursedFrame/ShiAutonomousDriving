@@ -6,23 +6,37 @@ public class AutonomousVehicle : MonoBehaviour
 {
     [SerializeField] private GameObject batteryIndicator;
     [SerializeField] private AudioSource batteryIndicatorSound;
-    private bool autonomousEnabled = true, dijkstraTest = false, waypointSet = false, calculatedPath = false, movingToDestination = false;
+    private bool autonomousEnabled = true;
+    private bool pathfindingStarted;
     public Transform forwardPoint;
-    private List<Waypoint> path;
     public Vector3 eventPosition;
-    private int nextPathIndex = 0;    
 
-    IEnumerator PathfindingJob(){
-        path = TrafficComponent.Instance.pathfinding.AStar(TrafficManager.Instance.GetClosestForwardWaypoint(this.gameObject, forwardPoint.position), GleyTrafficSystem.Manager.GetClosestWaypoint(eventPosition));
-        calculatedPath = true;
-        movingToDestination = true;
+    IEnumerator PathingJob(PathingData data){
+        List<Waypoint> path = TrafficComponent.Instance.pathfinding.AStar(data.startWaypoint, data.endWaypoint);
+        int nextPathIndex = 0;
+        while (nextPathIndex != path.Count){
+            if (Vector3.Distance(transform.position, path[nextPathIndex].position) < 2.0f){
+                nextPathIndex++;
+                if (nextPathIndex == path.Count) break;
+                GleyTrafficSystem.Manager.SetNextWaypoint(this.gameObject, path[nextPathIndex]);
+                Debug.Log(path[nextPathIndex].name);
+            }
+            yield return null;
+        }
+        Debug.Log("Arrived at destination!");
         yield break;
+    }
+    class PathingData {
+        public Waypoint startWaypoint, endWaypoint;
+        public PathingData(Waypoint startWaypoint, Waypoint endWaypoint){
+            this.startWaypoint = startWaypoint;
+            this.endWaypoint = endWaypoint;
+        }
     }
     void Start()
     {
         MoveTrafficSystem.Instance.player = this.transform;
-        EventManager.Instance.playerVehicle = this;
-        EventManager.Instance.Initialize();
+        EventManager.Instance.Initialize(this);
     }
     // Update is called once per frame
     void Update()
@@ -38,31 +52,7 @@ public class AutonomousVehicle : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.Alpha8)){
-            dijkstraTest = !dijkstraTest;
-        }
-
-        if (dijkstraTest){
-            if (!calculatedPath) StartCoroutine(PathfindingJob());
-            if (movingToDestination && path != null){
-                if (nextPathIndex == path.Count){
-                    movingToDestination = false;
-                    path = null;
-                    Debug.Log("Arrived at destination!");
-                } else {
-                    if (!waypointSet){
-                        GleyTrafficSystem.Manager.SetNextWaypoint(this.gameObject, path[nextPathIndex]);
-                        Debug.Log(path[nextPathIndex].name);
-                        waypointSet = true;
-                    } 
-                    if (nextPathIndex < path.Count){
-                        if (Vector3.Distance(transform.position, path[nextPathIndex].position) < 2.0f){
-                            nextPathIndex++;
-                            waypointSet = false;
-                        }
-                    }
-                }
-                
-            }
+            StartCoroutine(PathingJob(new PathingData(TrafficManager.Instance.GetClosestForwardWaypoint(this.gameObject, forwardPoint.position), GleyTrafficSystem.Manager.GetClosestWaypoint(eventPosition))));
         }
     }
 
@@ -75,7 +65,6 @@ public class AutonomousVehicle : MonoBehaviour
     public GameObject GetPlayerGameObject(){
         return this.gameObject;
     }
-
     public bool IsInAutonomousMode(){
         return autonomousEnabled;
     }
