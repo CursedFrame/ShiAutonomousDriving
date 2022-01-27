@@ -10,6 +10,7 @@ public class ChunkManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (gameObject.tag == "NonChunkDisable") return;
         // Disable rendering of terrain and objects
         terrain = gameObject.GetComponent<Terrain>();
         terrain.enabled = false;
