@@ -4,27 +4,35 @@ using UnityEngine;
 
 public class DetectPlayerCollision : MonoBehaviour
 {
-    public System.Action enterAction, exitAction;
-    public bool deleteGameObjectOnEnter = false, deleteGameObjectOnExit = false;
-    void OnTriggerEnter(Collider collider){
-        if (enterAction == null) return;
-        if (collider.tag == "Player"){
+    public const string TAG = "DetectPlayerCollision";
+    
+    [HideInInspector] public System.Action EnterAction { get; set; }
+    [HideInInspector] public System.Action ExitAction { get; set; }
+    [HideInInspector] public bool DeleteGameObjectOnEnter { get; set; } = false;
+    [HideInInspector] public bool DeleteGameObjectOnExit { get; set; } = false;
+
+    private void OnTriggerEnter(Collider collider){
+        if (EnterAction == null) return;
+        if (collider.tag == "Player")
+        {
             StartCoroutine(DoDelayed(() => {
-                enterAction();
-            }, deleteGameObjectOnEnter));
+                EnterAction();
+            }, DeleteGameObjectOnEnter));
         }
     }
 
-    void OnTriggerExit(Collider collider){
-        if (exitAction == null) return;
-        if (collider.tag == "Player") {
+    private void OnTriggerExit(Collider collider){
+        if (ExitAction == null) return;
+        if (collider.tag == "Player") 
+        {
             StartCoroutine(DoDelayed(() => {
-                exitAction();
-            }, deleteGameObjectOnExit));
+                ExitAction();
+            }, DeleteGameObjectOnExit));
         }
     }
 
-    IEnumerator DoDelayed(System.Action action, bool deleteAfterAction = false){
+    private IEnumerator DoDelayed(System.Action action, bool deleteAfterAction = false)
+    {
         yield return null;
         if (action != null) action();
         if (deleteAfterAction) Destroy(this.gameObject);

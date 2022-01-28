@@ -5,16 +5,19 @@ using GleyTrafficSystem;
 
 public class ControlLossEvent
 {
-    public static string TAG = "ControlLossEvent";
-    private bool controlLost = false;
+    public const string TAG = "ControlLossEvent";
     private const float waypointChangeTime = 1.0f;
     private float currentTime;
     private GameObject playerVehicle;
+    private bool controlLost = false;
 
-    public ControlLossEvent(GameObject playerVehicle){
+    public ControlLossEvent(GameObject playerVehicle)
+    {
         this.playerVehicle = playerVehicle;
     }
-    public void ToggleControlLoss(){
+
+    public void ToggleControlLoss()
+    {
         if (controlLost) GleyTrafficSystem.Manager.SetNextWaypoint(playerVehicle, GleyTrafficSystem.Manager.GetClosestWaypoint(playerVehicle));
         controlLost = !controlLost;
     }
