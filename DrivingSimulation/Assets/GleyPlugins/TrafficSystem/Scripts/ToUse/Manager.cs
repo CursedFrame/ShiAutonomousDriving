@@ -136,10 +136,10 @@ namespace GleyTrafficSystem
         /// </summary>
         /// <param name="center"></param>
         /// <param name="radius"></param>
-        public static void ClearTrafficOnArea(Vector3 center, float radius)
+        public static void ClearTrafficOnArea(Vector3 center, float radius, GameObject ignoredVehicle = null)
         {
 #if USE_GLEY_TRAFFIC
-            TrafficManager.Instance.ClearTrafficOnArea(center, radius);
+            TrafficManager.Instance.ClearTrafficOnArea(center, radius, ignoredVehicle);
 #endif
         }
 

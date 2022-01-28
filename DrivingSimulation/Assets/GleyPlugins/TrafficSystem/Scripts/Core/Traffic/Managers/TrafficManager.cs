@@ -376,14 +376,17 @@ namespace GleyTrafficSystem
         /// </summary>
         /// <param name="center"></param>
         /// <param name="radius"></param>
-        public void ClearTrafficOnArea(Vector3 center, float radius)
+        public void ClearTrafficOnArea(Vector3 center, float radius, GameObject ignoredVehicle = null)
         {
             if (!initialized)
                 return;
+            
+            int ignoredVehicleIndex = ignoredVehicle ? GetVehicleIndex(ignoredVehicle) : -1;
 
             float sqrRadius = radius * radius;
             for (int i = 0; i < vehiclePosition.Length; i++)
             {
+                if (i == ignoredVehicleIndex) continue;
                 if (vehicleRigidbody[i].gameObject.activeSelf)
                 {
                     //uses math because of the float3 array

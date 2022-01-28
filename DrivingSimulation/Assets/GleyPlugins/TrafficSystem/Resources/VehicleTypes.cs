@@ -5,7 +5,6 @@ namespace GleyTrafficSystem
 	{
 		Car,
 		AIPlayer,
-		Emergency,
 	}
 }
 #endif

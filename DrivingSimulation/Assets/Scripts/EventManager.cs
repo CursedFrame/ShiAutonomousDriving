@@ -27,10 +27,12 @@ public class EventManager : MonoBehaviour
 
     public void Initialize(AutonomousVehicle playerVehicle){
         this.playerVehicle = playerVehicle;
-        indicatorEvent = new IndicatorEvent(playerVehicle.GetBatteryIndicator(), playerVehicle.GetBatteryIndicatorSound());
+        indicatorEvent = new IndicatorEvent(playerVehicle.BatteryIndicator, playerVehicle.BatteryIndicatorSound);
         crashEvent = new CrashEvent(playerVehicle);
-        controlLossEvent = new ControlLossEvent(playerVehicle.GetPlayerGameObject());
+        controlLossEvent = new ControlLossEvent(playerVehicle.gameObject);
         initialized = true;
+        
+        Debug.Log(TAG + ": Initialized");
     }
 
     // Update is called once per frame

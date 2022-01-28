@@ -4,12 +4,12 @@ using UnityEngine;
 using GleyTrafficSystem;
 public class AutonomousVehicle : MonoBehaviour
 {
-    [SerializeField] private GameObject batteryIndicator;
-    [SerializeField] private AudioSource batteryIndicatorSound;
+    public GameObject BatteryIndicator { get; }
+    public AudioSource BatteryIndicatorSound { get; }
     private bool autonomousEnabled = true;
     public Transform forwardPoint;
 
-    public IEnumerator Pathing(Waypoint start, Waypoint end){
+    public IEnumerator Pathing(Waypoint start, Waypoint end, System.Action callback = null){
         List<Waypoint> path = TrafficComponent.Instance.pathfinding.AStar(start, end);
         int nextPathIndex = 0;
         while (nextPathIndex != path.Count){
@@ -18,6 +18,9 @@ public class AutonomousVehicle : MonoBehaviour
             yield return GoToWaypoint(path[nextPathIndex]);
         }
         Debug.Log("Arrived at destination!");
+        if (callback != null){
+            callback();
+        }
         yield break;
     }
     private IEnumerator GoToWaypoint(Waypoint waypoint){
@@ -43,16 +46,6 @@ public class AutonomousVehicle : MonoBehaviour
             }
             autonomousEnabled = !autonomousEnabled;
         }
-    }
-
-    public GameObject GetBatteryIndicator(){
-        return batteryIndicator;
-    }
-    public AudioSource GetBatteryIndicatorSound(){
-        return batteryIndicatorSound;
-    }
-    public GameObject GetPlayerGameObject(){
-        return this.gameObject;
     }
     public bool IsInAutonomousMode(){
         return autonomousEnabled;
