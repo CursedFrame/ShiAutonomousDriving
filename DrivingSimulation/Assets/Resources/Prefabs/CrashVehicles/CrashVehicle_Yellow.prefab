@@ -5874,11 +5874,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d66c630646650034f9983a2678c17897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rBody: {fileID: 4660256421787005120}
+  rigidBody: {fileID: 4660256421787005120}
   vehicleLights: {fileID: 4583756845268506529}
   boxCollider: {fileID: 5259469448814981893}
   engineSmoke: {fileID: 175706082}
-  moveForce: 90
+  moveForce: 60
 --- !u!65 &5259469448814981893
 BoxCollider:
   m_ObjectHideFlags: 0

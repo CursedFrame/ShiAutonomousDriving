@@ -106,7 +106,7 @@ MonoBehaviour:
     active: 010101
   intersectionSave:
     showAll: 1
-    showExit: 1
+    showExit: 0
     priorityColor: {r: 0, g: 1, b: 0, a: 1}
     lightsColor: {r: 0, g: 1, b: 1, a: 1}
     stopWaypointsColor: {r: 1, g: 0, b: 0, a: 1}

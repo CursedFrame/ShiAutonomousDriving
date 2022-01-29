@@ -6,22 +6,24 @@ public class EventManager : MonoBehaviour
 {
     public const string TAG = "EventManager";
     public bool timerTest = false;
+    private static EventManager _instance;
     private IndicatorEvent indicatorEvent;
     private CrashEvent crashEvent;
     private ControlLossEvent controlLossEvent;
-    private static EventManager _instance;
     private bool initialized = false;
     private bool timerStarted = false;
 
     public static EventManager Instance { get {return _instance; } }
-    public AutonomousVehicle PlayerVehicle { get; set; }
+    public GameObject PlayerVehicle { get; set; }
+    public AutonomousVehicle PlayerVehicleAutonomous { get; set; }
     
-    public void Initialize(AutonomousVehicle playerVehicle)
+    public void Initialize(GameObject playerVehicle)
     {
         PlayerVehicle = playerVehicle;
-        indicatorEvent = new IndicatorEvent(playerVehicle.GetBatteryIndicator(), playerVehicle.GetBatteryIndicatorSound());
-        crashEvent = new CrashEvent(playerVehicle);
-        controlLossEvent = new ControlLossEvent(playerVehicle.gameObject);
+        PlayerVehicleAutonomous = PlayerVehicle.GetComponent<AutonomousVehicle>();
+        indicatorEvent = new IndicatorEvent(PlayerVehicleAutonomous.GetBatteryIndicator(), PlayerVehicleAutonomous.GetBatteryIndicatorSound());
+        crashEvent = new CrashEvent(PlayerVehicle, PlayerVehicleAutonomous);
+        controlLossEvent = new ControlLossEvent(PlayerVehicle.gameObject);
         initialized = true;
         
         Debug.Log(TAG + ": Initialized");
@@ -72,7 +74,7 @@ public class EventManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (!initialized || !PlayerVehicle.IsInAutonomous) return;
+        if (!initialized || !PlayerVehicleAutonomous.IsInAutonomous) return;
 
         // if (!timerStarted)
         // {

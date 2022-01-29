@@ -42,7 +42,7 @@ public class AutonomousVehicle : MonoBehaviour
     private void Start()
     {
         MoveTrafficSystem.Instance.Initialize(this.transform);
-        EventManager.Instance.Initialize(this);
+        EventManager.Instance.Initialize(this.gameObject);
     }
 
     // Update is called once per frame
