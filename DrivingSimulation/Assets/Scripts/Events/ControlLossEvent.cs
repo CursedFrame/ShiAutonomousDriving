@@ -3,33 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 using GleyTrafficSystem;
 
-public class ControlLossEvent
+public static class ControlLossEvent
 {
     public const string TAG = "ControlLossEvent";
     private const float waypointChangeTime = 1.0f;
-    private float currentTime;
-    private GameObject playerVehicle;
-    private bool controlLost = false;
+    private static float currentTime;
+    private static bool controlLost = false;
 
-    public ControlLossEvent(GameObject playerVehicle)
+    public static void ToggleEvent()
     {
-        this.playerVehicle = playerVehicle;
-    }
-
-    public void ToggleControlLoss()
-    {
-        if (controlLost) GleyTrafficSystem.Manager.SetNextWaypoint(playerVehicle, GleyTrafficSystem.Manager.GetClosestWaypoint(playerVehicle));
+        if (controlLost) GleyTrafficSystem.Manager.SetNextWaypoint(EventManager.Instance.PlayerVehicle, GleyTrafficSystem.Manager.GetClosestWaypoint(EventManager.Instance.PlayerVehicle));
         controlLost = !controlLost;
     }
 
-    public void UpdateControlLoss(){
+    public static void UpdateControlLoss(){
         if (controlLost)
         {
             if (Time.realtimeSinceStartup - currentTime > waypointChangeTime)
             {
                 currentTime = Time.realtimeSinceStartup;
                 Waypoint waypoint = GleyTrafficSystem.Manager.GetRandomWaypoint();
-                GleyTrafficSystem.Manager.SetNextWaypoint(playerVehicle, waypoint);
+                GleyTrafficSystem.Manager.SetNextWaypoint(EventManager.Instance.PlayerVehicle, waypoint);
             }
         }
     }

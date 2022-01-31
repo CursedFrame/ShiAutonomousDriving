@@ -3,26 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using GleyTrafficSystem;
 
-public class CrashEvent
+public static class CrashEvent
 {
     public const string TAG = "CrashEvent";
-    private GameObject playerVehicle;
-    private AutonomousVehicle playerVehicleAutonomous;
 
-    public CrashEvent(GameObject playerVehicle, AutonomousVehicle playerVehicleAutonomous)
-    {
-        this.playerVehicle = playerVehicle;
-        this.playerVehicleAutonomous = playerVehicleAutonomous;
-    }
-
-    public void StartCrashEvent()
+    public static void StartEvent()
     {
         Vector3 crashEventPosition = new Vector3(1609.96f, 52.06f, 2793.8f);
         Vector3 despawnDetectPosition = new Vector3(1610.65f, 52.06f, 2741.06f);
 
         // start pathing job to event location and spawn crash event via callback
-        EventManager.Instance.StartChildCoroutine(playerVehicleAutonomous.Pathing(TrafficManager.Instance.GetClosestForwardWaypoint(
-                playerVehicle.gameObject, playerVehicleAutonomous.GetForwardPoint().position), GleyTrafficSystem.Manager.GetClosestWaypoint(crashEventPosition), OnAtEventPosition));
+        EventManager.Instance.StartChildCoroutine(EventManager.Instance.PlayerVehicleAutonomous.Pathing(TrafficManager.Instance.GetClosestForwardWaypoint(
+                EventManager.Instance.PlayerVehicle.gameObject, EventManager.Instance.PlayerVehicleAutonomous.GetForwardPoint().position), 
+                GleyTrafficSystem.Manager.GetClosestWaypoint(crashEventPosition), OnAtEventPosition));
         
         // intialize player detection object for despawning other traffic vehicles
         GameObject despawnDetect = new GameObject("DespawnDetect");
@@ -35,12 +28,12 @@ public class CrashEvent
         detectPlayerCollision.DeleteGameObjectOnEnter = true;
     }
 
-    private void OnAtEventPosition()
+    private static void OnAtEventPosition()
     {
         EventManager.Instance.StartChildCoroutine(SpawnCrashEvent());
     }
 
-    private IEnumerator SpawnCrashEvent()
+    private static IEnumerator SpawnCrashEvent()
     {
         Vector3 carOnePosition = new Vector3(1576.75f, 52.06f, 2837.51f), carOneQuaternion = new Vector3(0, 90f, 0);
         Vector3 carTwoPosition = new Vector3(1649.75f, 52.06f, 2840.94f), carTwoQuaternion = new Vector3(0, 265f, 0);
@@ -60,12 +53,12 @@ public class CrashEvent
         yield break;
     }
 
-    private void OnPlayerCollisionEnter()
+    private static void OnPlayerCollisionEnter()
     {
         Vector3 crashEpicenter = new Vector3(1609.12f, 52.06f, 2839.1f);
         
         // limit spawning so vehicle won't spawn in crash event area
-        GleyTrafficSystem.Manager.ClearTrafficOnArea(crashEpicenter, 100.0f, playerVehicle);
+        GleyTrafficSystem.Manager.ClearTrafficOnArea(crashEpicenter, 100.0f, EventManager.Instance.PlayerVehicle);
         GleyTrafficSystem.Manager.SetTrafficDensity(1);
 
         Debug.Log(TAG + ": Traffic cleared.");

@@ -5,15 +5,15 @@ using UnityEngine;
 public class EventManager : MonoBehaviour
 {
     public const string TAG = "EventManager";
-    public bool timerTest = false;
+    [SerializeField] private bool timerTest = false;
+    [SerializeField] private float timeBeforeEvents = 3600f;
+    [SerializeField] private float timeBetweenNextEventUpper = 900f;
+    [SerializeField] private float timeBetweenNextEventLower = 300f;
     private static EventManager _instance;
-    private IndicatorEvent indicatorEvent;
-    private CrashEvent crashEvent;
-    private ControlLossEvent controlLossEvent;
     private bool initialized = false;
     private bool timerStarted = false;
 
-    public static EventManager Instance { get {return _instance; } }
+    public static EventManager Instance { get { return _instance; } }
     public GameObject PlayerVehicle { get; set; }
     public AutonomousVehicle PlayerVehicleAutonomous { get; set; }
     
@@ -21,9 +21,7 @@ public class EventManager : MonoBehaviour
     {
         PlayerVehicle = playerVehicle;
         PlayerVehicleAutonomous = PlayerVehicle.GetComponent<AutonomousVehicle>();
-        indicatorEvent = new IndicatorEvent(PlayerVehicleAutonomous.GetBatteryIndicator(), PlayerVehicleAutonomous.GetBatteryIndicatorSound());
-        crashEvent = new CrashEvent(PlayerVehicle, PlayerVehicleAutonomous);
-        controlLossEvent = new ControlLossEvent(PlayerVehicle.gameObject);
+        IndicatorEvent.Initialize();
         initialized = true;
         
         Debug.Log(TAG + ": Initialized");
@@ -36,27 +34,29 @@ public class EventManager : MonoBehaviour
     }
 
     // Manages event life cycle via time
-    public IEnumerator Timer()
+    private IEnumerator Timer()
     {
-        yield return new WaitForSeconds(3600 + Random.Range(300, 900));
-        controlLossEvent.ToggleControlLoss();
-        yield return new WaitForSeconds(Random.Range(300, 900));
-        indicatorEvent.ToggleIndicator();
-        yield return new WaitForSeconds(Random.Range(300, 900));
-        crashEvent.StartCrashEvent();
+        yield return new WaitForSeconds(timeBeforeEvents + Random.Range(timeBetweenNextEventLower, timeBetweenNextEventUpper));
+        yield return WaitForAutonomous();
+        ControlLossEvent.ToggleEvent();
+
+        yield return new WaitForSeconds(Random.Range(timeBetweenNextEventLower, timeBetweenNextEventUpper));
+        yield return WaitForAutonomous();
+        IndicatorEvent.ToggleEvent();
+
+        yield return new WaitForSeconds(Random.Range(timeBetweenNextEventLower, timeBetweenNextEventUpper));
+        yield return WaitForAutonomous();
+        CrashEvent.StartEvent();
+
+        yield return new WaitForSeconds(Random.Range(timeBetweenNextEventLower, timeBetweenNextEventUpper));
+        yield return WaitForAutonomous();
+        MergeFailEvent.StartEvent();
+
         yield return null;
     }
 
-    // For debugging purposes
-    public IEnumerator TimerTest()
-    {
-        yield return new WaitForSeconds(10 + Random.Range(5, 10));
-        controlLossEvent.ToggleControlLoss();
-        yield return new WaitForSeconds(Random.Range(5, 10));
-        indicatorEvent.ToggleIndicator();
-        yield return new WaitForSeconds(Random.Range(5, 10));
-        crashEvent.StartCrashEvent();
-        yield return null;
+    private IEnumerator WaitForAutonomous(){
+        while (!PlayerVehicleAutonomous.IsInAutonomous) yield return null;
     }
 
     private void Awake()
@@ -79,25 +79,30 @@ public class EventManager : MonoBehaviour
         // if (!timerStarted)
         // {
         //     timerStarted = true;
-        //     StartCoroutine(timerTest ? TimerTest() : Timer());
+        //     StartCoroutine(Timer());
         // }
 
-        if (Input.GetKeyDown(KeyCode.Alpha5))
+        if (Input.GetKeyDown(KeyCode.Keypad1))
         {
-            controlLossEvent.ToggleControlLoss(); // sets random waypoints for autonomous vehicle to emulate control loss
+            ControlLossEvent.ToggleEvent(); // sets random waypoints for autonomous vehicle to emulate control loss
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha6))
+        if (Input.GetKeyDown(KeyCode.Keypad2))
         {
-            indicatorEvent.ToggleIndicator(); // toggles the indicator event
+            IndicatorEvent.ToggleEvent(); // toggles the indicator event
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha7))
+        if (Input.GetKeyDown(KeyCode.Keypad3))
         {
-            crashEvent.StartCrashEvent(); // spawns car to crash at crash event location
+            CrashEvent.StartEvent(); // spawns car to crash at crash event location
+        }
+
+        if (Input.GetKeyDown(KeyCode.Keypad4))
+        {
+            MergeFailEvent.StartEvent(); // spawns car to crash at crash event location
         }
         
-        indicatorEvent.UpdateIndicator();
-        controlLossEvent.UpdateControlLoss();
+        IndicatorEvent.UpdateIndicator();
+        ControlLossEvent.UpdateControlLoss();
     }
 }

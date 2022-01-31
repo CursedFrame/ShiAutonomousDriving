@@ -2,28 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class IndicatorEvent
+public static class IndicatorEvent
 {
     public const string TAG = "IndicatorEvent";
     private const float blinkTime = 0.5f;
-    private float currentTime;    
-    private GameObject indicator;
-    private AudioSource indicatorBeep;
-    private bool indicatorOn = false;
+    private static float currentTime;    
+    private static GameObject indicator;
+    private static AudioSource indicatorBeep;
+    private static bool indicatorOn = false;
 
-    public IndicatorEvent(GameObject indicator, AudioSource indicatorBeep)
+    public static void Initialize()
     {
-        this.indicator = indicator;
-        this.indicatorBeep = indicatorBeep;
+        indicator = EventManager.Instance.PlayerVehicleAutonomous.GetBatteryIndicator();
+        indicatorBeep = EventManager.Instance.PlayerVehicleAutonomous.GetBatteryIndicatorSound();
     }
 
-    public void ToggleIndicator()
+    public static void ToggleEvent()
     {
         if (indicatorOn) indicator.SetActive(false);
         indicatorOn = !indicatorOn;
     }
 
-    public void UpdateIndicator()
+    public static void UpdateIndicator()
     {
         if (indicatorOn)
         {

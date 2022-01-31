@@ -3,21 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 using GleyTrafficSystem;
 
-public class MergeFailEvent
+public static class MergeFailEvent
 {
     public const string TAG = "MergeFailEvent";
-    private static readonly Vector3 mergeFailEventPosition = new Vector3(2536.88f, 53.1f, 2005.05f);
-    private AutonomousVehicle playerVehicle;
 
-    public MergeFailEvent(AutonomousVehicle playerVehicle)
+    public static void StartEvent()
     {
-        this.playerVehicle = playerVehicle;
+        Vector3 mergeFailStartPosition = new Vector3(2537.32f, 52.06f, 1898.08f);
+
+        // start pathing job to event location
+        EventManager.Instance.StartChildCoroutine(EventManager.Instance.PlayerVehicleAutonomous.Pathing(TrafficManager.Instance.GetClosestForwardWaypoint(
+                EventManager.Instance.PlayerVehicle.gameObject, EventManager.Instance.PlayerVehicleAutonomous.GetForwardPoint().position), 
+                GleyTrafficSystem.Manager.GetClosestWaypoint(mergeFailStartPosition), StartMergeFail));
     }
 
-    public void StartCrashEvent()
+    private static void StartMergeFail()
     {
-        // start pathing job to event location
-        EventManager.Instance.StartChildCoroutine(playerVehicle.Pathing(TrafficManager.Instance.GetClosestForwardWaypoint(
-                playerVehicle.gameObject, playerVehicle.GetForwardPoint().position), GleyTrafficSystem.Manager.GetClosestWaypoint(mergeFailEventPosition)));
+        Vector3 mergeFailEndPosition = new Vector3(2533.7f, 52.06f, 1825.7f);
+        
+        GleyTrafficSystem.Manager.SetNextWaypoint(EventManager.Instance.PlayerVehicle, GleyTrafficSystem.Manager.GetClosestWaypoint(mergeFailEndPosition));
     }
 }
