@@ -30,7 +30,7 @@ MonoBehaviour:
       viewLanes: 0
       viewWaypoints: 1
       viewLaneChanges: 0
-    waypointDistance: 4
+    waypointDistance: 2
   editRoadSave:
     viewRoadsSettings:
       viewLanes: 0
@@ -97,7 +97,8 @@ MonoBehaviour:
   speedRoutesSave:
     routesColor:
     - {r: 1, g: 1, b: 1, a: 1}
-    active: 01
+    - {r: 1, g: 1, b: 1, a: 1}
+    active: 0100
   carRoutesSave:
     routesColor:
     - {r: 1, g: 1, b: 1, a: 1}
