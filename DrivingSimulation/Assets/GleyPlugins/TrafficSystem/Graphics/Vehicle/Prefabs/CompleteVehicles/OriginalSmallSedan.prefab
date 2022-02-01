@@ -160,7 +160,7 @@ MonoBehaviour:
   vehicleType: 0
   maxSuspension: 0
   suspensionPosition: 0.5
-  maxSteer: 30
+  maxSteer: 50
   minPossibleSpeed: 20
   maxPossibleSpeed: 90
   accelerationTime: 10
