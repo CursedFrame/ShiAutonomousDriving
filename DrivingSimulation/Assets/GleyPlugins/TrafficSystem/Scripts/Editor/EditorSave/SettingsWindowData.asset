@@ -28,7 +28,7 @@ MonoBehaviour:
   connectRoadsSave:
     viewRoadsSettings:
       viewLanes: 0
-      viewWaypoints: 1
+      viewWaypoints: 0
       viewLaneChanges: 0
     waypointDistance: 2
   editRoadSave:

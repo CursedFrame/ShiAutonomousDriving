@@ -27,7 +27,7 @@ namespace GleyTrafficSystem
         public Pathfinding pathfinding;
 
         private static TrafficComponent _instance;
-        public static TrafficComponent Instance { get {return _instance; } }
+        public static TrafficComponent Instance { get { return _instance; } }
         private void Awake()
         {
             if (_instance != null && _instance != this)
