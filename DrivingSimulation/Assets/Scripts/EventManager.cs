@@ -99,7 +99,7 @@ public class EventManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Keypad4))
         {
-            MergeFailEvent.StartEvent(); // spawns car to crash at crash event location
+            MergeFailEvent.StartEvent(); // moves car to merge fail event location
         }
         
         IndicatorEvent.UpdateIndicator();

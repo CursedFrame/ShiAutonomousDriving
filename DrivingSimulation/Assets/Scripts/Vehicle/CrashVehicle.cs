@@ -11,6 +11,7 @@ public class CrashVehicle : MonoBehaviour
     [SerializeField] private BoxCollider boxCollider;
     [SerializeField] private ParticleSystem engineSmoke;
     [SerializeField] private float moveForce = 100.0f;
+    [SerializeField] private AudioSource audioSource;
 
     public DriveMode Mode { get; set; } = DriveMode.STOP;
 
@@ -72,6 +73,8 @@ public class CrashVehicle : MonoBehaviour
             Mode = DriveMode.DECELERATE;
             Debug.Log("Changed crash vehicle drive mode to: DECELERATE");
             vehicleLights.SetBlinker(BlinkType.Emergency);
+            CrashEvent.PlayCrashSound();
+            // audioSource.PlayDelayed(2.0f);
             StartCoroutine(DoDelayedRandom(() => {
                 engineSmoke.Play();
             }, 5.0f));

@@ -5831,7 +5831,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f3dc1f09858dfb64ba3205d18306a7df, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b6bef31c1d11c474aa238e4e0ea83588, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -16465,7 +16465,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1606757270840104, guid: 0ba239054da355345bc3be88be60af08, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1620073806927670, guid: 0ba239054da355345bc3be88be60af08, type: 3}
       propertyPath: m_Layer
@@ -16582,6 +16582,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114462316325742096, guid: 0ba239054da355345bc3be88be60af08,
         type: 3}
+      propertyPath: engine.volumeAtRest
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114462316325742096, guid: 0ba239054da355345bc3be88be60af08,
+        type: 3}
+      propertyPath: engine.volumeAtFullLoad
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114462316325742096, guid: 0ba239054da355345bc3be88be60af08,
+        type: 3}
       propertyPath: engineExtras.turboMaxRpm
       value: 6500
       objectReference: {fileID: 0}
@@ -16594,6 +16604,21 @@ PrefabInstance:
         type: 3}
       propertyPath: engine.volumeChangeRateDown
       value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 114462316325742096, guid: 0ba239054da355345bc3be88be60af08,
+        type: 3}
+      propertyPath: engineExtras.turboMaxVolume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114462316325742096, guid: 0ba239054da355345bc3be88be60af08,
+        type: 3}
+      propertyPath: engineExtras.transmissionMaxVolume
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114462316325742096, guid: 0ba239054da355345bc3be88be60af08,
+        type: 3}
+      propertyPath: engineExtras.transmissionMinVolume
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ba239054da355345bc3be88be60af08, type: 3}

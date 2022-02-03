@@ -6,6 +6,9 @@ using GleyTrafficSystem;
 public static class CrashEvent
 {
     public const string TAG = "CrashEvent";
+    private static bool crashSoundPlayed = false;
+    private static GameObject carOne;
+    private static GameObject carTwo;
 
     public static void StartEvent()
     {
@@ -28,6 +31,19 @@ public static class CrashEvent
         detectPlayerCollision.DeleteGameObjectOnEnter = true;
     }
 
+    public static void StopEvent(){
+        UnityEngine.Object.Destroy(carOne);
+        UnityEngine.Object.Destroy(carTwo);
+    }
+
+    public static void PlayCrashSound()
+    {
+        if (crashSoundPlayed) return;
+        Vector3 crashEpicenter = new Vector3(1609.05f, 53.07f, 2839.13f);
+        AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("Audio/Car_Crash"), 0.2f * crashEpicenter + 0.8f * EventManager.Instance.PlayerVehicle.transform.position);
+        crashSoundPlayed = true;
+    }
+
     private static void OnAtEventPosition()
     {
         EventManager.Instance.StartChildCoroutine(SpawnCrashEvent());
@@ -35,11 +51,12 @@ public static class CrashEvent
 
     private static IEnumerator SpawnCrashEvent()
     {
+        // car spawning
         Vector3 carOnePosition = new Vector3(1576.75f, 52.06f, 2837.51f), carOneQuaternion = new Vector3(0, 90f, 0);
         Vector3 carTwoPosition = new Vector3(1649.75f, 52.06f, 2840.94f), carTwoQuaternion = new Vector3(0, 265f, 0);
 
-        GameObject carOne = GameObject.Instantiate(Resources.Load<GameObject>("Prefabs/CrashVehicles/CrashVehicle_Blue"), carOnePosition, Quaternion.Euler(carOneQuaternion));
-        GameObject carTwo = GameObject.Instantiate(Resources.Load<GameObject>("Prefabs/CrashVehicles/CrashVehicle_Yellow"), carTwoPosition, Quaternion.Euler(carTwoQuaternion));
+        carOne = GameObject.Instantiate(Resources.Load<GameObject>("Prefabs/CrashVehicles/CrashVehicle_Blue"), carOnePosition, Quaternion.Euler(carOneQuaternion));
+        carTwo = GameObject.Instantiate(Resources.Load<GameObject>("Prefabs/CrashVehicles/CrashVehicle_Yellow"), carTwoPosition, Quaternion.Euler(carTwoQuaternion));
 
         yield return new WaitForSeconds(1); // waits for cars to spawn and be in position
 

@@ -10,6 +10,7 @@ public static class IndicatorEvent
     private static GameObject indicator;
     private static AudioSource indicatorBeep;
     private static bool indicatorOn = false;
+    private static bool longIndicatorBeep = false;
 
     public static void Initialize()
     {
@@ -19,7 +20,14 @@ public static class IndicatorEvent
 
     public static void ToggleEvent()
     {
-        if (indicatorOn) indicator.SetActive(false);
+        if (indicatorOn) 
+        {
+            indicator.SetActive(false);
+        }
+        else if (longIndicatorBeep)
+        {
+            indicatorBeep.Play();
+        }
         indicatorOn = !indicatorOn;
     }
 
@@ -38,7 +46,7 @@ public static class IndicatorEvent
                 else 
                 {
                     indicator.SetActive(true);
-                    indicatorBeep.Play();
+                     if (longIndicatorBeep) indicatorBeep.Play();
                 }
             }
         }
