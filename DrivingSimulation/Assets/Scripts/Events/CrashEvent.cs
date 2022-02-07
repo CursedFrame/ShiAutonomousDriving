@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using GleyTrafficSystem;
 
@@ -31,7 +32,13 @@ public static class CrashEvent
         detectPlayerCollision.DeleteGameObjectOnEnter = true;
     }
 
-    public static void StopEvent(){
+    public static void StopEvent()
+    {
+        EventManager.Instance.StopWatch(TAG);
+    }
+
+    public static void DisposeEvent()
+    {
         UnityEngine.Object.Destroy(carOne);
         UnityEngine.Object.Destroy(carTwo);
     }
@@ -66,7 +73,11 @@ public static class CrashEvent
         carOneCV.Mode = CrashVehicle.DriveMode.ACCELERATE;
         carTwoCV.Mode = CrashVehicle.DriveMode.ACCELERATE;
 
-        Debug.Log(TAG + ": Crash event started.");
+        EventManager.Instance.StartWatch(TAG);
+        
+        EventLogger.Write(TAG + ": Started.");
+        UnityEngine.Debug.Log(TAG + ": Crash event started.");
+
         yield break;
     }
 
@@ -78,6 +89,6 @@ public static class CrashEvent
         GleyTrafficSystem.Manager.ClearTrafficOnArea(crashEpicenter, 100.0f, EventManager.Instance.PlayerVehicle);
         GleyTrafficSystem.Manager.SetTrafficDensity(1);
 
-        Debug.Log(TAG + ": Traffic cleared.");
+        UnityEngine.Debug.Log(TAG + ": Traffic cleared.");
     }
 }

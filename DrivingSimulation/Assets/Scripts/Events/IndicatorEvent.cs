@@ -1,38 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public static class IndicatorEvent
 {
     public const string TAG = "IndicatorEvent";
     private const float blinkTime = 0.5f;
+    private static bool indicatorOn = false;
+    private static bool initialized = false;
     private static float currentTime;    
     private static GameObject indicator;
     private static AudioSource indicatorBeep;
-    private static bool indicatorOn = false;
-    private static bool longIndicatorBeep = false;
 
     public static void Initialize()
     {
         indicator = EventManager.Instance.PlayerVehicleAutonomous.GetBatteryIndicator();
         indicatorBeep = EventManager.Instance.PlayerVehicleAutonomous.GetBatteryIndicatorSound();
+        initialized = true;
     }
 
-    public static void ToggleEvent()
+    public static void StartEvent()
     {
-        if (indicatorOn) 
-        {
-            indicator.SetActive(false);
-        }
-        else if (longIndicatorBeep)
-        {
-            indicatorBeep.Play();
-        }
-        indicatorOn = !indicatorOn;
+        if (!initialized) return;
+
+        indicatorOn = true;
+        EventManager.Instance.StartWatch(TAG);
+    }
+
+    public static void StopEvent()
+    {
+        indicatorOn = false;
+        indicator.SetActive(false);
+        EventManager.Instance.StopWatch(TAG);
     }
 
     public static void UpdateIndicator()
     {
+        if (!initialized) return;
+
         if (indicatorOn)
         {
             if (Time.realtimeSinceStartup - currentTime > blinkTime)
@@ -46,7 +52,7 @@ public static class IndicatorEvent
                 else 
                 {
                     indicator.SetActive(true);
-                     if (longIndicatorBeep) indicatorBeep.Play();
+                    indicatorBeep.Play();
                 }
             }
         }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using GleyTrafficSystem;
 
@@ -17,9 +18,16 @@ public static class MergeFailEvent
                 GleyTrafficSystem.Manager.GetClosestWaypoint(mergeFailStartPosition), StartMergeFail));
     }
 
+    public static void StopEvent()
+    {
+        EventManager.Instance.StopWatch(TAG);
+    }
+
     private static void StartMergeFail()
     {
         Vector3 mergeFailEndPosition = new Vector3(2533.7f, 52.06f, 1825.7f);
+
+        EventManager.Instance.StartWatch(TAG);
         
         GleyTrafficSystem.Manager.SetNextWaypoint(EventManager.Instance.PlayerVehicle, GleyTrafficSystem.Manager.GetClosestWaypoint(mergeFailEndPosition));
     }
