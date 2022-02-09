@@ -5,14 +5,14 @@ using GleyTrafficSystem;
 using System.Diagnostics;
 using System;
 
-public static class ControlLossEvent
+public class ControlLossEvent : AutonomousEvent, UpdateEvent
 {
     public const string TAG = "ControlLossEvent";
     private const float waypointChangeTime = 1.0f;
-    private static bool controlLost = false;
-    private static float currentTime;
+    private bool controlLost = false;
+    private float currentTime;
 
-    public static void StartEvent()
+    public override void StartEvent()
     {
         controlLost = true;
 
@@ -20,14 +20,14 @@ public static class ControlLossEvent
         EventManager.Instance.StartWatch(TAG);
     }
 
-    public static void StopEvent()
+    public override void StopEvent()
     {
         controlLost = false;
 
         EventManager.Instance.StopWatch(TAG);
-    }
+    }    
 
-    public static void UpdateControlLoss(){
+    public void UpdateEvent(){
         if (controlLost)
         {
             if (Time.realtimeSinceStartup - currentTime > waypointChangeTime)

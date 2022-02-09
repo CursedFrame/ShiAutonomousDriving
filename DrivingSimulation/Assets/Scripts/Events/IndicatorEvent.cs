@@ -3,57 +3,45 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 
-public static class IndicatorEvent
+public class IndicatorEvent : AutonomousEvent, UpdateEvent
 {
     public const string TAG = "IndicatorEvent";
     private const float blinkTime = 0.5f;
-    private static bool indicatorOn = false;
-    private static bool initialized = false;
-    private static float currentTime;    
-    private static GameObject indicator;
-    private static AudioSource indicatorBeep;
+    private float currentTime;    
+    private GameObject indicator;
+    private AudioSource indicatorBeep;
 
-    public static void Initialize()
+    public IndicatorEvent(GameObject indicator, AudioSource indicatorBeep)
     {
-        indicator = EventManager.Instance.PlayerVehicleAutonomous.GetBatteryIndicator();
-        indicatorBeep = EventManager.Instance.PlayerVehicleAutonomous.GetBatteryIndicatorSound();
-        initialized = true;
+        this.indicator = indicator;
+        this.indicatorBeep = indicatorBeep;
     }
 
-    public static void StartEvent()
+    public override void StartEvent()
     {
-        if (!initialized) return;
-
-        indicatorOn = true;
         EventManager.Instance.StartWatch(TAG);
     }
 
-    public static void StopEvent()
+    public override void StopEvent()
     {
-        indicatorOn = false;
         indicator.SetActive(false);
         EventManager.Instance.StopWatch(TAG);
     }
 
-    public static void UpdateIndicator()
+    public void UpdateEvent()
     {
-        if (!initialized) return;
-
-        if (indicatorOn)
+        if (Time.realtimeSinceStartup - currentTime > blinkTime)
         {
-            if (Time.realtimeSinceStartup - currentTime > blinkTime)
-            {
-                currentTime = Time.realtimeSinceStartup;
+            currentTime = Time.realtimeSinceStartup;
 
-                if (indicator.activeSelf)
-                {
-                    indicator.SetActive(false);
-                } 
-                else 
-                {
-                    indicator.SetActive(true);
-                    indicatorBeep.Play();
-                }
+            if (indicator.activeSelf)
+            {
+                indicator.SetActive(false);
+            } 
+            else 
+            {
+                indicator.SetActive(true);
+                indicatorBeep.Play();
             }
         }
     }

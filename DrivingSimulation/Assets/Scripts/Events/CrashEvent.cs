@@ -4,14 +4,14 @@ using System.Diagnostics;
 using UnityEngine;
 using GleyTrafficSystem;
 
-public static class CrashEvent
+public class CrashEvent : AutonomousEvent
 {
     public const string TAG = "CrashEvent";
     private static bool crashSoundPlayed = false;
-    private static GameObject carOne;
-    private static GameObject carTwo;
+    private GameObject carOne;
+    private GameObject carTwo;
 
-    public static void StartEvent()
+    public override void StartEvent()
     {
         Vector3 crashEventPosition = new Vector3(1609.96f, 52.06f, 2793.8f);
         Vector3 despawnDetectPosition = new Vector3(1610.65f, 52.06f, 2741.06f);
@@ -20,7 +20,8 @@ public static class CrashEvent
         EventManager.Instance.StartChildCoroutine(EventManager.Instance.PlayerVehicleAutonomous.Pathing(TrafficManager.Instance.GetClosestForwardWaypoint(
                 EventManager.Instance.PlayerVehicle.gameObject, EventManager.Instance.PlayerVehicleAutonomous.GetForwardPoint().position), 
                 GleyTrafficSystem.Manager.GetClosestWaypoint(crashEventPosition), OnAtEventPosition));
-        
+        EventLogger.Log(TAG, "Vehicle pathing to crash event location.");
+
         // intialize player detection object for despawning other traffic vehicles
         GameObject despawnDetect = new GameObject("DespawnDetect");
         BoxCollider collider = despawnDetect.AddComponent<BoxCollider>();
@@ -32,15 +33,9 @@ public static class CrashEvent
         detectPlayerCollision.DeleteGameObjectOnEnter = true;
     }
 
-    public static void StopEvent()
+    public override void StopEvent()
     {
         EventManager.Instance.StopWatch(TAG);
-    }
-
-    public static void DisposeEvent()
-    {
-        UnityEngine.Object.Destroy(carOne);
-        UnityEngine.Object.Destroy(carTwo);
     }
 
     public static void PlayCrashSound()
@@ -51,12 +46,18 @@ public static class CrashEvent
         crashSoundPlayed = true;
     }
 
-    private static void OnAtEventPosition()
+    public void DisposeEvent()
+    {
+        UnityEngine.Object.Destroy(carOne);
+        UnityEngine.Object.Destroy(carTwo);
+    }
+
+    private void OnAtEventPosition()
     {
         EventManager.Instance.StartChildCoroutine(SpawnCrashEvent());
     }
 
-    private static IEnumerator SpawnCrashEvent()
+    private IEnumerator SpawnCrashEvent()
     {
         // car spawning
         Vector3 carOnePosition = new Vector3(1576.75f, 52.06f, 2837.51f), carOneQuaternion = new Vector3(0, 90f, 0);
@@ -75,13 +76,13 @@ public static class CrashEvent
 
         EventManager.Instance.StartWatch(TAG);
         
-        EventLogger.Write(TAG + ": Started.");
+        EventLogger.Log(TAG, "Crash vehicles now spawned and moving toward each other.");
         UnityEngine.Debug.Log(TAG + ": Crash event started.");
 
         yield break;
     }
 
-    private static void OnPlayerCollisionEnter()
+    private void OnPlayerCollisionEnter()
     {
         Vector3 crashEpicenter = new Vector3(1609.12f, 52.06f, 2839.1f);
         

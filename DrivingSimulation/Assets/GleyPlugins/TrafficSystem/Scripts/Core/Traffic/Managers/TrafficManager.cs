@@ -581,6 +581,7 @@ namespace GleyTrafficSystem
             {
                 if (vehicleRigidbody[i].gameObject == vehicle)
                 {
+                    waypointManager.RemoveTargetWaypoint(GetVehicleIndex(vehicle));
                     ignoreVehicle[i] = true;
                 }
             }

@@ -4,11 +4,11 @@ using System.Diagnostics;
 using UnityEngine;
 using GleyTrafficSystem;
 
-public static class MergeFailEvent
+public class MergeFailEvent : AutonomousEvent
 {
     public const string TAG = "MergeFailEvent";
 
-    public static void StartEvent()
+    public override void StartEvent()
     {
         Vector3 mergeFailStartPosition = new Vector3(2537.32f, 52.06f, 1898.08f);
 
@@ -16,14 +16,15 @@ public static class MergeFailEvent
         EventManager.Instance.StartChildCoroutine(EventManager.Instance.PlayerVehicleAutonomous.Pathing(TrafficManager.Instance.GetClosestForwardWaypoint(
                 EventManager.Instance.PlayerVehicle.gameObject, EventManager.Instance.PlayerVehicleAutonomous.GetForwardPoint().position), 
                 GleyTrafficSystem.Manager.GetClosestWaypoint(mergeFailStartPosition), StartMergeFail));
+        EventLogger.Log(TAG, "Vehicle pathing to merge fail event location.");
     }
 
-    public static void StopEvent()
+    public override void StopEvent()
     {
         EventManager.Instance.StopWatch(TAG);
     }
 
-    private static void StartMergeFail()
+    private void StartMergeFail()
     {
         Vector3 mergeFailEndPosition = new Vector3(2533.7f, 52.06f, 1825.7f);
 

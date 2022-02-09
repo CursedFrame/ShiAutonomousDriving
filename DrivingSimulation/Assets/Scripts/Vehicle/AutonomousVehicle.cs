@@ -37,7 +37,7 @@ public class AutonomousVehicle : MonoBehaviour
     {
         GleyTrafficSystem.Manager.SetNextWaypoint(this.gameObject, waypoint);
         Debug.Log(waypoint.name);
-        while (Vector3.Distance(this.gameObject.transform.position, waypoint.position) > 5.0f) yield return null;
+        while (Vector3.Distance(this.gameObject.transform.position, waypoint.position) > 1.0f) yield return null;
         yield break;
     }
 
@@ -59,7 +59,7 @@ public class AutonomousVehicle : MonoBehaviour
         {
             if (!IsInAutonomous)
             {
-                GleyTrafficSystem.Manager.SetTrafficVehicleToClosestForwardWaypoint(this.gameObject, forwardPoint.position);
+                GleyTrafficSystem.Manager.SetTrafficVehicleToClosestForwardWaypoint(this.gameObject, transform.forward);
                 GleyTrafficSystem.Manager.StartVehicleDriving(this.gameObject);
             } 
             else 
@@ -71,7 +71,7 @@ public class AutonomousVehicle : MonoBehaviour
             IsInAutonomous = !IsInAutonomous;
         }
 
-        if (IsInAutonomous && (Mathf.Abs(prevXAxis - xAxis) > 0.5f || Mathf.Abs(prevYAxis - yAxis) > 0.5f))
+        if (IsInAutonomous && (Mathf.Abs(prevXAxis - xAxis) > 0.1f || Mathf.Abs(prevYAxis - yAxis) > 0.1f))
         {
             GleyTrafficSystem.Manager.StopVehicleDriving(this.gameObject);
             EventManager.Instance.HandleAutonomousDisabled();
