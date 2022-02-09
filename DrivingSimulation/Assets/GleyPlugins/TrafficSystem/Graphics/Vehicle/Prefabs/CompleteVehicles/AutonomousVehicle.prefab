@@ -13736,7 +13736,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8766852851978175122
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16583,6 +16583,11 @@ PrefabInstance:
     - target: {fileID: 114462316325742096, guid: 0ba239054da355345bc3be88be60af08,
         type: 3}
       propertyPath: engine.volumeAtRest
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114462316325742096, guid: 0ba239054da355345bc3be88be60af08,
+        type: 3}
+      propertyPath: wheels.skidMaxVolume
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114462316325742096, guid: 0ba239054da355345bc3be88be60af08,

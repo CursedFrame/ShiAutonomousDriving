@@ -3,7 +3,7 @@
   "Assemblies": [
     {
       "FullName": "Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-      "LastWriteTime": "2021-12-29T23:20:22.9369783Z"
+      "LastWriteTime": "2022-02-09T20:42:28.5841928Z"
     },
     {
       "FullName": "mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
@@ -15,7 +15,7 @@
     },
     {
       "FullName": "CityGen3D.EditorExtension, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-      "LastWriteTime": "2021-12-12T22:31:05.5381126Z"
+      "LastWriteTime": "2022-02-09T20:41:56.9227214Z"
     },
     {
       "FullName": "mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
@@ -27,15 +27,15 @@
     },
     {
       "FullName": "Unity.Mathematics, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-      "LastWriteTime": "2021-12-29T23:20:23.014851Z"
+      "LastWriteTime": "2022-02-09T20:42:28.5891194Z"
     },
     {
       "FullName": "CityGen3D, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null",
-      "LastWriteTime": "2021-12-12T22:31:05.5445601Z"
+      "LastWriteTime": "2022-02-09T20:41:56.926714Z"
     },
     {
       "FullName": "Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-      "LastWriteTime": "2022-02-09T03:33:16.7677041Z"
+      "LastWriteTime": "2022-02-09T21:25:03.7779967Z"
     }
   ],
   "Functions": [
@@ -60,22 +60,9 @@
       ]
     },
     {
-      "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<CityGen3D.EditorExtension.Generator/SpherecastMapJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
-      "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "2946af34b2f1ff7c8b7a21bc0e949d9f",
-      "LinkName": "F31FF4D8DD1DC61B",
-      "AssemblyDependencyIndices": [
-        2,
-        3,
-        4,
-        1,
-        5
-      ]
-    },
-    {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<CityGen3D.EditorExtension.Generator/RaycastMapJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "2a39136b9c8fd6425a7f81c07543d371",
+      "ModuleHash": "62fb9bf5951473d10ba5db8c6ed32bcb",
       "LinkName": "A635E3F9A55EF7B8",
       "AssemblyDependencyIndices": [
         2,
@@ -87,9 +74,22 @@
       ]
     },
     {
+      "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<CityGen3D.EditorExtension.Generator/SpherecastMapJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
+      "ModuleOptionsHash": 11834165633931345063,
+      "ModuleHash": "ab3242887a4446b17b3c8b961a975259",
+      "LinkName": "F31FF4D8DD1DC61B",
+      "AssemblyDependencyIndices": [
+        2,
+        3,
+        4,
+        1,
+        5
+      ]
+    },
+    {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<CityGen3D.EditorExtension.Generator/SurfaceResultsJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "a05a925d954610e0129b0708212e2bcf",
+      "ModuleHash": "bec5eb33a6e16586c6ddc924120e0adc",
       "LinkName": "F3F67E4C9CB15DE8",
       "AssemblyDependencyIndices": [
         2,
@@ -102,7 +102,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<CityGen3D.EditorExtension.Generator/CollisionResultsJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "5f1471da5840aa1684850373366de7dc",
+      "ModuleHash": "7ce1f896081be3bc74ecf554cb3fff0c",
       "LinkName": "03D6BE749CDFFFB4",
       "AssemblyDependencyIndices": [
         2,
@@ -115,7 +115,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<CityGen3D.EditorExtension.Generator/TerrainResultsJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "f66f3c96c4b3b0f3020800aa36d1e170",
+      "ModuleHash": "c95b93340698da98284167790b58e7f7",
       "LinkName": "0EB360769685E253",
       "AssemblyDependencyIndices": [
         2,
@@ -129,7 +129,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<CityGen3D.EditorExtension.Generator/TerrainAltitudeJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "aebc0167ddaaf41fb8783c913aa6b1e7",
+      "ModuleHash": "4f85fd0d8669deef0a1b955c2f831b33",
       "LinkName": "DBCEB9ABCA7DDAF5",
       "AssemblyDependencyIndices": [
         2,
@@ -142,7 +142,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<CityGen3D.EditorExtension.Generator/SpherecastColliderJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "cce4dfb0cc8690a98f9780e30bf9c203",
+      "ModuleHash": "a362bca27421a728e66b89b2a6be5af2",
       "LinkName": "E79D7679566BDE5B",
       "AssemblyDependencyIndices": [
         2,
@@ -155,7 +155,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<CityGen3D.EditorExtension.Generator/LevellingJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "a0939aa815533e62c7b46c09fafcbb8f",
+      "ModuleHash": "3a0ccf3649bfb68d86bda71b491529bc",
       "LinkName": "8912B2CF4DCB4981",
       "AssemblyDependencyIndices": [
         2,
@@ -168,7 +168,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<CityGen3D.EditorExtension.Highways/HighwayResultsJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "7dcc483721dbf3a5c1e67035e921ee12",
+      "ModuleHash": "b6acc97dce9c0cd7e47f0324bb5b1053",
       "LinkName": "ECCF3F00AAFF1253",
       "AssemblyDependencyIndices": [
         2,
@@ -181,7 +181,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<CityGen3D.EditorExtension.SplatMap/SelectTextureJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "96eea6fce54976f6b2c0cff693f7fe35",
+      "ModuleHash": "71b6b75deaf647d5dc8e202110b30bcb",
       "LinkName": "C33ED17DB746D15D",
       "AssemblyDependencyIndices": [
         2,
@@ -196,7 +196,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<GleyTrafficSystem.DriveJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "9a200d87a3fe5c84fd75f3d727cc1c12",
+      "ModuleHash": "3d0c3605270c93019fa2fa78dc395ef8",
       "LinkName": "5786E848FAAEE7A2",
       "AssemblyDependencyIndices": [
         2,
@@ -209,7 +209,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<GleyTrafficSystem.WheelJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "a7b64f5cf3bdc5e77a5500dba4f9593a",
+      "ModuleHash": "96b3b6c55769d955b25ec8e20ad45b39",
       "LinkName": "3C122607D82A47C2",
       "AssemblyDependencyIndices": [
         2,
@@ -222,7 +222,7 @@
     {
       "FullName": "System.Void UnityEngine.Jobs.IJobParallelForTransformExtensions/TransformParallelForLoopStruct`1<GleyTrafficSystem.UpdateTriggerJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "52577f438c73f1662c3e506b02b99e59",
+      "ModuleHash": "5a9677144e59f22a8bc9c059677b9c60",
       "LinkName": "CFEA11BD7AFC4DE6",
       "AssemblyDependencyIndices": [
         2,
@@ -235,7 +235,7 @@
     {
       "FullName": "System.Void UnityEngine.Jobs.IJobParallelForTransformExtensions/TransformParallelForLoopStruct`1<GleyTrafficSystem.UpdateWheelJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "e91b33f7552980ef89d39841ffadf309",
+      "ModuleHash": "7feea68f598c2e5e347882ceb2ac3c9d",
       "LinkName": "AD3AB413B35559A0",
       "AssemblyDependencyIndices": [
         2,

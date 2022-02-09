@@ -8,8 +8,6 @@ public class AutonomousVehicle : MonoBehaviour
     [SerializeField] private GameObject batteryIndicator;
     [SerializeField] private AudioSource batteryIndicatorSound;
     [SerializeField] private Transform forwardPoint;
-    private float prevXAxis;
-    private float prevYAxis;
     
     public bool IsInAutonomous { get; set; } = true;
     public GameObject GetBatteryIndicator(){ return batteryIndicator; }
@@ -45,16 +43,11 @@ public class AutonomousVehicle : MonoBehaviour
     {
         MoveTrafficSystem.Instance.Initialize(this.transform);
         EventManager.Instance.Initialize(this.gameObject);
-        prevXAxis = Input.GetAxis("Horizontal");
-        prevYAxis = Input.GetAxis("Vertical");
     }
 
     // Update is called once per frame
     private void Update()
     {
-        float xAxis = Input.GetAxis("Horizontal");
-        float yAxis = Input.GetAxis("Vertical");
-
         if (Input.GetKeyDown(KeyCode.Keypad9))
         {
             if (!IsInAutonomous)
@@ -71,16 +64,13 @@ public class AutonomousVehicle : MonoBehaviour
             IsInAutonomous = !IsInAutonomous;
         }
 
-        if (IsInAutonomous && (Mathf.Abs(prevXAxis - xAxis) > 0.1f || Mathf.Abs(prevYAxis - yAxis) > 0.1f))
+        if (IsInAutonomous && (Mathf.Abs(Input.GetAxis("Horizontal")) > 0.1f || Mathf.Abs(Input.GetAxis("Vertical")) > 0.1f))
         {
             GleyTrafficSystem.Manager.StopVehicleDriving(this.gameObject);
             EventManager.Instance.HandleAutonomousDisabled();
             
             IsInAutonomous = false;
         }
-
-        prevXAxis = xAxis;
-        prevYAxis = yAxis;
     }
 }
 
