@@ -294,6 +294,17 @@ namespace GleyTrafficSystem
 #endif
         }
 
+        /// <summary>
+        /// When this method is called, the vehicle passed as param is controlled by the traffic system 
+        /// until it is out of view and respawned
+        /// </summary>
+        /// <param name="vehicle"></param>
+        public static void StartPlayerVehicleDriving(GameObject vehicle)
+        {
+#if USE_GLEY_TRAFFIC
+            TrafficManager.Instance.StartPlayerVehicleDriving(vehicle);
+#endif
+        }
 
         /// <summary>
         /// If a vehicle sees a collider and that collider is destroyed from other script, trigger exit method is not fired, so it is needed 

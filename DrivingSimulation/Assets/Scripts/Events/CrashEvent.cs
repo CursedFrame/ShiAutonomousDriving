@@ -1,15 +1,18 @@
+using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 using GleyTrafficSystem;
 
-public class CrashEvent : AutonomousEvent
+public class CrashEvent : AutonomousEvent, UpdateEvent
 {
-    public const string TAG = "CrashEvent";
+    public override string Tag { get { return "CrashEvent"; } }
     private static bool crashSoundPlayed = false;
+    private static Vector3 crashEpicenter = new Vector3(1609.05f, 53.07f, 2839.13f);
     private GameObject carOne;
+    private BoxCollider carOneBody;
     private GameObject carTwo;
+    private BoxCollider carTwoBody;
+    private bool vehiclesVisible = false;
 
     public override void StartEvent()
     {
@@ -17,16 +20,16 @@ public class CrashEvent : AutonomousEvent
         Vector3 despawnDetectPosition = new Vector3(1610.65f, 52.06f, 2741.06f);
 
         // start pathing job to event location and spawn crash event via callback
-        EventManager.Instance.StartChildCoroutine(EventManager.Instance.PlayerVehicleAutonomous.Pathing(TrafficManager.Instance.GetClosestForwardWaypoint(
-                EventManager.Instance.PlayerVehicle.gameObject, EventManager.Instance.PlayerVehicleAutonomous.GetForwardPoint().position), 
-                GleyTrafficSystem.Manager.GetClosestWaypoint(crashEventPosition), OnAtEventPosition));
-        EventLogger.Log(TAG, "Vehicle pathing to crash event location.");
+        EventManager.Instance.PlayerVehicleAutonomous.StartPathing(TrafficManager.Instance.GetClosestForwardWaypoint(
+                EventManager.Instance.PlayerVehicle.gameObject, EventManager.Instance.PlayerVehicle.transform.forward), 
+                GleyTrafficSystem.Manager.GetClosestWaypoint(crashEventPosition), OnAtEventPosition);
+        EventLogger.Log(Tag, "Vehicle pathing to crash event location.");
 
         // intialize player detection object for despawning other traffic vehicles
         GameObject despawnDetect = new GameObject("DespawnDetect");
         BoxCollider collider = despawnDetect.AddComponent<BoxCollider>();
         collider.center = despawnDetectPosition;
-        collider.size = new Vector3(5f, 5f, 5f);
+        collider.size = new Vector3(6f, 6f, 6f);
         collider.isTrigger = true;
         DetectPlayerCollision detectPlayerCollision = despawnDetect.AddComponent<DetectPlayerCollision>();
         detectPlayerCollision.EnterAction = OnPlayerCollisionEnter;
@@ -35,13 +38,25 @@ public class CrashEvent : AutonomousEvent
 
     public override void StopEvent()
     {
-        EventManager.Instance.StopWatch(TAG);
+        EventManager.Instance.StopWatch();
+        EventManager.Instance.PlayerVehicleAutonomous.DisposePathing();
+    }
+
+    public void UpdateEvent()
+    {
+        if (!carOne || !carTwo || vehiclesVisible) return;
+
+        Plane[] planes = GeometryUtility.CalculateFrustumPlanes(GameMaster.Instance.MainCamera);
+        if (GeometryUtility.TestPlanesAABB(planes, carOneBody.bounds) || GeometryUtility.TestPlanesAABB(planes, carTwoBody.bounds))
+        {
+            vehiclesVisible = true;
+            EventLogger.Log(Tag, "One or more crash vehicles are visible.");
+        }
     }
 
     public static void PlayCrashSound()
     {
         if (crashSoundPlayed) return;
-        Vector3 crashEpicenter = new Vector3(1609.05f, 53.07f, 2839.13f);
         AudioSource.PlayClipAtPoint(Resources.Load<AudioClip>("Audio/Car_Crash"), 0.2f * crashEpicenter + 0.8f * EventManager.Instance.PlayerVehicle.transform.position);
         crashSoundPlayed = true;
     }
@@ -64,7 +79,9 @@ public class CrashEvent : AutonomousEvent
         Vector3 carTwoPosition = new Vector3(1649.75f, 52.06f, 2840.94f), carTwoQuaternion = new Vector3(0, 265f, 0);
 
         carOne = GameObject.Instantiate(Resources.Load<GameObject>("Prefabs/CrashVehicles/CrashVehicle_Blue"), carOnePosition, Quaternion.Euler(carOneQuaternion));
+        carOneBody = carOne.transform.GetComponentInChildren<BoxCollider>();
         carTwo = GameObject.Instantiate(Resources.Load<GameObject>("Prefabs/CrashVehicles/CrashVehicle_Yellow"), carTwoPosition, Quaternion.Euler(carTwoQuaternion));
+        carTwoBody = carTwo.transform.GetComponentInChildren<BoxCollider>();
 
         yield return new WaitForSeconds(1); // waits for cars to spawn and be in position
 
@@ -74,10 +91,15 @@ public class CrashEvent : AutonomousEvent
         carOneCV.Mode = CrashVehicle.DriveMode.ACCELERATE;
         carTwoCV.Mode = CrashVehicle.DriveMode.ACCELERATE;
 
-        EventManager.Instance.StartWatch(TAG);
+        EventManager.Instance.StartWatch();
         
-        EventLogger.Log(TAG, "Crash vehicles now spawned and moving toward each other.");
-        UnityEngine.Debug.Log(TAG + ": Crash event started.");
+        float distanceToCrashMeters = Vector3.Distance(crashEpicenter, EventManager.Instance.PlayerVehicle.transform.position);
+        float distanceToCrashFeet = distanceToCrashMeters * 3.28084f;
+
+        EventLogger.Log(Tag, String.Format("Distance from vehicle to crash epicenter: {0} m / {1} ft", distanceToCrashMeters, distanceToCrashFeet));
+        EventLogger.Log(Tag, "Crash vehicles now spawned and moving toward each other.");
+        
+        UnityEngine.Debug.Log(Tag + ": Crash event started.");
 
         yield break;
     }
@@ -90,6 +112,6 @@ public class CrashEvent : AutonomousEvent
         GleyTrafficSystem.Manager.ClearTrafficOnArea(crashEpicenter, 100.0f, EventManager.Instance.PlayerVehicle);
         GleyTrafficSystem.Manager.SetTrafficDensity(1);
 
-        UnityEngine.Debug.Log(TAG + ": Traffic cleared.");
+        UnityEngine.Debug.Log(Tag + ": Traffic cleared.");
     }
 }

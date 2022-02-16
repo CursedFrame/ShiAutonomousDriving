@@ -9,7 +9,7 @@ public class Pathfinding
     private int numNodes;
     private Dictionary<Waypoint, Node> nodes;
 
-    private class Node : FastPriorityQueueNode 
+    private class Node
     {
         public Waypoint waypoint;
         public Node parent;
@@ -44,6 +44,8 @@ public class Pathfinding
                 node.neighbors[i] = nodes[waypoints[node.waypoint.neighbors[i]]];
             }
         }
+
+        Debug.Log(TAG + ": Pathfinding ready.");
     }
 
     // f(n) = g(n) + h(n)
@@ -51,7 +53,7 @@ public class Pathfinding
     public List<Waypoint> AStar(Waypoint startWaypoint, Waypoint endWaypoint)
     {
         Node start = nodes[startWaypoint], end = nodes[endWaypoint];
-        FastPriorityQueue<Node> openList = new FastPriorityQueue<Node>(numNodes);
+        SimplePriorityQueue<Node> openList = new SimplePriorityQueue<Node>();
         start.g = 0;
         start.f = start.g + GetDistanceBetween(start, end);
         openList.Enqueue(start, start.f);
@@ -59,8 +61,8 @@ public class Pathfinding
         while (openList.Count > 0)
         {
             Node current = openList.First;
-            if (current == end) return GetPath(end);
             openList.Dequeue();
+            if (current == end) break;
 
             foreach (Node neighbor in current.neighbors)
             {
@@ -80,7 +82,20 @@ public class Pathfinding
             }
         }
 
-        return null;
+        // Extra disposal if needed
+        openList.Clear();
+
+        List<Waypoint> path = GetPath(end);
+
+        // Reset nodes for later pathfinding usage
+        foreach (Node node in nodes.Values)
+        {
+            node.parent = null;
+            node.g = float.MaxValue;
+            node.f = float.MaxValue;
+        }
+        
+        return path;
     }
 
     private List<Waypoint> GetPath(Node end)
@@ -95,7 +110,8 @@ public class Pathfinding
             current = current.parent;
         }
 
-        Debug.Log("Found optimal path of length " + path.Count);
+        Debug.Log(TAG + ": Found optimal path of length " + path.Count);
+
         return path;
     }
 

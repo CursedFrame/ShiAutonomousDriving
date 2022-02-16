@@ -1,5 +1,6 @@
 ﻿#if USE_GLEY_TRAFFIC
 using System.Collections.Generic;
+using System.Collections;
 using Unity.Collections;
 using Unity.Jobs;
 using UnityEngine;
@@ -106,6 +107,8 @@ namespace GleyTrafficSystem
         private int totalWheels;
         private int activeSquaresLevel;
         private int activeCameraIndex;
+        private int playerVehicleIndex;
+        private bool delayPlayerVehicle = false;
         private bool initialized;
 #pragma warning disable 0649
         private bool drawBodyForces;
@@ -581,7 +584,6 @@ namespace GleyTrafficSystem
             {
                 if (vehicleRigidbody[i].gameObject == vehicle)
                 {
-                    waypointManager.RemoveTargetWaypoint(GetVehicleIndex(vehicle));
                     ignoreVehicle[i] = true;
                 }
             }
@@ -601,6 +603,23 @@ namespace GleyTrafficSystem
             }
         }
 
+        public void StartPlayerVehicleDriving(GameObject vehicle)
+        {
+            if (!initialized)
+                return;
+
+            for (int i = 0; i < vehicleRigidbody.Length; i++)
+            {
+                if (vehicleRigidbody[i].gameObject == vehicle)
+                {
+                    playerVehicleIndex = i;
+                    ignoreVehicle[i] = false;
+                    delayPlayerVehicle = true;
+                    StartCoroutine(DelayPlayerVehicleJobActions(vehicle));
+                }
+            }
+        }
+
 
         public void SetTrafficVehicleToClosestForwardWaypoint(GameObject vehicle, Vector3 forwardPoint)
         {
@@ -613,7 +632,6 @@ namespace GleyTrafficSystem
             int waypointIndex = waypointManager.GetClosestForwardWaypoint(vehiclePosition[vehicleIndex], vehicleType[vehicleIndex], forwardPoint);
             if (waypointIndex == -1) return;
 
-            waypointManager.RemoveTargetWaypoint(vehicleIndex);
             waypointManager.SetNextWaypoint(vehicleIndex, waypointIndex);
         }
 
@@ -698,6 +716,13 @@ namespace GleyTrafficSystem
             } else {
                 return waypointManager.GetWaypoint(waypointIndex);
             }
+        }
+
+        private IEnumerator DelayPlayerVehicleJobActions(GameObject vehicle)
+        {
+            SetTrafficVehicleToClosestForwardWaypoint(vehicle, vehicle.transform.forward);
+            yield return new WaitForSeconds(0.25f);
+            delayPlayerVehicle = false;
         }
 
 
@@ -894,6 +919,8 @@ namespace GleyTrafficSystem
             //make vehicle actions based on job results
             for (int i = 0; i < nrOfVehicles; i++)
             {
+                if (delayPlayerVehicle && playerVehicleIndex == i) continue; 
+
                 if (!vehicleRigidbody[i].IsSleeping())
                 {
                     int groundedWheels = 0;

@@ -19,17 +19,17 @@ public static class EventLogger
 
     public static void Log(string tag, string line)
     {
-        Write(tag + ": " + line);
+        Write(String.Format("{0}: {1}", tag, line));
     }
 
-    public static void Write(string line)
+    private static void Write(string line)
     {
         if (!initialized) return;
 
         DateTime dateTime = DateTime.Now;
         CultureInfo culture = new CultureInfo(CULTURE);
         using StreamWriter file = new StreamWriter(filePath, append: true);
-        file.WriteLine(dateTime.ToString(culture) + ": " + line);
+        file.WriteLine(String.Format("{0}: {1}", dateTime.ToString(culture), line));
         file.Close();
     }
 }

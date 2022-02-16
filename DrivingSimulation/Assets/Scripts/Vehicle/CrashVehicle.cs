@@ -74,7 +74,6 @@ public class CrashVehicle : MonoBehaviour
             Debug.Log("Changed crash vehicle drive mode to: DECELERATE");
             vehicleLights.SetBlinker(BlinkType.Emergency);
             CrashEvent.PlayCrashSound();
-            // audioSource.PlayDelayed(2.0f);
             StartCoroutine(DoDelayedRandom(() => {
                 engineSmoke.Play();
             }, 5.0f));

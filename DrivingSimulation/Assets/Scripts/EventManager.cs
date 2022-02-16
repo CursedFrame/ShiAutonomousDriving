@@ -16,7 +16,7 @@ public class EventManager : MonoBehaviour
     private List<AutonomousEvent> events;
     private Stopwatch timeElapsed;
     private UpdateEvent updateEvent;
-    private int currentDebugIndex = 0;
+    private int currentIndex;
     private bool initialized = false;
     private bool eventInProgress = false;
     
@@ -77,48 +77,53 @@ public class EventManager : MonoBehaviour
     }
 
     // Start stopwatch
-    public void StartWatch(string eventTag)
+    public void StartWatch()
     {
         if (!initialized) return;
         
-        EventLogger.Log(eventTag, "Event and stopwatch started.");
+        EventLogger.Log(events[currentIndex].Tag, "Event and stopwatch started.");
         timeElapsed.Start();
     }
 
     // Stop and reset stopwatch
-    public void StopWatch(string eventTag)
+    public void StopWatch()
     {
         if (!initialized) return;
 
         timeElapsed.Stop();
         TimeSpan ts = timeElapsed.Elapsed;
-        EventLogger.Log(eventTag, "Event stopped.");
-        EventLogger.Log(eventTag, "Driver took " + ts.Seconds + " seconds and " + ts.Milliseconds + " milliseconds to take control of autonomous vehicle.");
+        EventLogger.Log(events[currentIndex].Tag, "Event stopped.");
+        EventLogger.Log(events[currentIndex].Tag, String.Format("Driver took {0} seconds and {1} milliseconds to take control of autonomous vehicle.", ts.Seconds, ts.Milliseconds));
         timeElapsed.Reset();
     }
 
     // Stop stopwatch and queue next event when user attempts to take control of vehicle
-    public void HandleAutonomousDisabled()
+    public void HandleAutonomousDisabled(string driverControlPreference = "NONE")
     {
-        if (!initialized || !eventInProgress) return;
+        if (!initialized || !eventInProgress)
+        {
+            EventLogger.Log(AutonomousVehicle.TAG, String.Format("Driver used the {0} to take over the vehicle outside of event.", driverControlPreference));
+            return;
+        }
 
         updateEvent = null;
         eventInProgress = false;
 
         if (debugEnabled)
         {
-            events[currentDebugIndex].StopEvent();
+            events[currentIndex].StopEvent();
             return;
         }
 
-        int eventIndex = events.Count - 1;
-        events[eventIndex].StopEvent();
-        events.RemoveAt(eventIndex);
+        currentIndex = events.Count - 1;
+        events[currentIndex].StopEvent();
+        EventLogger.Log(events[currentIndex].Tag, String.Format("Driver used the {0} to take over the vehicle.", driverControlPreference));
+        events.RemoveAt(currentIndex);
 
         if (events.Count <= 0) return; // stop event cycle if no more events are in list
 
         // queue next event
-        if (events[eventIndex] is UpdateEvent) updateEvent = (UpdateEvent) events[eventIndex]; // set update event if update required
+        if (events[currentIndex] is UpdateEvent) updateEvent = (UpdateEvent) events[currentIndex]; // set update event if update required
         StartCoroutine(QueueNextEvent());
         eventInProgress = false;
     }
@@ -160,7 +165,7 @@ public class EventManager : MonoBehaviour
                 events[0].StartEvent(); // sets random waypoints for autonomous vehicle to emulate control loss
                 updateEvent = (UpdateEvent) events[0];
                 eventInProgress = true;
-                currentDebugIndex = 0;
+                currentIndex = 0;
             }
 
             if (Input.GetKeyDown(KeyCode.Keypad2))
@@ -168,21 +173,22 @@ public class EventManager : MonoBehaviour
                 events[1].StartEvent(); // toggles the indicator event
                 updateEvent = (UpdateEvent) events[1];
                 eventInProgress = true;
-                currentDebugIndex = 1;
+                currentIndex = 1;
             }
 
             if (Input.GetKeyDown(KeyCode.Keypad3))
             {
                 events[2].StartEvent(); // spawns car to crash at crash event location
+                updateEvent = (UpdateEvent) events[2];
                 eventInProgress = true;
-                currentDebugIndex = 2;
+                currentIndex = 2;
             }
 
             if (Input.GetKeyDown(KeyCode.Keypad4))
             {
                 events[3].StartEvent(); // moves car to merge fail event location
                 eventInProgress = true;
-                currentDebugIndex = 3;
+                currentIndex = 3;
             }
         }
             

@@ -7,7 +7,7 @@ using System;
 
 public class ControlLossEvent : AutonomousEvent, UpdateEvent
 {
-    public const string TAG = "ControlLossEvent";
+    public override string Tag { get { return "ControlLossEvent"; } }
     private const float waypointChangeTime = 1.0f;
     private bool controlLost = false;
     private float currentTime;
@@ -17,14 +17,14 @@ public class ControlLossEvent : AutonomousEvent, UpdateEvent
         controlLost = true;
 
         GleyTrafficSystem.Manager.SetNextWaypoint(EventManager.Instance.PlayerVehicle, GleyTrafficSystem.Manager.GetClosestWaypoint(EventManager.Instance.PlayerVehicle));
-        EventManager.Instance.StartWatch(TAG);
+        EventManager.Instance.StartWatch();
     }
 
     public override void StopEvent()
     {
         controlLost = false;
 
-        EventManager.Instance.StopWatch(TAG);
+        EventManager.Instance.StopWatch();
     }    
 
     public void UpdateEvent(){
@@ -33,8 +33,7 @@ public class ControlLossEvent : AutonomousEvent, UpdateEvent
             if (Time.realtimeSinceStartup - currentTime > waypointChangeTime)
             {
                 currentTime = Time.realtimeSinceStartup;
-                Waypoint waypoint = GleyTrafficSystem.Manager.GetRandomWaypoint();
-                GleyTrafficSystem.Manager.SetNextWaypoint(EventManager.Instance.PlayerVehicle, waypoint);
+                GleyTrafficSystem.Manager.SetNextWaypoint(EventManager.Instance.PlayerVehicle, GleyTrafficSystem.Manager.GetRandomWaypoint());
             }
         }
     }

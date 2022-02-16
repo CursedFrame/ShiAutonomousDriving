@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class IndicatorEvent : AutonomousEvent, UpdateEvent
 {
-    public const string TAG = "IndicatorEvent";
+    public override string Tag { get { return "IndicatorEvent"; } }
     private const float blinkTime = 0.5f;
     private float currentTime;    
     private GameObject indicator;
@@ -19,13 +19,13 @@ public class IndicatorEvent : AutonomousEvent, UpdateEvent
 
     public override void StartEvent()
     {
-        EventManager.Instance.StartWatch(TAG);
+        EventManager.Instance.StartWatch();
     }
 
     public override void StopEvent()
     {
         indicator.SetActive(false);
-        EventManager.Instance.StopWatch(TAG);
+        EventManager.Instance.StopWatch();
     }
 
     public void UpdateEvent()
