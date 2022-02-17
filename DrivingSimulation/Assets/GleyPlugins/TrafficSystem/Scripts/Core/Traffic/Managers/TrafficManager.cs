@@ -614,7 +614,6 @@ namespace GleyTrafficSystem
                 {
                     playerVehicleIndex = i;
                     ignoreVehicle[i] = false;
-                    delayPlayerVehicle = true;
                     StartCoroutine(DelayPlayerVehicleJobActions(vehicle));
                 }
             }
@@ -632,6 +631,7 @@ namespace GleyTrafficSystem
             int waypointIndex = waypointManager.GetClosestForwardWaypoint(vehiclePosition[vehicleIndex], vehicleType[vehicleIndex], forwardPoint);
             if (waypointIndex == -1) return;
 
+            waypointManager.RemoveTargetWaypoint(vehicleIndex);
             waypointManager.SetNextWaypoint(vehicleIndex, waypointIndex);
         }
 
@@ -720,8 +720,9 @@ namespace GleyTrafficSystem
 
         private IEnumerator DelayPlayerVehicleJobActions(GameObject vehicle)
         {
+            delayPlayerVehicle = true;
             SetTrafficVehicleToClosestForwardWaypoint(vehicle, vehicle.transform.forward);
-            yield return new WaitForSeconds(0.25f);
+            yield return new WaitForSeconds(1f);
             delayPlayerVehicle = false;
         }
 
@@ -919,8 +920,6 @@ namespace GleyTrafficSystem
             //make vehicle actions based on job results
             for (int i = 0; i < nrOfVehicles; i++)
             {
-                if (delayPlayerVehicle && playerVehicleIndex == i) continue; 
-
                 if (!vehicleRigidbody[i].IsSleeping())
                 {
                     int groundedWheels = 0;
@@ -944,7 +943,8 @@ namespace GleyTrafficSystem
                     if (groundedWheels != 0)
                     {
                         vehicleRigidbody[i].AddForce(vehicleBodyForce[i] * ((float)groundedWheels / (vehicleEndWheelIndex[i] - vehicleStartWheelIndex[i])), ForceMode.VelocityChange);
-                        vehicleRigidbody[i].MoveRotation(vehicleRigidbody[i].rotation * Quaternion.Euler(0, vehicleRotationAngle[i], 0));
+                        if (!(playerVehicleIndex == i && delayPlayerVehicle)) vehicleRigidbody[i].MoveRotation(vehicleRigidbody[i].rotation * Quaternion.Euler(0, vehicleRotationAngle[i], 0));
+
                     }
                     //request new waypoint if needed
                     if (vehicleNeedWaypoint[i] == true)

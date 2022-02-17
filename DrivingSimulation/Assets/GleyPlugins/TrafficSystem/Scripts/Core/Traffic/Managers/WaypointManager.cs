@@ -463,9 +463,9 @@ namespace GleyTrafficSystem
             {
                 Vector3 targetWaypointPos = GetWaypoint(possibleWaypoints[i].waypointIndex).position;
                 Vector3 targetDir = targetWaypointPos - position;
-                bool isCorrectAngle = Vector3.Angle(targetDir, forward) < 30f;
+                bool isCorrectAngle = Vector3.Angle(targetDir, forward) < 10f;
                 float newDistance = Vector3.SqrMagnitude(targetWaypointPos - position);
-                if (newDistance < distance && isCorrectAngle)
+                if (newDistance < distance && newDistance > 10f && isCorrectAngle)
                 {
                     distance = newDistance;
                     waypointIndex = possibleWaypoints[i].waypointIndex;

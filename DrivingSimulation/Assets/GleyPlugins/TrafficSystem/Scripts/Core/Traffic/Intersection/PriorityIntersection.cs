@@ -204,7 +204,7 @@ namespace GleyTrafficSystem
             {
                 text += " " + carsInIntersection[i];
             }
-            //Debug.Log(text);
+            // Debug.Log(text);
         }
     }
 }

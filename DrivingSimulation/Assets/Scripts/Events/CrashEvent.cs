@@ -12,28 +12,41 @@ public class CrashEvent : AutonomousEvent, UpdateEvent
     private BoxCollider carOneBody;
     private GameObject carTwo;
     private BoxCollider carTwoBody;
+    private GameObject despawnTrafficVehicles;
+    private GameObject despawnCrashVehicles;
     private bool vehiclesVisible = false;
 
     public override void StartEvent()
     {
         Vector3 crashEventPosition = new Vector3(1609.96f, 52.06f, 2793.8f);
-        Vector3 despawnDetectPosition = new Vector3(1610.65f, 52.06f, 2741.06f);
+        Vector3 despawnTrafficVehiclesPosition = new Vector3(1610.65f, 52.06f, 2741.06f);
+        Vector3 despawnCrashVehiclesPosition = new Vector3(1529.82f, 53.07f, 2838.74f);
 
         // start pathing job to event location and spawn crash event via callback
         EventManager.Instance.PlayerVehicleAutonomous.StartPathing(TrafficManager.Instance.GetClosestForwardWaypoint(
                 EventManager.Instance.PlayerVehicle.gameObject, EventManager.Instance.PlayerVehicle.transform.forward), 
-                GleyTrafficSystem.Manager.GetClosestWaypoint(crashEventPosition), OnAtEventPosition);
+                GleyTrafficSystem.Manager.GetClosestWaypoint(crashEventPosition), OnAtEventPosition, DisposeEvent);
         EventLogger.Log(Tag, "Vehicle pathing to crash event location.");
 
         // intialize player detection object for despawning other traffic vehicles
-        GameObject despawnDetect = new GameObject("DespawnDetect");
-        BoxCollider collider = despawnDetect.AddComponent<BoxCollider>();
-        collider.center = despawnDetectPosition;
-        collider.size = new Vector3(6f, 6f, 6f);
-        collider.isTrigger = true;
-        DetectPlayerCollision detectPlayerCollision = despawnDetect.AddComponent<DetectPlayerCollision>();
-        detectPlayerCollision.EnterAction = OnPlayerCollisionEnter;
-        detectPlayerCollision.DeleteGameObjectOnEnter = true;
+        despawnTrafficVehicles = new GameObject("DespawnTrafficVehicles");
+        BoxCollider despawnTrafficVehicleCollider = despawnTrafficVehicles.AddComponent<BoxCollider>();
+        despawnTrafficVehicleCollider.center = despawnTrafficVehiclesPosition;
+        despawnTrafficVehicleCollider.size = new Vector3(6f, 6f, 6f);
+        despawnTrafficVehicleCollider.isTrigger = true;
+        DetectPlayerCollision detectPlayerCollisionTrafficVehicles = despawnTrafficVehicles.AddComponent<DetectPlayerCollision>();
+        detectPlayerCollisionTrafficVehicles.EnterAction = DespawnTraffic;
+        detectPlayerCollisionTrafficVehicles.DeleteGameObjectOnEnter = true;
+
+        // intialize player detection object for despawning other traffic vehicles
+        despawnCrashVehicles = new GameObject("DespawnCrashVehicles");
+        BoxCollider despawnCrashVehiclesCollider = despawnCrashVehicles.AddComponent<BoxCollider>();
+        despawnCrashVehiclesCollider.center = despawnCrashVehiclesPosition;
+        despawnCrashVehiclesCollider.size = new Vector3(6f, 6f, 6f);
+        despawnCrashVehiclesCollider.isTrigger = true;
+        DetectPlayerCollision detectPlayerCollisionCrashVehicles = despawnCrashVehicles.AddComponent<DetectPlayerCollision>();
+        detectPlayerCollisionCrashVehicles.EnterAction = DespawnCrash;
+        detectPlayerCollisionCrashVehicles.DeleteGameObjectOnEnter = true;
     }
 
     public override void StopEvent()
@@ -63,8 +76,10 @@ public class CrashEvent : AutonomousEvent, UpdateEvent
 
     public void DisposeEvent()
     {
-        UnityEngine.Object.Destroy(carOne);
-        UnityEngine.Object.Destroy(carTwo);
+        if (carOne) UnityEngine.Object.Destroy(carOne);
+        if (carTwo) UnityEngine.Object.Destroy(carTwo);
+        if (despawnTrafficVehicles) UnityEngine.Object.Destroy(despawnTrafficVehicles);
+        if (despawnCrashVehicles) UnityEngine.Object.Destroy(despawnCrashVehicles);
     }
 
     private void OnAtEventPosition()
@@ -104,7 +119,7 @@ public class CrashEvent : AutonomousEvent, UpdateEvent
         yield break;
     }
 
-    private void OnPlayerCollisionEnter()
+    private void DespawnTraffic()
     {
         Vector3 crashEpicenter = new Vector3(1609.12f, 52.06f, 2839.1f);
         
@@ -113,5 +128,10 @@ public class CrashEvent : AutonomousEvent, UpdateEvent
         GleyTrafficSystem.Manager.SetTrafficDensity(1);
 
         UnityEngine.Debug.Log(Tag + ": Traffic cleared.");
+    }
+
+    private void DespawnCrash()
+    {
+        DisposeEvent();
     }
 }

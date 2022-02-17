@@ -10,18 +10,20 @@ public class AutonomousVehicle : MonoBehaviour
     [SerializeField] private Camera playerCamera;
     private IEnumerator pathingRoutine;
     private Waypoint pathingEnd;
-    private System.Action pathingCallback;
+    private System.Action pathingCallbackFinish;
+    private System.Action pathingCallbackStop;
     
     public bool IsInAutonomous { get; set; } = true;
     public bool IsPathing { get; set; } = false;
     public GameObject GetBatteryIndicator(){ return batteryIndicator; }
     public AudioSource GetBatteryIndicatorSound() { return batteryIndicatorSound; }
     
-    public void StartPathing(Waypoint start, Waypoint end, System.Action callback = null)
+    public void StartPathing(Waypoint start, Waypoint end, System.Action callbackFinish = null, System.Action callbackStop = null)
     {
-        pathingRoutine = Pathing(start, end, callback);
+        pathingRoutine = Pathing(start, end, callbackFinish);
         pathingEnd = end;
-        pathingCallback = callback;
+        pathingCallbackFinish = callbackFinish;
+        pathingCallbackStop = callbackStop;
         StartCoroutine(pathingRoutine);
 
         IsPathing = true;
@@ -33,7 +35,8 @@ public class AutonomousVehicle : MonoBehaviour
 
         pathingRoutine = null;
         pathingEnd = null;
-        pathingCallback = null;
+        pathingCallbackFinish = null;
+        pathingCallbackStop = null;
     }
 
     public IEnumerator Pathing(Waypoint start, Waypoint end, System.Action callback = null)
@@ -84,7 +87,7 @@ public class AutonomousVehicle : MonoBehaviour
                 {
                     StartPathing(TrafficManager.Instance.GetClosestForwardWaypoint(
                         EventManager.Instance.PlayerVehicle.gameObject, EventManager.Instance.PlayerVehicle.transform.forward), 
-                        pathingEnd, pathingCallback);
+                        pathingEnd, pathingCallbackStop);
                     EventLogger.Log(TAG, "Continuing pathing to event.");
                 }
 
@@ -134,6 +137,7 @@ public class AutonomousVehicle : MonoBehaviour
         if (IsPathing)
         {
             StopCoroutine(pathingRoutine);
+            pathingCallbackStop();
             pathingRoutine = null;
             EventLogger.Log(TAG, "Pausing pathing to event.");
         }
