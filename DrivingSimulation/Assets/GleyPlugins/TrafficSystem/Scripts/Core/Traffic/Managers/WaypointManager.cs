@@ -450,30 +450,84 @@ namespace GleyTrafficSystem
             return waypointIndex;
         }
 
-        internal int GetClosestForwardWaypoint(Vector3 position, VehicleTypes type, Vector3 forward)
+        /// <summary>
+        /// Get waypoint directly in front of vehicle, used to make sure that autonomous vehicle attaches on to waypoint
+        /// directly in front
+        /// </summary>
+        /// <param name="index"></param>
+        /// <returns></returns>
+        internal int GetForwardWaypointIndex(Vector3 position, VehicleTypes type, Vector3 forward)
         {
-            List<SpawnWaypoint> possibleWaypoints = waypointsGrid.GetCell(position.x, position.z).spawnWaypoints.Where(cond1 => cond1.allowedVehicles.Contains(type)).ToList();
-
-            if (possibleWaypoints.Count == 0)
+            if (allWaypoints.Length == 0)
                 return -1;
 
-            float distance = float.MaxValue;
+            // Find closest waypoint
+            float minDistance = float.MaxValue;
             int waypointIndex = -1;
-            for (int i = 0; i < possibleWaypoints.Count; i++)
+            for (int i = 0; i < allWaypoints.Length; i++)
             {
-                Vector3 targetWaypointPos = GetWaypoint(possibleWaypoints[i].waypointIndex).position;
+                Vector3 targetWaypointPos = allWaypoints[i].position;
                 Vector3 targetDir = targetWaypointPos - position;
-                bool isCorrectAngle = Vector3.Angle(targetDir, forward) < 10f;
-                float newDistance = Vector3.SqrMagnitude(targetWaypointPos - position);
-                if (newDistance < distance && newDistance > 10f && isCorrectAngle)
+                
+                bool isCorrectAngle = Vector3.Angle(targetDir, forward) < 10f; // 20 degree cone for getting closest waypoint
+                float newDistance = Vector3.Distance(targetWaypointPos, position);
+                if (7.5f < newDistance && newDistance < minDistance && isCorrectAngle) // distance must be greater than 10f (~m) and less than minDistance
                 {
-                    distance = newDistance;
-                    waypointIndex = possibleWaypoints[i].waypointIndex;
+                    minDistance = newDistance;
+                    waypointIndex = allWaypoints[i].listIndex;
                 }
             }
+
+            // Debug
+            if (waypointIndex != -1)
+            {
+                Debug.DrawLine(position, GetWaypoint(waypointIndex).position, Color.green, 60.0f);
+                Debug.Log("Distance: " + minDistance);
+            }
+            else
+            {
+                Debug.Log("Index not found.");
+            }
+
             return waypointIndex;
         }
 
+        // /// <summary>
+        // /// Get waypoint directly in front of vehicle, used to make sure that autonomous vehicle attaches on to waypoint
+        // /// directly in front
+        // /// </summary>
+        // /// <param name="index"></param>
+        // /// <returns></returns>
+        // internal int GetForwardWaypoint(Vector3 position, VehicleTypes type, Vector3 forward)
+        // {
+        //     List<SpawnWaypoint> possibleWaypoints = waypointsGrid.GetCell(position.x, position.z).spawnWaypoints.Where(cond1 => cond1.allowedVehicles.Contains(type)).ToList();
+
+        //     if (possibleWaypoints.Count == 0)
+        //         return -1;
+
+        //     Debug.DrawLine(position, forward, Color.red, 2.5f);
+
+        //     float minDistance = float.MaxValue;
+        //     int waypointIndex = -1;
+        //     for (int i = 0; i < possibleWaypoints.Count; i++)
+        //     {
+        //         Vector3 targetWaypointPos = GetWaypoint(possibleWaypoints[i].waypointIndex).position;
+        //         Vector3 targetDir = targetWaypointPos - position;
+        //         float newDistance = Vector3.SqrMagnitude(targetWaypointPos - position);
+        //         if (20f < newDistance && newDistance < minDistance) // distance must be greater than 20f (~m) and less than minDistance
+        //         {
+        //             Debug.DrawLine(position, targetWaypointPos, Color.green, 1.0f);
+        //             minDistance = newDistance;
+        //             waypointIndex = possibleWaypoints[i].waypointIndex;
+        //         }
+        //     }
+        //     return waypointIndex;
+        // }
+
+        internal float GetDistanceToWaypoint(Vector3 position, int waypointIndex)
+        {
+            return Vector3.Distance(position, GetWaypoint(waypointIndex).position);
+        }
 
         /// <summary>
         /// Get position of the target waypoint

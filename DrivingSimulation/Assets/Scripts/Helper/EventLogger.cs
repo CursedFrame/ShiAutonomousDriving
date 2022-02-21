@@ -17,6 +17,11 @@ public static class EventLogger
         initialized = true;
     }
 
+    public static void LogTimer(string tag, string line, TimeSpan ts)
+    {
+        Log(tag, String.Format("[{0:D3}:{1:D3}] {2}", ts.Seconds, ts.Milliseconds, line)); 
+    }
+
     public static void Log(string tag, string line)
     {
         Write(String.Format("{0}: {1}", tag, line));

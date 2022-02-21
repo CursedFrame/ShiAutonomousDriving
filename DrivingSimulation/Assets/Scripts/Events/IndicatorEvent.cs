@@ -25,7 +25,6 @@ public class IndicatorEvent : AutonomousEvent, UpdateEvent
     public override void StopEvent()
     {
         indicator.SetActive(false);
-        EventManager.Instance.StopWatch();
     }
 
     public void UpdateEvent()

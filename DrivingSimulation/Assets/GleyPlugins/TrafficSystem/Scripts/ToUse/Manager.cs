@@ -299,10 +299,10 @@ namespace GleyTrafficSystem
         /// until it is out of view and respawned
         /// </summary>
         /// <param name="vehicle"></param>
-        public static void StartPlayerVehicleDriving(GameObject vehicle)
+        public static void StartPlayerVehicleDriving(GameObject vehicle, System.Action callback = null)
         {
 #if USE_GLEY_TRAFFIC
-            TrafficManager.Instance.StartPlayerVehicleDriving(vehicle);
+            TrafficManager.Instance.StartPlayerVehicleDriving(vehicle, callback);
 #endif
         }
 
@@ -406,24 +406,27 @@ namespace GleyTrafficSystem
 
 
         /// <summary>
-        /// Set traffic vehicle to closest waypoint
+        /// Set traffic vehicle to waypoint directly in front of vehicle, used to make sure that autonomous vehicle attaches on to waypoint
+        /// directly in front
         /// </summary>
-        /// <param name="dynamicObjectInteraction"></param>
-        public static void SetTrafficVehicleToClosestForwardWaypoint(GameObject vehicle, Vector3 forwardPoint)
+        /// <param name="index"></param>
+        public static void SetTrafficVehicleToForwardWaypoint(GameObject vehicle, Vector3 forward)
         {
 #if USE_GLEY_TRAFFIC
-            TrafficManager.Instance.SetTrafficVehicleToClosestForwardWaypoint(vehicle, forwardPoint);
+            TrafficManager.Instance.SetTrafficVehicleToForwardWaypoint(vehicle, forward);
 #endif
         }
 
         /// <summary>
-        /// Set traffic vehicle to closest waypoint
+        /// Get waypoint directly in front of vehicle, used to make sure that autonomous vehicle attaches on to waypoint
+        /// directly in front
         /// </summary>
-        /// <param name="dynamicObjectInteraction"></param>
-        public static Waypoint GetClosestForwardWaypoint(GameObject vehicle, Vector3 forwardPoint)
+        /// <param name="index"></param>
+        /// <returns>Waypoint</returns>
+        public static Waypoint GetForwardWaypoint(GameObject vehicle, Vector3 forward)
         {
 #if USE_GLEY_TRAFFIC
-            return TrafficManager.Instance.GetClosestForwardWaypoint(vehicle, forwardPoint);
+            return TrafficManager.Instance.GetForwardWaypoint(vehicle, forward);
 #endif
         }
 
@@ -448,7 +451,12 @@ namespace GleyTrafficSystem
             return TrafficManager.Instance.GetClosestWaypoint(position);
 #endif
         }
-
+        
+        /// <summary>
+        /// Get closest waypoint index to position
+        /// </summary>
+        /// <param name="dynamicObjectInteraction"></param>
+        /// <returns>int</returns>
         public static int GetClosestWaypointIndex(Vector3 position)
         {
 #if USE_GLEY_TRAFFIC
@@ -457,9 +465,10 @@ namespace GleyTrafficSystem
         }
 
         /// <summary>
-        /// Get closest waypoint to vehicle
+        /// Get random waypoint from all waypoints
         /// </summary>
         /// <param name="dynamicObjectInteraction"></param>
+        /// <returns>Waypoint</returns>
         public static Waypoint GetRandomWaypoint()
         {
 #if USE_GLEY_TRAFFIC
@@ -468,7 +477,7 @@ namespace GleyTrafficSystem
         }
 
         /// <summary>
-        /// Set traffic vehicle to closest waypoint
+        /// Set traffic vehicle's next waypoint
         /// </summary>
         /// <param name="dynamicObjectInteraction"></param>
         public static void SetNextWaypoint(GameObject vehicle, Waypoint waypoint)
@@ -479,7 +488,7 @@ namespace GleyTrafficSystem
         }
 
         /// <summary>
-        /// Set traffic vehicle to closest waypoint
+        /// Set traffic vehicle's next waypoint
         /// </summary>
         /// <param name="dynamicObjectInteraction"></param>
         public static void SetNextWaypoint(int vehicleIndex, Waypoint waypoint)
@@ -490,9 +499,10 @@ namespace GleyTrafficSystem
         }
 
         /// <summary>
-        /// Set traffic vehicle to closest waypoint
+        /// Get vehicle from vehicle index
         /// </summary>
         /// <param name="dynamicObjectInteraction"></param>
+        /// <returns>VehicleComponent</returns>
         public static VehicleComponent GetVehicle(int vehicleIndex)
         {
 #if USE_GLEY_TRAFFIC

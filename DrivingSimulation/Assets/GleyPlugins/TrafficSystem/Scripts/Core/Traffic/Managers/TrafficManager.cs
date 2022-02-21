@@ -107,8 +107,6 @@ namespace GleyTrafficSystem
         private int totalWheels;
         private int activeSquaresLevel;
         private int activeCameraIndex;
-        private int playerVehicleIndex;
-        private bool delayPlayerVehicle = false;
         private bool initialized;
 #pragma warning disable 0649
         private bool drawBodyForces;
@@ -121,8 +119,10 @@ namespace GleyTrafficSystem
         private bool debugAI;
         private bool debugIntersections;
         private bool stopIntersectionUpdate;
+        private bool playerVehicleRotationDisabled = false;
+        private int playerVehicleIndex = -1;
 #pragma warning restore 0649
-        #endregion
+    #endregion
 
         private static TrafficManager instance;
         public static TrafficManager Instance
@@ -603,7 +603,7 @@ namespace GleyTrafficSystem
             }
         }
 
-        public void StartPlayerVehicleDriving(GameObject vehicle)
+        public void StartPlayerVehicleDriving(GameObject vehicle, System.Action callback = null)
         {
             if (!initialized)
                 return;
@@ -612,15 +612,37 @@ namespace GleyTrafficSystem
             {
                 if (vehicleRigidbody[i].gameObject == vehicle)
                 {
+                    intersectionManager.RemoveCarFromIntersection(i);
+                    int playerVehicleTargetIndex = SetPlayerVehicleToForwardWaypoint(vehicle, vehicle.transform.forward); // queue waypoint to set autonomous vehicle 
+                    if (playerVehicleTargetIndex == -1) return; // if no index is found, autonomous mode should not be enabled
                     playerVehicleIndex = i;
                     ignoreVehicle[i] = false;
-                    StartCoroutine(DelayPlayerVehicleJobActions(vehicle));
+                    wheelRotation[i] = 0;
+                    
+                    // callback for continuing pathing should be delayed until after the next waypoint has been queued
+                    StartCoroutine(DelayVehicleActions(vehicle, waypointManager.GetDistanceToWaypoint(vehicle.transform.position, playerVehicleTargetIndex), callback)); 
                 }
             }
         }
 
+        public int SetPlayerVehicleToForwardWaypoint(GameObject vehicle, Vector3 forward)
+        {
+            if (!initialized)
+                return -1;
 
-        public void SetTrafficVehicleToClosestForwardWaypoint(GameObject vehicle, Vector3 forwardPoint)
+            int vehicleIndex = GetVehicleIndex(vehicle);
+            if (vehicleIndex == -1) return -1;
+
+            int waypointIndex = waypointManager.GetForwardWaypointIndex(vehiclePosition[vehicleIndex], vehicleType[vehicleIndex], forward);
+            if (waypointIndex == -1) return -1;
+
+            waypointManager.RemoveTargetWaypoint(vehicleIndex);
+            waypointManager.SetNextWaypoint(vehicleIndex, waypointIndex);
+
+            return waypointIndex;
+        }
+
+        public void SetTrafficVehicleToForwardWaypoint(GameObject vehicle, Vector3 forward)
         {
             if (!initialized)
                 return;
@@ -628,7 +650,7 @@ namespace GleyTrafficSystem
             int vehicleIndex = GetVehicleIndex(vehicle);
             if (vehicleIndex == -1) return;
 
-            int waypointIndex = waypointManager.GetClosestForwardWaypoint(vehiclePosition[vehicleIndex], vehicleType[vehicleIndex], forwardPoint);
+            int waypointIndex = waypointManager.GetForwardWaypointIndex(vehiclePosition[vehicleIndex], vehicleType[vehicleIndex], forward);
             if (waypointIndex == -1) return;
 
             waypointManager.RemoveTargetWaypoint(vehicleIndex);
@@ -690,7 +712,7 @@ namespace GleyTrafficSystem
             return waypointManager.GetClosestWayoint(position, VehicleTypes.Car);
         }
 
-        public Waypoint GetClosestForwardWaypoint(GameObject vehicle, Vector3 forwardPoint)
+        public Waypoint GetForwardWaypoint(GameObject vehicle, Vector3 forward)
         {
             if (!initialized)
                 return new Waypoint();
@@ -698,7 +720,7 @@ namespace GleyTrafficSystem
             int vehicleIndex = GetVehicleIndex(vehicle);
             if (vehicleIndex == -1) return new Waypoint();
 
-            int waypointIndex = waypointManager.GetClosestForwardWaypoint(vehiclePosition[vehicleIndex], vehicleType[vehicleIndex], forwardPoint);
+            int waypointIndex = waypointManager.GetForwardWaypointIndex(vehiclePosition[vehicleIndex], vehicleType[vehicleIndex], forward);
             if (waypointIndex == -1){
                 return new Waypoint();
             } else {
@@ -718,12 +740,30 @@ namespace GleyTrafficSystem
             }
         }
 
-        private IEnumerator DelayPlayerVehicleJobActions(GameObject vehicle)
+        private IEnumerator DelayVehicleActions(GameObject vehicle, float distanceToWaypoint, System.Action callback)
         {
-            delayPlayerVehicle = true;
-            SetTrafficVehicleToClosestForwardWaypoint(vehicle, vehicle.transform.forward);
-            yield return new WaitForSeconds(1f);
-            delayPlayerVehicle = false;
+            playerVehicleRotationDisabled = true; // disable driver vehicle rotation to prevent bug
+            Debug.Log("Autonomous vehicle rotation lock enabled.");
+
+            float totalDist = 0f;
+            Vector3 previousPos = vehicle.transform.position;
+
+            distanceToWaypoint *= 0.8f;
+
+            yield return null;
+
+            while (totalDist < distanceToWaypoint)
+            {
+                totalDist += Vector3.Distance(previousPos, vehicle.transform.position);
+                Debug.Log("Distance travelled: " + totalDist);
+                previousPos = vehicle.transform.position;
+                yield return null;
+            }
+
+            playerVehicleRotationDisabled = false;
+            Debug.Log("Autonomous vehicle rotation lock disabled.");
+
+            if (callback != null) callback();
         }
 
 
@@ -943,7 +983,14 @@ namespace GleyTrafficSystem
                     if (groundedWheels != 0)
                     {
                         vehicleRigidbody[i].AddForce(vehicleBodyForce[i] * ((float)groundedWheels / (vehicleEndWheelIndex[i] - vehicleStartWheelIndex[i])), ForceMode.VelocityChange);
-                        if (!(playerVehicleIndex == i && delayPlayerVehicle)) vehicleRigidbody[i].MoveRotation(vehicleRigidbody[i].rotation * Quaternion.Euler(0, vehicleRotationAngle[i], 0));
+                        if (!(playerVehicleIndex == i && playerVehicleRotationDisabled))
+                        {
+                            vehicleRigidbody[i].MoveRotation(vehicleRigidbody[i].rotation * Quaternion.Euler(0, vehicleRotationAngle[i], 0));
+                        }
+                        else
+                        {
+                            turnAngle[i] = 0;
+                        }
 
                     }
                     //request new waypoint if needed

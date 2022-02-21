@@ -13,7 +13,7 @@ public class MergeFailEvent : AutonomousEvent
         Vector3 mergeFailStartPosition = new Vector3(2537.32f, 52.06f, 1898.08f);
 
         // start pathing job to event location
-        EventManager.Instance.PlayerVehicleAutonomous.StartPathing(TrafficManager.Instance.GetClosestForwardWaypoint(
+        EventManager.Instance.PlayerVehicleAutonomous.StartPathing(TrafficManager.Instance.GetForwardWaypoint(
                 EventManager.Instance.PlayerVehicle.gameObject, EventManager.Instance.PlayerVehicle.transform.forward), 
                 GleyTrafficSystem.Manager.GetClosestWaypoint(mergeFailStartPosition), StartMergeFail);
         EventLogger.Log(Tag, "Vehicle pathing to merge fail event location.");
@@ -21,7 +21,6 @@ public class MergeFailEvent : AutonomousEvent
 
     public override void StopEvent()
     {
-        EventManager.Instance.StopWatch();
         EventManager.Instance.PlayerVehicleAutonomous.DisposePathing();
     }
 

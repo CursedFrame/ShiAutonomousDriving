@@ -14,13 +14,13 @@ public class EventManager : MonoBehaviour
     [SerializeField] private List<UniqueEvent> eventOrder;
     private static EventManager _instance;
     private List<AutonomousEvent> events;
-    private Stopwatch timeElapsed;
     private UpdateEvent updateEvent;
     private int currentIndex;
     private bool initialized = false;
-    private bool eventInProgress = false;
     
     public static EventManager Instance { get { return _instance; } }
+    public bool EventInProgress { get; set; } = false;
+    public Stopwatch TimeElapsed { get; set; }
     public GameObject PlayerVehicle { get; set; }
     public AutonomousVehicle PlayerVehicleAutonomous { get; set; }
 
@@ -64,7 +64,7 @@ public class EventManager : MonoBehaviour
             StartCoroutine(QueueNextEvent(firstEvent: true));
         }
         
-        timeElapsed = new Stopwatch();
+        TimeElapsed = new Stopwatch();
         initialized = true;
         
         UnityEngine.Debug.Log(TAG + ": Initialized");
@@ -81,43 +81,43 @@ public class EventManager : MonoBehaviour
     {
         if (!initialized) return;
         
-        EventLogger.Log(events[currentIndex].Tag, "Event and stopwatch started.");
-        timeElapsed.Start();
+        EventInProgress = true;
+        TimeElapsed.Start();
+        EventLogger.LogTimer(events[currentIndex].Tag, "Event and stopwatch started.", TimeElapsed.Elapsed);
     }
 
     // Stop and reset stopwatch
-    public void StopWatch()
+    public void StopWatch(string driverControlPreference)
     {
         if (!initialized) return;
 
-        timeElapsed.Stop();
-        TimeSpan ts = timeElapsed.Elapsed;
-        EventLogger.Log(events[currentIndex].Tag, "Event stopped.");
-        EventLogger.Log(events[currentIndex].Tag, String.Format("Driver took {0} seconds and {1} milliseconds to take control of autonomous vehicle.", ts.Seconds, ts.Milliseconds));
-        timeElapsed.Reset();
+        TimeElapsed.Stop();
+        EventLogger.LogTimer(events[currentIndex].Tag, String.Format("Event stopped. Driver took control of autonomous vehicle using {0}.", driverControlPreference), TimeElapsed.Elapsed);
+        TimeElapsed.Reset();
     }
 
     // Stop stopwatch and queue next event when user attempts to take control of vehicle
     public void HandleAutonomousDisabled(string driverControlPreference = "NONE")
     {
-        if (!initialized || !eventInProgress)
+        if (!initialized || !EventInProgress)
         {
             EventLogger.Log(AutonomousVehicle.TAG, String.Format("Driver used the {0} to take over the vehicle outside of event.", driverControlPreference));
             return;
         }
 
         updateEvent = null;
-        eventInProgress = false;
+        EventInProgress = false;
 
         if (debugEnabled)
         {
             events[currentIndex].StopEvent();
+            StopWatch(driverControlPreference);
             return;
         }
 
         currentIndex = events.Count - 1;
         events[currentIndex].StopEvent();
-        EventLogger.Log(events[currentIndex].Tag, String.Format("Driver used the {0} to take over the vehicle.", driverControlPreference));
+        StopWatch(driverControlPreference);
         events.RemoveAt(currentIndex);
 
         if (events.Count <= 0) return; // stop event cycle if no more events are in list
@@ -125,19 +125,19 @@ public class EventManager : MonoBehaviour
         // queue next event
         if (events[currentIndex] is UpdateEvent) updateEvent = (UpdateEvent) events[currentIndex]; // set update event if update required
         StartCoroutine(QueueNextEvent());
-        eventInProgress = false;
     }
 
     // Queues the next/initial events after a random interval of time within a specified range has passed
     // and when the autonomous mode is enabled.
     private IEnumerator QueueNextEvent(bool firstEvent = false)
     {
-        yield return new WaitForSeconds(firstEvent ? 
+        int seconds = (int) (firstEvent ? 
             timeBeforeEvents + UnityEngine.Random.Range(timeBetweenNextEventLower, timeBetweenNextEventUpper) : 
             UnityEngine.Random.Range(timeBetweenNextEventLower, timeBetweenNextEventUpper));
+        EventLogger.Log(TAG, String.Format("Waiting for {0} seconds until queueing next event.", seconds));
+        yield return new WaitForSeconds(seconds);
         while (!PlayerVehicleAutonomous.IsInAutonomous) yield return null;
         events[events.Count - 1].StartEvent();
-        eventInProgress = true;
         yield return null;
     }
 
@@ -164,7 +164,6 @@ public class EventManager : MonoBehaviour
             {
                 events[0].StartEvent(); // sets random waypoints for autonomous vehicle to emulate control loss
                 updateEvent = (UpdateEvent) events[0];
-                eventInProgress = true;
                 currentIndex = 0;
             }
 
@@ -172,7 +171,6 @@ public class EventManager : MonoBehaviour
             {
                 events[1].StartEvent(); // toggles the indicator event
                 updateEvent = (UpdateEvent) events[1];
-                eventInProgress = true;
                 currentIndex = 1;
             }
 
@@ -180,14 +178,12 @@ public class EventManager : MonoBehaviour
             {
                 events[2].StartEvent(); // spawns car to crash at crash event location
                 updateEvent = (UpdateEvent) events[2];
-                eventInProgress = true;
                 currentIndex = 2;
             }
 
             if (Input.GetKeyDown(KeyCode.Keypad4))
             {
                 events[3].StartEvent(); // moves car to merge fail event location
-                eventInProgress = true;
                 currentIndex = 3;
             }
         }

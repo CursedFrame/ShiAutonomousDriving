@@ -11,32 +11,42 @@ public class AutonomousVehicle : MonoBehaviour
     private IEnumerator pathingRoutine;
     private Waypoint pathingEnd;
     private System.Action pathingCallbackFinish;
-    private System.Action pathingCallbackStop;
     
     public bool IsInAutonomous { get; set; } = true;
     public bool IsPathing { get; set; } = false;
     public GameObject GetBatteryIndicator(){ return batteryIndicator; }
     public AudioSource GetBatteryIndicatorSound() { return batteryIndicatorSound; }
     
-    public void StartPathing(Waypoint start, Waypoint end, System.Action callbackFinish = null, System.Action callbackStop = null)
+    public void StartPathing(Waypoint start, Waypoint end, System.Action callbackFinish = null)
     {
+        IsPathing = true;
+
         pathingRoutine = Pathing(start, end, callbackFinish);
         pathingEnd = end;
         pathingCallbackFinish = callbackFinish;
-        pathingCallbackStop = callbackStop;
-        StartCoroutine(pathingRoutine);
 
-        IsPathing = true;
+        Debug.Log("Start pathing to event.");
+        StartCoroutine(pathingRoutine);
+    }
+
+    public void ContinuePathing()
+    {
+        StartPathing(TrafficManager.Instance.GetForwardWaypoint(
+            EventManager.Instance.PlayerVehicle.gameObject, EventManager.Instance.PlayerVehicle.transform.forward), 
+            pathingEnd, pathingCallbackFinish);
+        EventLogger.Log(TAG, "Continuing pathing to event.");
+        Debug.Log("Continuing pathing to event.");
     }
 
     public void DisposePathing()
     {
+        Debug.Log("Disposing of autonomous vehicle pathing.");
+
         IsPathing = false;
 
         pathingRoutine = null;
         pathingEnd = null;
         pathingCallbackFinish = null;
-        pathingCallbackStop = null;
     }
 
     public IEnumerator Pathing(Waypoint start, Waypoint end, System.Action callback = null)
@@ -79,23 +89,23 @@ public class AutonomousVehicle : MonoBehaviour
         {
             if (!IsInAutonomous)
             {   
-                GleyTrafficSystem.Manager.StartPlayerVehicleDriving(this.gameObject);
-                EventLogger.Log(TAG, "Driver used the toggle button to enable autonomous mode.");
-
+                EventLogger.Log(TAG, "Driver used the TOGGLE BUTTON to enable autonomous mode.");
+                
                 // Continue pathing if should be pathing
                 if (IsPathing)
                 {
-                    StartPathing(TrafficManager.Instance.GetClosestForwardWaypoint(
-                        EventManager.Instance.PlayerVehicle.gameObject, EventManager.Instance.PlayerVehicle.transform.forward), 
-                        pathingEnd, pathingCallbackStop);
-                    EventLogger.Log(TAG, "Continuing pathing to event.");
+                    GleyTrafficSystem.Manager.StartPlayerVehicleDriving(this.gameObject, ContinuePathing);
+                }
+                else
+                {
+                    GleyTrafficSystem.Manager.StartPlayerVehicleDriving(this.gameObject);
                 }
 
                 IsInAutonomous = true;
             } 
             else 
             {
-                DriverTakeControl("toggle button");
+                DriverTakeControl("TOGGLE BUTTON");
             }
         }
 
@@ -105,25 +115,25 @@ public class AutonomousVehicle : MonoBehaviour
 
         if (Input.GetAxis("Horizontal") > 0.1f)
         {
-            DriverTakeControl("steering wheel turned right");
+            DriverTakeControl("STEERING WHEEL - RIGHT");
             return;
         }
 
         if (Input.GetAxis("Horizontal") < -0.1f)
         {
-            DriverTakeControl("steering wheel turned left");
+            DriverTakeControl("STEERING WHEEL - LEFT");
             return;
         }
 
         if (Input.GetAxis("Vertical") > 0.1f)
         {
-            DriverTakeControl("gas pedal");
+            DriverTakeControl("GAS PEDAL");
             return;
         }
 
         if (Input.GetAxis("Vertical") < -0.1f)
         {
-            DriverTakeControl("brake");
+            DriverTakeControl("BRAKE");
             return;
         }
     }
@@ -136,8 +146,10 @@ public class AutonomousVehicle : MonoBehaviour
         // Pause pathing if pathing
         if (IsPathing)
         {
+            Debug.Log("Pausing pathing to event.");
+
             StopCoroutine(pathingRoutine);
-            pathingCallbackStop();
+
             pathingRoutine = null;
             EventLogger.Log(TAG, "Pausing pathing to event.");
         }

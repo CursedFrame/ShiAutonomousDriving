@@ -23,8 +23,6 @@ public class ControlLossEvent : AutonomousEvent, UpdateEvent
     public override void StopEvent()
     {
         controlLost = false;
-
-        EventManager.Instance.StopWatch();
     }    
 
     public void UpdateEvent(){
