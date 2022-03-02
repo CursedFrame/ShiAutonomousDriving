@@ -24,7 +24,9 @@ public static class EventLogger
 
     public static void Log(string tag, string line)
     {
-        Write(String.Format("{0}: {1}", tag, line));
+        String output = String.Format("{0}: {1}", tag, line);
+        Write(output);
+        UnityEngine.Debug.Log(output);
     }
 
     private static void Write(string line)

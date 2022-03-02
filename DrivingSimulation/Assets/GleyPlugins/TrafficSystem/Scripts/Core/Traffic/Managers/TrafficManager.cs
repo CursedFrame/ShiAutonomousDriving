@@ -761,6 +761,7 @@ namespace GleyTrafficSystem
             }
 
             playerVehicleRotationDisabled = false;
+
             Debug.Log("Autonomous vehicle rotation lock disabled.");
 
             if (callback != null) callback();

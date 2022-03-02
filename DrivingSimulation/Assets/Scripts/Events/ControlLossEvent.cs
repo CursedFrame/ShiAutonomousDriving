@@ -5,7 +5,7 @@ using GleyTrafficSystem;
 using System.Diagnostics;
 using System;
 
-public class ControlLossEvent : AutonomousEvent, UpdateEvent
+public class ControlLossEvent : AutonomousEvent
 {
     public override string Tag { get { return "ControlLossEvent"; } }
     private const float waypointChangeTime = 1.0f;
@@ -25,7 +25,7 @@ public class ControlLossEvent : AutonomousEvent, UpdateEvent
         controlLost = false;
     }    
 
-    public void UpdateEvent(){
+    public override void UpdateEvent(){
         if (controlLost)
         {
             if (Time.realtimeSinceStartup - currentTime > waypointChangeTime)

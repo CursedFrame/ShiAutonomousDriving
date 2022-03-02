@@ -21,8 +21,8 @@ public class AutonomousVehicle : MonoBehaviour
     private Waypoint pathingEnd;
     private System.Action pathingCallbackFinish;
 
-    public bool IsInAutonomous { get; set; } = true;
-    public bool IsPathing { get; set; } = false;
+    public bool IsInAutonomous { get; set; }
+    public bool IsPathing { get; set; }
     public GameObject GetBatteryIndicator(){ return batteryIndicator; }
     public AudioSource GetBatteryIndicatorSound() { return batteryIndicatorSound; }
     
@@ -44,7 +44,6 @@ public class AutonomousVehicle : MonoBehaviour
             EventManager.Instance.PlayerVehicle.gameObject, EventManager.Instance.PlayerVehicle.transform.forward), 
             pathingEnd, pathingCallbackFinish);
         EventLogger.Log(TAG, "Continuing pathing to event.");
-        Debug.Log("Continuing pathing to event.");
     }
 
     public void DisposePathing()
@@ -88,6 +87,8 @@ public class AutonomousVehicle : MonoBehaviour
         MoveTrafficSystem.Instance.Initialize(this.transform);
         EventManager.Instance.Initialize(this.gameObject);
         GameMaster.Instance.MainCamera = playerCamera;
+        IsInAutonomous = true;
+        IsPathing = false;
         inputSimulator = new InputSimulator();
     }
 
@@ -179,8 +180,6 @@ public class AutonomousVehicle : MonoBehaviour
         // Pause pathing if pathing
         if (IsPathing)
         {
-            Debug.Log("Pausing pathing to event.");
-
             StopCoroutine(pathingRoutine);
 
             pathingRoutine = null;

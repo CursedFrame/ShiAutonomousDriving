@@ -7,9 +7,5 @@ public abstract class AutonomousEvent
     public abstract string Tag { get; }
     public abstract void StartEvent();
     public abstract void StopEvent();
-}
-
-public interface UpdateEvent
-{
-    void UpdateEvent();
+    public virtual void UpdateEvent() {}
 }

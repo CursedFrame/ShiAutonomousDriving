@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
 
-public class IndicatorEvent : AutonomousEvent, UpdateEvent
+public class IndicatorEvent : AutonomousEvent
 {
     public override string Tag { get { return "IndicatorEvent"; } }
     private const float blinkTime = 0.5f;
@@ -27,7 +27,7 @@ public class IndicatorEvent : AutonomousEvent, UpdateEvent
         indicator.SetActive(false);
     }
 
-    public void UpdateEvent()
+    public override void UpdateEvent()
     {
         if (Time.realtimeSinceStartup - currentTime > blinkTime)
         {

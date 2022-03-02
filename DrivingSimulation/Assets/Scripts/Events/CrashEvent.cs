@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using GleyTrafficSystem;
 
-public class CrashEvent : AutonomousEvent, UpdateEvent
+public class CrashEvent : AutonomousEvent
 {
     public override string Tag { get { return "CrashEvent"; } }
     private static bool crashSoundPlayed = false;
@@ -62,7 +62,7 @@ public class CrashEvent : AutonomousEvent, UpdateEvent
         EventManager.Instance.PlayerVehicleAutonomous.DisposePathing();
     }
 
-    public void UpdateEvent()
+    public override void UpdateEvent()
     {
         if (!carOne || !carTwo || vehiclesVisible) return;
 
