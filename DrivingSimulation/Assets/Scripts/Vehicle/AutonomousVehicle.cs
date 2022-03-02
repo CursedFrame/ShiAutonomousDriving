@@ -2,16 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using GleyTrafficSystem;
+using WindowsInput;
+using WindowsInput.Native;
 public class AutonomousVehicle : MonoBehaviour
 {
     public const string TAG = "AutonomousVehicle";
+    private const int LOGITECH_STEERING_WHEEL_INDEX = 0; // This may need to be changed, requires testing with wheel, which I do not have with me at the time of writing this
+    private const int LOGITECH_STEERING_WHEEL_CROSS = 1;
+    private const int LOGITECH_STEERING_WHEEL_SQUARE = 2;
+    private const int LOGITECH_STEERING_WHEEL_CIRCLE = 3;
+    private const int LOGITECH_STEERING_WHEEL_TRIANGLE = 4;
+    
+    private static InputSimulator inputSimulator;
     [SerializeField] private GameObject batteryIndicator;
     [SerializeField] private AudioSource batteryIndicatorSound;
     [SerializeField] private Camera playerCamera;
     private IEnumerator pathingRoutine;
     private Waypoint pathingEnd;
     private System.Action pathingCallbackFinish;
-    
+
     public bool IsInAutonomous { get; set; } = true;
     public bool IsPathing { get; set; } = false;
     public GameObject GetBatteryIndicator(){ return batteryIndicator; }
@@ -79,13 +88,14 @@ public class AutonomousVehicle : MonoBehaviour
         MoveTrafficSystem.Instance.Initialize(this.transform);
         EventManager.Instance.Initialize(this.gameObject);
         GameMaster.Instance.MainCamera = playerCamera;
+        inputSimulator = new InputSimulator();
     }
 
     // Update is called once per frame
     private void Update()
     {
         // Manual toggle of autonomous mode
-        if (Input.GetKeyDown(KeyCode.Keypad9))
+        if (Input.GetKeyDown(KeyCode.Keypad9) || LogitechGSDK.LogiButtonTriggered(LOGITECH_STEERING_WHEEL_INDEX, LOGITECH_STEERING_WHEEL_CIRCLE))
         {
             if (!IsInAutonomous)
             {   
@@ -106,6 +116,29 @@ public class AutonomousVehicle : MonoBehaviour
             else 
             {
                 DriverTakeControl("TOGGLE BUTTON");
+            }
+        }
+
+        // Due to limitations with the Vehicle Physics Pro package, we must simulate keyboard presses when
+        // steering wheel buttons are pressed for toggles
+        if (!IsInAutonomous)
+        {
+            // Vehicle start
+            if (LogitechGSDK.LogiButtonIsPressed(LOGITECH_STEERING_WHEEL_INDEX, LOGITECH_STEERING_WHEEL_TRIANGLE))
+            {
+                inputSimulator.Keyboard.KeyDown(VirtualKeyCode.VK_K);
+            }
+
+            // Neutral
+            if (LogitechGSDK.LogiButtonTriggered(LOGITECH_STEERING_WHEEL_INDEX, LOGITECH_STEERING_WHEEL_SQUARE))
+            {
+                inputSimulator.Keyboard.KeyPress(VirtualKeyCode.VK_N);
+            }
+
+            // Reverse
+            if (LogitechGSDK.LogiButtonTriggered(LOGITECH_STEERING_WHEEL_INDEX, LOGITECH_STEERING_WHEEL_CROSS))
+            {
+                inputSimulator.Keyboard.KeyPress(VirtualKeyCode.VK_R);
             }
         }
 

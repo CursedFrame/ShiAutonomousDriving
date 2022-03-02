@@ -2,17 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using System.Diagnostics;
+using System.Linq;
 using UnityEngine;
 
 public class EventManager : MonoBehaviour
 {
     public const string TAG = "EventManager";
     [SerializeField] private bool debugEnabled = false;
+    [SerializeField] private bool shuffleModeEnabled = false;
     [SerializeField] private float timeBeforeEvents = 3600f;
     [SerializeField] private float timeBetweenNextEventUpper = 900f;
     [SerializeField] private float timeBetweenNextEventLower = 300f;
     [SerializeField] private List<UniqueEvent> eventOrder;
     private static EventManager _instance;
+    private static System.Random rng = new System.Random();
     private List<AutonomousEvent> events;
     private UpdateEvent updateEvent;
     private int currentIndex;
@@ -61,6 +64,22 @@ public class EventManager : MonoBehaviour
                         break;
                 }
             }
+
+            // Thanks to https://stackoverflow.com/questions/273313/randomize-a-listt
+            if (shuffleModeEnabled)
+            {
+                events = events.OrderBy(a => rng.Next()).ToList();
+
+                // Log event order for 
+                UnityEngine.Debug.Log("Events order shuffled. Order of events are...");
+                EventLogger.Log(TAG, "Events order shuffled. Order of events are...");
+                for (int i = 0; i < events.Count; i++)
+                {
+                    EventLogger.Log(TAG, String.Format("{0}: {1}", i, events[i].Tag));
+                    UnityEngine.Debug.Log(String.Format("{0}: {1}", i, events[i].Tag));
+                }
+            }
+
             StartCoroutine(QueueNextEvent(firstEvent: true));
         }
         
