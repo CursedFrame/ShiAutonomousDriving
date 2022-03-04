@@ -617,7 +617,6 @@ namespace GleyTrafficSystem
                     if (playerVehicleTargetIndex == -1) return; // if no index is found, autonomous mode should not be enabled
                     playerVehicleIndex = i;
                     ignoreVehicle[i] = false;
-                    wheelRotation[i] = 0;
                     
                     // callback for continuing pathing should be delayed until after the next waypoint has been queued
                     StartCoroutine(DelayVehicleActions(vehicle, waypointManager.GetDistanceToWaypoint(vehicle.transform.position, playerVehicleTargetIndex), callback)); 
@@ -633,7 +632,7 @@ namespace GleyTrafficSystem
             int vehicleIndex = GetVehicleIndex(vehicle);
             if (vehicleIndex == -1) return -1;
 
-            int waypointIndex = waypointManager.GetForwardWaypointIndex(vehiclePosition[vehicleIndex], vehicleType[vehicleIndex], forward);
+            int waypointIndex = waypointManager.GetForwardWaypointIndex(vehiclePosition[vehicleIndex], vehicleType[vehicleIndex], forward, vehicleRigidbody[vehicleIndex].velocity.magnitude);
             if (waypointIndex == -1) return -1;
 
             waypointManager.RemoveTargetWaypoint(vehicleIndex);
@@ -650,7 +649,7 @@ namespace GleyTrafficSystem
             int vehicleIndex = GetVehicleIndex(vehicle);
             if (vehicleIndex == -1) return;
 
-            int waypointIndex = waypointManager.GetForwardWaypointIndex(vehiclePosition[vehicleIndex], vehicleType[vehicleIndex], forward);
+            int waypointIndex = waypointManager.GetForwardWaypointIndex(vehiclePosition[vehicleIndex], vehicleType[vehicleIndex], forward, vehicleRigidbody[vehicleIndex].velocity.magnitude);
             if (waypointIndex == -1) return;
 
             waypointManager.RemoveTargetWaypoint(vehicleIndex);
@@ -720,7 +719,7 @@ namespace GleyTrafficSystem
             int vehicleIndex = GetVehicleIndex(vehicle);
             if (vehicleIndex == -1) return new Waypoint();
 
-            int waypointIndex = waypointManager.GetForwardWaypointIndex(vehiclePosition[vehicleIndex], vehicleType[vehicleIndex], forward);
+            int waypointIndex = waypointManager.GetForwardWaypointIndex(vehiclePosition[vehicleIndex], vehicleType[vehicleIndex], forward, vehicleRigidbody[vehicleIndex].velocity.magnitude);
             if (waypointIndex == -1){
                 return new Waypoint();
             } else {
@@ -766,7 +765,6 @@ namespace GleyTrafficSystem
 
             if (callback != null) callback();
         }
-
 
         int GetVehicleIndex(GameObject vehicle)
         {
@@ -984,15 +982,16 @@ namespace GleyTrafficSystem
                     if (groundedWheels != 0)
                     {
                         vehicleRigidbody[i].AddForce(vehicleBodyForce[i] * ((float)groundedWheels / (vehicleEndWheelIndex[i] - vehicleStartWheelIndex[i])), ForceMode.VelocityChange);
-                        if (!(playerVehicleIndex == i && playerVehicleRotationDisabled))
+
+                        if (playerVehicleIndex == i && playerVehicleRotationDisabled)
+                        {
+                            turnAngle[i] = 0;
+                            wheelRotation[i] = 0;
+                        } 
+                        else
                         {
                             vehicleRigidbody[i].MoveRotation(vehicleRigidbody[i].rotation * Quaternion.Euler(0, vehicleRotationAngle[i], 0));
                         }
-                        else
-                        {
-                            turnAngle[i] = 0;
-                        }
-
                     }
                     //request new waypoint if needed
                     if (vehicleNeedWaypoint[i] == true)

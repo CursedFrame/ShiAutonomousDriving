@@ -456,13 +456,13 @@ namespace GleyTrafficSystem
         /// </summary>
         /// <param name="index"></param>
         /// <returns></returns>
-        internal int GetForwardWaypointIndex(Vector3 position, VehicleTypes type, Vector3 forward)
+        internal int GetForwardWaypointIndex(Vector3 position, VehicleTypes type, Vector3 forward, float velocity)
         {
             if (allWaypoints.Length == 0)
                 return -1;
 
             // Find closest waypoint
-            float minDistance = float.MaxValue;
+            float minFoundDistance = float.MaxValue;
             int waypointIndex = -1;
             for (int i = 0; i < allWaypoints.Length; i++)
             {
@@ -471,9 +471,9 @@ namespace GleyTrafficSystem
                 
                 bool isCorrectAngle = Vector3.Angle(targetDir, forward) < 10f; // 20 degree cone for getting closest waypoint
                 float newDistance = Vector3.Distance(targetWaypointPos, position);
-                if (7.5f < newDistance && newDistance < minDistance && isCorrectAngle) // distance must be greater than 10f (~m) and less than minDistance
+                if (velocity < newDistance && newDistance < minFoundDistance && isCorrectAngle) // distance must be greater than 10f (~m) and less than minDistance
                 {
-                    minDistance = newDistance;
+                    minFoundDistance = newDistance;
                     waypointIndex = allWaypoints[i].listIndex;
                 }
             }
@@ -482,7 +482,7 @@ namespace GleyTrafficSystem
             if (waypointIndex != -1)
             {
                 Debug.DrawLine(position, GetWaypoint(waypointIndex).position, Color.green, 60.0f);
-                Debug.Log("Distance: " + minDistance);
+                Debug.Log("Distance: " + minFoundDistance);
             }
             else
             {

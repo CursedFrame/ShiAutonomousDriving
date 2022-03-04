@@ -35,7 +35,7 @@
     },
     {
       "FullName": "Assembly-CSharp, Version=0.2.0.0, Culture=neutral, PublicKeyToken=null",
-      "LastWriteTime": "2022-03-02T21:09:55.2974771Z"
+      "LastWriteTime": "2022-03-04T00:37:08.7750181Z"
     }
   ],
   "Functions": [
@@ -196,7 +196,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<GleyTrafficSystem.DriveJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "d2fd51c4f43d35ed627cd7f2fd754dde",
+      "ModuleHash": "c548008c846c3e60674ecbd648b68169",
       "LinkName": "5786E848FAAEE7A2",
       "AssemblyDependencyIndices": [
         2,
@@ -209,7 +209,7 @@
     {
       "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<GleyTrafficSystem.WheelJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "3ace58048cacd23adf703a4665922624",
+      "ModuleHash": "96cc6e03c9c75ff0a9978103282ffa88",
       "LinkName": "3C122607D82A47C2",
       "AssemblyDependencyIndices": [
         2,
@@ -222,7 +222,7 @@
     {
       "FullName": "System.Void UnityEngine.Jobs.IJobParallelForTransformExtensions/TransformParallelForLoopStruct`1<GleyTrafficSystem.UpdateTriggerJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "ef60a6db26a71b8ffc914406eaf1e906",
+      "ModuleHash": "eba75eaae2463770de6aeff36c72e878",
       "LinkName": "CFEA11BD7AFC4DE6",
       "AssemblyDependencyIndices": [
         2,
@@ -235,7 +235,7 @@
     {
       "FullName": "System.Void UnityEngine.Jobs.IJobParallelForTransformExtensions/TransformParallelForLoopStruct`1<GleyTrafficSystem.UpdateWheelJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "f4d76ef1f872f7ae980d2132fb40a197",
+      "ModuleHash": "bc41c733abf25f0598fc153c43749b57",
       "LinkName": "AD3AB413B35559A0",
       "AssemblyDependencyIndices": [
         2,
