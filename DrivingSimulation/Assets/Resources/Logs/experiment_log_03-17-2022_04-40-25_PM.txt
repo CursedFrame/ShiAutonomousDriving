@@ -1,0 +1,27 @@
+3/17/2022 4:40:25 PM: EventManager: Waiting for at least 0 seconds until queueing next event.
+3/17/2022 4:40:25 PM: IndicatorEvent: [000:000] Event and stopwatch started.
+3/17/2022 4:40:29 PM: IndicatorEvent: [004:291] Event stopped. Driver took control of autonomous vehicle using STEERING WHEEL - LEFT.
+3/17/2022 4:40:29 PM: EventManager: Waiting for at least 0 seconds until queueing next event.
+3/17/2022 4:40:29 PM: EventManager: Vehicle is not in autonomous mode. Waiting for user to enable autonomous before starting next event.
+3/17/2022 4:40:41 PM: AutonomousVehicle: Driver used the TOGGLE BUTTON to enable autonomous mode.
+3/17/2022 4:40:42 PM: EventManager: User has enabled autonomous mode, now waiting 15 seconds before starting next event.
+3/17/2022 4:40:58 PM: ControlLossEvent: [000:000] Event and stopwatch started.
+3/17/2022 4:41:02 PM: ControlLossEvent: [003:867] Event stopped. Driver took control of autonomous vehicle using STEERING WHEEL - LEFT.
+3/17/2022 4:41:02 PM: EventManager: Waiting for at least 0 seconds until queueing next event.
+3/17/2022 4:41:02 PM: EventManager: Vehicle is not in autonomous mode. Waiting for user to enable autonomous before starting next event.
+3/17/2022 4:41:36 PM: AutonomousVehicle: Driver used the TOGGLE BUTTON to enable autonomous mode.
+3/17/2022 4:41:36 PM: EventManager: User has enabled autonomous mode, now waiting 15 seconds before starting next event.
+3/17/2022 4:41:52 PM: CrashEvent: Vehicle pathing to crash event location.
+3/17/2022 4:44:49 PM: CrashEvent: [000:000] Event and stopwatch started.
+3/17/2022 4:44:50 PM: CrashEvent: [001:009] Distance from vehicle to crash epicenter: 41.45359 m / 136.0026 ft
+3/17/2022 4:44:50 PM: CrashEvent: [001:010] Crash vehicles now spawned and moving toward each other.
+3/17/2022 4:44:51 PM: CrashEvent: [001:812] One or more crash vehicles are visible.
+3/17/2022 4:44:52 PM: CrashEvent: [003:573] Event stopped. Driver took control of autonomous vehicle using BRAKE.
+3/17/2022 4:44:52 PM: EventManager: Waiting for at least 0 seconds until queueing next event.
+3/17/2022 4:44:52 PM: EventManager: Vehicle is not in autonomous mode. Waiting for user to enable autonomous before starting next event.
+3/17/2022 4:45:55 PM: AutonomousVehicle: Driver used the TOGGLE BUTTON to enable autonomous mode.
+3/17/2022 4:45:56 PM: EventManager: User has enabled autonomous mode, now waiting 15 seconds before starting next event.
+3/17/2022 4:46:12 PM: MergeFailEvent: Vehicle pathing to merge fail event location.
+3/17/2022 4:48:44 PM: MergeFailEvent: [000:000] Event and stopwatch started.
+3/17/2022 4:48:45 PM: MergeFailEvent: [001:283] Event stopped. Driver took control of autonomous vehicle using STEERING WHEEL - LEFT.
+3/17/2022 4:48:58 PM: AutonomousVehicle: Driver used the TOGGLE BUTTON to enable autonomous mode.

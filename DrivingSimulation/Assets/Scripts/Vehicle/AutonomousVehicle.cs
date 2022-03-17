@@ -13,6 +13,7 @@ public class AutonomousVehicle : MonoBehaviour
     private const int LOGITECH_STEERING_WHEEL_CIRCLE = 3;
     private const int LOGITECH_STEERING_WHEEL_TRIANGLE = 4;
     
+    
     private static InputSimulator inputSimulator;
     [SerializeField] private GameObject batteryIndicator;
     [SerializeField] private AudioSource batteryIndicatorSound;
@@ -20,6 +21,7 @@ public class AutonomousVehicle : MonoBehaviour
     private IEnumerator pathingRoutine;
     private Waypoint pathingEnd;
     private System.Action pathingCallbackFinish;
+    private string buttonStatus;
 
     public bool IsInAutonomous { get; set; }
     public bool IsPathing { get; set; }
@@ -92,6 +94,11 @@ public class AutonomousVehicle : MonoBehaviour
         inputSimulator = new InputSimulator();
     }
 
+    public void Resume()
+    {
+        Time.timeScale = 1;
+    }
+
     // Update is called once per frame
     private void Update()
     {
@@ -119,10 +126,14 @@ public class AutonomousVehicle : MonoBehaviour
                 DriverTakeControl("TOGGLE BUTTON");
             }
         }
+        if(LogitechGSDK.LogiButtonTriggered(LOGITECH_STEERING_WHEEL_INDEX, LOGITECH_STEERING_WHEEL_CROSS))
+        {
+            Resume();
+        }
 
         // Due to limitations with the Vehicle Physics Pro package, we must simulate keyboard presses when
         // steering wheel buttons are pressed for toggles
-        if (!IsInAutonomous)
+        /*if (!IsInAutonomous)
         {
             // Vehicle start
             if (LogitechGSDK.LogiButtonIsPressed(LOGITECH_STEERING_WHEEL_INDEX, LOGITECH_STEERING_WHEEL_TRIANGLE))
@@ -141,7 +152,8 @@ public class AutonomousVehicle : MonoBehaviour
             {
                 inputSimulator.Keyboard.KeyPress(VirtualKeyCode.VK_R);
             }
-        }
+
+        }*/
 
         // Disables autonomous control when driver moves the steering wheel
         // or presses any pedal

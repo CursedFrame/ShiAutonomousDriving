@@ -1132,7 +1132,7 @@ MonoBehaviour:
   progressiveSteerMode: 0
   movementRate: 0.25
   autoCenterRate: 0.01
-  ignitionKey: 107
+  ignitionKey: 336
   steerAxis: Horizontal
   throttleAndBrakeAxis: Vertical
   handbrakeAxis: Jump
@@ -1140,8 +1140,8 @@ MonoBehaviour:
   gearShiftButton: Fire2
   gearModeSelectButton: Fire3
   keyboardNumbersSelectGears: 1
-  neutralGear: 110
-  reverseGear: 114
+  neutralGear: 334
+  reverseGear: 335
   externalThrottle: 0
   reverse: 0
   externalBrake: 0

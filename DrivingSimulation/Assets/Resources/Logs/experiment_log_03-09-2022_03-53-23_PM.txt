@@ -1,0 +1,22 @@
+3/9/2022 3:53:23 PM: EventManager: Waiting for at least 0 seconds until queueing next event.
+3/9/2022 3:53:23 PM: IndicatorEvent: [000:000] Event and stopwatch started.
+3/9/2022 3:53:26 PM: IndicatorEvent: [002:479] Event stopped. Driver took control of autonomous vehicle using BRAKE.
+3/9/2022 3:53:26 PM: EventManager: Waiting for at least 0 seconds until queueing next event.
+3/9/2022 3:53:26 PM: EventManager: Vehicle is not in autonomous mode. Waiting for user to enable autonomous before starting next event.
+3/9/2022 3:53:41 PM: AutonomousVehicle: Driver used the TOGGLE BUTTON to enable autonomous mode.
+3/9/2022 3:53:41 PM: EventManager: User has enabled autonomous mode, now waiting 15 seconds before starting next event.
+3/9/2022 3:53:52 PM: AutonomousVehicle: Driver used the TOGGLE BUTTON to take over the vehicle outside of event.
+3/9/2022 3:53:52 PM: EventManager: User has disabled autonomous mode before event started. Resetting delay timer.
+3/9/2022 3:53:53 PM: AutonomousVehicle: Driver used the TOGGLE BUTTON to enable autonomous mode.
+3/9/2022 3:53:53 PM: EventManager: User has enabled autonomous mode, now waiting 15 seconds before starting next event.
+3/9/2022 3:53:54 PM: AutonomousVehicle: Driver used the TOGGLE BUTTON to take over the vehicle outside of event.
+3/9/2022 3:53:54 PM: AutonomousVehicle: Driver used the TOGGLE BUTTON to enable autonomous mode.
+3/9/2022 3:53:54 PM: AutonomousVehicle: Driver used the TOGGLE BUTTON to take over the vehicle outside of event.
+3/9/2022 3:53:55 PM: AutonomousVehicle: Driver used the TOGGLE BUTTON to enable autonomous mode.
+3/9/2022 3:54:09 PM: ControlLossEvent: [000:000] Event and stopwatch started.
+3/9/2022 3:54:43 PM: ControlLossEvent: [034:283] Event stopped. Driver took control of autonomous vehicle using STEERING WHEEL - RIGHT.
+3/9/2022 3:54:43 PM: EventManager: Waiting for at least 0 seconds until queueing next event.
+3/9/2022 3:54:43 PM: EventManager: Vehicle is not in autonomous mode. Waiting for user to enable autonomous before starting next event.
+3/9/2022 3:55:52 PM: AutonomousVehicle: Driver used the TOGGLE BUTTON to enable autonomous mode.
+3/9/2022 3:55:52 PM: EventManager: User has enabled autonomous mode, now waiting 15 seconds before starting next event.
+3/9/2022 3:56:08 PM: CrashEvent: Vehicle pathing to crash event location.

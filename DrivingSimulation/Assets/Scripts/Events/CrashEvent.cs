@@ -114,6 +114,19 @@ public class CrashEvent : AutonomousEvent
         crashSoundPlayed = true;
     }
 
+    string URL = "https://docs.google.com/forms/d/e/1FAIpQLScwoRFutUp8B3sBv-I-GMDwjxyAYOwAu-gxCrWfx4gDzEQ4qg/viewform?usp=sf_link";
+    public void Pause()
+    {
+        Time.timeScale = 0;
+    }
+    public void Resume()
+    {
+        Time.timeScale = 1;
+    }
+    public void OpenURL()
+    {
+        Application.OpenURL(URL);
+    }
     public void OnEventFinish()
     {
         if (carOne) UnityEngine.Object.Destroy(carOne);
@@ -121,6 +134,8 @@ public class CrashEvent : AutonomousEvent
         if (despawnTrafficVehicles) UnityEngine.Object.Destroy(despawnTrafficVehicles);
         if (despawnCrashVehicles) UnityEngine.Object.Destroy(despawnCrashVehicles);
         GleyTrafficSystem.Manager.SetTrafficDensity(20);
+        Pause();
+        OpenURL();
     }
 
     private void OnAtEventPosition()

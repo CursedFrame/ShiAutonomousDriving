@@ -32,6 +32,7 @@ public class EventManager : MonoBehaviour
     private List<AutonomousEvent> events;
     private int currentIndex;
     private bool initialized = false;
+    private int pauseCounter = 0;
     
     public static EventManager Instance { get { return _instance; } }
     public bool EventTimerStarted { get; set; } = false;
@@ -41,6 +42,20 @@ public class EventManager : MonoBehaviour
 
     public enum UniqueEvent { ControlLossEvent, CrashEvent, IndicatorEvent, MergeFailEvent }
     
+    string URL = "https://docs.google.com/forms/d/e/1FAIpQLScwoRFutUp8B3sBv-I-GMDwjxyAYOwAu-gxCrWfx4gDzEQ4qg/viewform?usp=sf_link";
+    public void Pause()
+    {
+        Time.timeScale = 0;
+    }
+    public void Resume()
+    {
+        Time.timeScale = 1;
+    }
+    public void OpenURL()
+    {
+        Application.OpenURL(URL);
+    }
+
     public void Initialize(GameObject playerVehicle)
     {
         EventLogger.Initialize();
@@ -124,6 +139,13 @@ public class EventManager : MonoBehaviour
         TimeElapsed.Stop();
         EventLogger.LogTimer(events[currentIndex].Tag, String.Format("Event stopped. Driver took control of autonomous vehicle using {0}.", driverControlPreference), TimeElapsed.Elapsed);
         TimeElapsed.Reset();
+        if("CrashEvent" == events[currentIndex].Tag && pauseCounter == 1)
+        {
+        Pause();
+        AudioListener.pause = true;
+        OpenURL();
+        }
+        pauseCounter++;
     }
 
     // Stop stopwatch and queue next event when user attempts to take control of vehicle

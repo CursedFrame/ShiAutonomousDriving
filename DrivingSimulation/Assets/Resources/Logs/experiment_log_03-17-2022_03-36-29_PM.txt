@@ -1,0 +1,5 @@
+3/17/2022 3:36:29 PM: EventManager: Waiting for at least 0 seconds until queueing next event.
+3/17/2022 3:36:29 PM: IndicatorEvent: [000:000] Event and stopwatch started.
+3/17/2022 3:36:32 PM: IndicatorEvent: [003:677] Event stopped. Driver took control of autonomous vehicle using STEERING WHEEL - RIGHT.
+3/17/2022 3:36:32 PM: EventManager: Waiting for at least 0 seconds until queueing next event.
+3/17/2022 3:36:32 PM: EventManager: Vehicle is not in autonomous mode. Waiting for user to enable autonomous before starting next event.
