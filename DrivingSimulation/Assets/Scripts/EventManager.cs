@@ -139,7 +139,7 @@ public class EventManager : MonoBehaviour
         TimeElapsed.Stop();
         EventLogger.LogTimer(events[currentIndex].Tag, String.Format("Event stopped. Driver took control of autonomous vehicle using {0}.", driverControlPreference), TimeElapsed.Elapsed);
         TimeElapsed.Reset();
-        if("CrashEvent" == events[currentIndex].Tag && pauseCounter == 1)
+        if("CrashEvent" == events[currentIndex].Tag && pauseCounter == 2)
         {
         Pause();
         AudioListener.pause = true;

@@ -35,7 +35,7 @@
     },
     {
       "FullName": "Assembly-CSharp, Version=0.2.0.0, Culture=neutral, PublicKeyToken=null",
-      "LastWriteTime": "2022-03-17T21:53:49.0092466Z"
+      "LastWriteTime": "2022-03-21T21:14:29.9641473Z"
     }
   ],
   "Functions": [
@@ -194,9 +194,35 @@
       ]
     },
     {
+      "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<GleyTrafficSystem.DriveJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
+      "ModuleOptionsHash": 11834165633931345063,
+      "ModuleHash": "fad0b8642c46744682f43862ca51aba5",
+      "LinkName": "5786E848FAAEE7A2",
+      "AssemblyDependencyIndices": [
+        2,
+        8,
+        4,
+        6,
+        1
+      ]
+    },
+    {
+      "FullName": "System.Void Unity.Jobs.IJobParallelForExtensions/ParallelForJobStruct`1<GleyTrafficSystem.WheelJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
+      "ModuleOptionsHash": 11834165633931345063,
+      "ModuleHash": "5918efb35a2283fc4d05e6728ae15a4a",
+      "LinkName": "3C122607D82A47C2",
+      "AssemblyDependencyIndices": [
+        2,
+        8,
+        4,
+        6,
+        1
+      ]
+    },
+    {
       "FullName": "System.Void UnityEngine.Jobs.IJobParallelForTransformExtensions/TransformParallelForLoopStruct`1<GleyTrafficSystem.UpdateTriggerJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
       "ModuleOptionsHash": 11834165633931345063,
-      "ModuleHash": "4ee4b224ad43e403ba4452ce361ff79c",
+      "ModuleHash": "e93efee3b9dc36ef06a9f9d7cce2d4f1",
       "LinkName": "CFEA11BD7AFC4DE6",
       "AssemblyDependencyIndices": [
         2,
@@ -204,6 +230,19 @@
         4,
         1,
         6
+      ]
+    },
+    {
+      "FullName": "System.Void UnityEngine.Jobs.IJobParallelForTransformExtensions/TransformParallelForLoopStruct`1<GleyTrafficSystem.UpdateWheelJob>::Execute(T&,System.IntPtr,System.IntPtr,Unity.Jobs.LowLevel.Unsafe.JobRanges&,System.Int32)",
+      "ModuleOptionsHash": 11834165633931345063,
+      "ModuleHash": "72b6443d40c1b4455365520a3be44ea3",
+      "LinkName": "AD3AB413B35559A0",
+      "AssemblyDependencyIndices": [
+        2,
+        8,
+        4,
+        6,
+        1
       ]
     }
   ]
