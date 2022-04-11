@@ -1,5 +1,0 @@
-3/9/2022 4:14:21 PM: EventManager: Waiting for at least 0 seconds until queueing next event.
-3/9/2022 4:14:21 PM: IndicatorEvent: [000:000] Event and stopwatch started.
-3/9/2022 4:14:24 PM: IndicatorEvent: [002:596] Event stopped. Driver took control of autonomous vehicle using BRAKE.
-3/9/2022 4:14:24 PM: EventManager: Waiting for at least 0 seconds until queueing next event.
-3/9/2022 4:14:24 PM: EventManager: Vehicle is not in autonomous mode. Waiting for user to enable autonomous before starting next event.

@@ -1,0 +1,6 @@
+4/11/2022 3:32:39 PM: EventManager: Events order shuffled. Order of events are...
+4/11/2022 3:32:39 PM: EventManager: 4: ControlLossEvent
+4/11/2022 3:32:39 PM: EventManager: 3: CrashEvent
+4/11/2022 3:32:39 PM: EventManager: 2: IndicatorEvent
+4/11/2022 3:32:39 PM: EventManager: 1: MergeFailEvent
+4/11/2022 3:32:39 PM: EventManager: Waiting for at least 150 seconds until queueing next event.

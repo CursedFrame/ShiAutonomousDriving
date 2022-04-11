@@ -1148,7 +1148,7 @@ MonoBehaviour:
   externalHandbrake: 0
   externalSteer: 0
   externalClutch: 0
-  externalIgnition: 0
+  externalIgnition: 2
   lockBrakesOnEnable: 0
 --- !u!114 &1554401609128868299
 MonoBehaviour:

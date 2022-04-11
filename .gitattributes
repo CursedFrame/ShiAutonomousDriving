@@ -6,3 +6,8 @@ DrivingSimulation/Library/ArtifactDB filter=lfs diff=lfs merge=lfs -text
 DrivingSimulation/Assets/Scenes/Key filter=lfs diff=lfs merge=lfs -text
 Biscayne.unity filter=lfs diff=lfs merge=lfs -text
 DrivingSimulation/Assets/Scenes/KeyBiscayne.unity filter=lfs diff=lfs merge=lfs -text
+*.assset filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.assets filter=lfs diff=lfs merge=lfs -text
+*.resS filter=lfs diff=lfs merge=lfs -text
+level0 filter=lfs diff=lfs merge=lfs -text

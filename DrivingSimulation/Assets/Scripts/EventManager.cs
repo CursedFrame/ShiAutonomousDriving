@@ -32,7 +32,6 @@ public class EventManager : MonoBehaviour
     private List<AutonomousEvent> events;
     private int currentIndex;
     private bool initialized = false;
-    private int pauseCounter = 0;
     
     public static EventManager Instance { get { return _instance; } }
     public bool EventTimerStarted { get; set; } = false;
@@ -139,13 +138,12 @@ public class EventManager : MonoBehaviour
         TimeElapsed.Stop();
         EventLogger.LogTimer(events[currentIndex].Tag, String.Format("Event stopped. Driver took control of autonomous vehicle using {0}.", driverControlPreference), TimeElapsed.Elapsed);
         TimeElapsed.Reset();
-        if("CrashEvent" == events[currentIndex].Tag && pauseCounter == 2)
+        /*if("CrashEvent" == events[currentIndex].Tag)
         {
         Pause();
         AudioListener.pause = true;
         OpenURL();
-        }
-        pauseCounter++;
+        }*/
     }
 
     // Stop stopwatch and queue next event when user attempts to take control of vehicle

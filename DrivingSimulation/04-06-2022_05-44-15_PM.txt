@@ -1,0 +1,7 @@
+4/6/2022 5:44:15 PM: EventManager: Events order shuffled. Order of events are...
+4/6/2022 5:44:15 PM: EventManager: 4: IndicatorEvent
+4/6/2022 5:44:15 PM: EventManager: 3: MergeFailEvent
+4/6/2022 5:44:15 PM: EventManager: 2: CrashEvent
+4/6/2022 5:44:15 PM: EventManager: 1: ControlLossEvent
+4/6/2022 5:44:15 PM: EventManager: Waiting for at least 150 seconds until queueing next event.
+4/6/2022 5:44:18 PM: AutonomousVehicle: Driver used the BRAKE to take over the vehicle outside of event.

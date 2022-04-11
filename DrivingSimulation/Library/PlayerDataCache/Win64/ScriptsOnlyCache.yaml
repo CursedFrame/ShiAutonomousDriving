@@ -1,0 +1,1955 @@
+ScriptsOnlyBuild:
+  usedScripts:
+    Assembly-CSharp.dll:
+    - AutonomousVehicle
+    - ChunkManager
+    - CityGen3D.Screenshot
+    - CrashVehicle
+    - EventManager
+    - GameMaster
+    - GleyTrafficSystem.CurrentSceneData
+    - GleyTrafficSystem.DebugSettings
+    - GleyTrafficSystem.LayerSetup
+    - GleyTrafficSystem.TrafficComponent
+    - GleyTrafficSystem.VehicleComponent
+    - GleyTrafficSystem.VehicleLightsComponent
+    - GleyTrafficSystem.VehiclePool
+    - GleyTrafficSystem.VisibilityScript
+    - InfoScreen
+    - LogitechSteeringWheel
+    - MoveTrafficSystem
+    - VehiclePhysics.UI.Dashboard
+    - VehiclePhysics.UI.Gauge
+    - VehiclePhysics.Utility.CaptureScreenshot
+    CityGen3D.EditorExtension.dll:
+    - CityGen3D.EditorExtension.Buildings
+    - CityGen3D.EditorExtension.Detail
+    - CityGen3D.EditorExtension.Entities
+    - CityGen3D.EditorExtension.Features
+    - CityGen3D.EditorExtension.Generator
+    - CityGen3D.EditorExtension.Heightmap
+    - CityGen3D.EditorExtension.Highway
+    - CityGen3D.EditorExtension.Highways
+    - CityGen3D.EditorExtension.Mapbox
+    - CityGen3D.EditorExtension.MeshExtender
+    - CityGen3D.EditorExtension.MeshExtrusion
+    - CityGen3D.EditorExtension.PlaneExtruder
+    - CityGen3D.EditorExtension.Plot
+    - CityGen3D.EditorExtension.PrefabSpawner
+    - CityGen3D.EditorExtension.Roadside
+    - CityGen3D.EditorExtension.ShapeMesh
+    - CityGen3D.EditorExtension.SplatMap
+    - CityGen3D.EditorExtension.Trees
+    - CityGen3D.EditorExtension.Water
+    - MeshSlicer
+    CityGen3D.dll:
+    - CityGen3D.Blueprint
+    - CityGen3D.Coastline
+    - CityGen3D.Data
+    - CityGen3D.Database
+    - CityGen3D.FPSDisplay
+    - CityGen3D.FreeCam
+    - CityGen3D.Landscape
+    - CityGen3D.LandscapeManager
+    - CityGen3D.LayerManager
+    - CityGen3D.Level
+    - CityGen3D.Map
+    - CityGen3D.MapBuilding
+    - CityGen3D.MapBuildings
+    - CityGen3D.MapEntities
+    - CityGen3D.MapEntity
+    - CityGen3D.MapFeature
+    - CityGen3D.MapFeatures
+    - CityGen3D.MapRoad
+    - CityGen3D.MapRoads
+    - CityGen3D.MapSurface
+    - CityGen3D.MapSurfaces
+    - CityGen3D.MapTree
+    - CityGen3D.MapTrees
+    - CityGen3D.Plan
+    - CityGen3D.Shape
+    - CityGen3D.ShapeNode
+    - CityGen3D.Voronoi
+    Unity.Postprocessing.Runtime.dll:
+    - UnityEngine.Rendering.PostProcessing.AmbientOcclusion
+    - UnityEngine.Rendering.PostProcessing.PostProcessLayer
+    - UnityEngine.Rendering.PostProcessing.PostProcessProfile
+    - UnityEngine.Rendering.PostProcessing.PostProcessResources
+    - UnityEngine.Rendering.PostProcessing.PostProcessVolume
+    Unity.Rider.Editor.dll:
+    - Packages.Rider.Editor.UnitTesting.CallbackData
+    UnityEditor.TestRunner.dll:
+    - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
+    - UnityEditor.TestTools.TestRunner.TestRun.TestJobDataHolder
+    UnityEngine.UI.dll:
+    - UnityEngine.EventSystems.EventSystem
+    - UnityEngine.EventSystems.StandaloneInputModule
+    - UnityEngine.UI.CanvasScaler
+    - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
+    - UnityEngine.UI.Text
+    VehiclePhysics.dll:
+    - EdyCommonTools.ApplicationCursor
+    - EdyCommonTools.SceneReload
+    - EdyCommonTools.ScreenBug
+    - EdyCommonTools.TimeScale
+    - VehiclePhysics.VPAeroSurface
+    - VehiclePhysics.VPAntiRollBar
+    - VehiclePhysics.VPAudio
+    - VehiclePhysics.VPCameraController
+    - VehiclePhysics.VPCameraTarget
+    - VehiclePhysics.VPResetVehicle
+    - VehiclePhysics.VPRollingFriction
+    - VehiclePhysics.VPStandardInput
+    - VehiclePhysics.VPTelemetry
+    - VehiclePhysics.VPVehicleController
+    - VehiclePhysics.VPVisualEffects
+    - VehiclePhysics.VPWheelCollider
+  sceneClasses:
+    Assets/Scenes/KeyBiscayne.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
+      Script: {instanceID: 0}
+    - Class: 43
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
+    - Class: 54
+      Script: {instanceID: 0}
+    - Class: 64
+      Script: {instanceID: 0}
+    - Class: 65
+      Script: {instanceID: 0}
+    - Class: 72
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1594}
+    - Class: 114
+      Script: {instanceID: 1602}
+    - Class: 114
+      Script: {instanceID: 1608}
+    - Class: 114
+      Script: {instanceID: 1618}
+    - Class: 114
+      Script: {instanceID: 1622}
+    - Class: 114
+      Script: {instanceID: 1624}
+    - Class: 114
+      Script: {instanceID: 1626}
+    - Class: 114
+      Script: {instanceID: 1628}
+    - Class: 114
+      Script: {instanceID: 1632}
+    - Class: 114
+      Script: {instanceID: 1634}
+    - Class: 114
+      Script: {instanceID: 1638}
+    - Class: 114
+      Script: {instanceID: 1640}
+    - Class: 114
+      Script: {instanceID: 1642}
+    - Class: 114
+      Script: {instanceID: 1644}
+    - Class: 114
+      Script: {instanceID: 1724}
+    - Class: 114
+      Script: {instanceID: 1726}
+    - Class: 114
+      Script: {instanceID: 2204}
+    - Class: 114
+      Script: {instanceID: 2266}
+    - Class: 114
+      Script: {instanceID: 2288}
+    - Class: 114
+      Script: {instanceID: 2290}
+    - Class: 114
+      Script: {instanceID: 2292}
+    - Class: 114
+      Script: {instanceID: 2296}
+    - Class: 114
+      Script: {instanceID: 2298}
+    - Class: 114
+      Script: {instanceID: 2300}
+    - Class: 114
+      Script: {instanceID: 2302}
+    - Class: 114
+      Script: {instanceID: 2306}
+    - Class: 114
+      Script: {instanceID: 2308}
+    - Class: 114
+      Script: {instanceID: 2310}
+    - Class: 114
+      Script: {instanceID: 2312}
+    - Class: 114
+      Script: {instanceID: 2314}
+    - Class: 114
+      Script: {instanceID: 2316}
+    - Class: 114
+      Script: {instanceID: 2318}
+    - Class: 114
+      Script: {instanceID: 2320}
+    - Class: 114
+      Script: {instanceID: 2322}
+    - Class: 114
+      Script: {instanceID: 2324}
+    - Class: 114
+      Script: {instanceID: 2326}
+    - Class: 114
+      Script: {instanceID: 2328}
+    - Class: 114
+      Script: {instanceID: 2330}
+    - Class: 114
+      Script: {instanceID: 2332}
+    - Class: 114
+      Script: {instanceID: 2334}
+    - Class: 114
+      Script: {instanceID: 2338}
+    - Class: 114
+      Script: {instanceID: 2340}
+    - Class: 114
+      Script: {instanceID: 2346}
+    - Class: 114
+      Script: {instanceID: 2444}
+    - Class: 114
+      Script: {instanceID: 2552}
+    - Class: 114
+      Script: {instanceID: 2848}
+    - Class: 114
+      Script: {instanceID: 3010}
+    - Class: 114
+      Script: {instanceID: 3164}
+    - Class: 114
+      Script: {instanceID: 3198}
+    - Class: 114
+      Script: {instanceID: 3298}
+    - Class: 114
+      Script: {instanceID: 3376}
+    - Class: 114
+      Script: {instanceID: 3418}
+    - Class: 114
+      Script: {instanceID: 3894}
+    - Class: 114
+      Script: {instanceID: 3916}
+    - Class: 114
+      Script: {instanceID: 3918}
+    - Class: 114
+      Script: {instanceID: 3962}
+    - Class: 114
+      Script: {instanceID: 3964}
+    - Class: 114
+      Script: {instanceID: 3966}
+    - Class: 114
+      Script: {instanceID: 3968}
+    - Class: 114
+      Script: {instanceID: 3976}
+    - Class: 114
+      Script: {instanceID: 3978}
+    - Class: 114
+      Script: {instanceID: 3980}
+    - Class: 114
+      Script: {instanceID: 3982}
+    - Class: 114
+      Script: {instanceID: 3984}
+    - Class: 114
+      Script: {instanceID: 3986}
+    - Class: 114
+      Script: {instanceID: 3988}
+    - Class: 114
+      Script: {instanceID: 4434}
+    - Class: 114
+      Script: {instanceID: 4498}
+    - Class: 114
+      Script: {instanceID: 4876}
+    - Class: 114
+      Script: {instanceID: 4972}
+    - Class: 114
+      Script: {instanceID: 4974}
+    - Class: 114
+      Script: {instanceID: 5004}
+    - Class: 114
+      Script: {instanceID: 5026}
+    - Class: 114
+      Script: {instanceID: 5072}
+    - Class: 114
+      Script: {instanceID: 5108}
+    - Class: 114
+      Script: {instanceID: 5112}
+    - Class: 114
+      Script: {instanceID: 5124}
+    - Class: 114
+      Script: {instanceID: 5130}
+    - Class: 114
+      Script: {instanceID: 5132}
+    - Class: 114
+      Script: {instanceID: 5134}
+    - Class: 114
+      Script: {instanceID: 5138}
+    - Class: 114
+      Script: {instanceID: 5140}
+    - Class: 114
+      Script: {instanceID: 5142}
+    - Class: 114
+      Script: {instanceID: 5144}
+    - Class: 114
+      Script: {instanceID: 5146}
+    - Class: 114
+      Script: {instanceID: 5150}
+    - Class: 114
+      Script: {instanceID: 5152}
+    - Class: 114
+      Script: {instanceID: 5370}
+    - Class: 114
+      Script: {instanceID: 5390}
+    - Class: 114
+      Script: {instanceID: 5508}
+    - Class: 114
+      Script: {instanceID: 6374}
+    - Class: 114
+      Script: {instanceID: 6378}
+    - Class: 114
+      Script: {instanceID: 6582}
+    - Class: 114
+      Script: {instanceID: 6628}
+    - Class: 114
+      Script: {instanceID: 2698080}
+    - Class: 114
+      Script: {instanceID: 2698084}
+    - Class: 114
+      Script: {instanceID: 2698112}
+    - Class: 114
+      Script: {instanceID: 2698206}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 121
+      Script: {instanceID: 0}
+    - Class: 124
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 134
+      Script: {instanceID: 0}
+    - Class: 135
+      Script: {instanceID: 0}
+    - Class: 136
+      Script: {instanceID: 0}
+    - Class: 146
+      Script: {instanceID: 0}
+    - Class: 154
+      Script: {instanceID: 0}
+    - Class: 156
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 169
+      Script: {instanceID: 0}
+    - Class: 182
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
+    - Class: 205
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 215
+      Script: {instanceID: 0}
+    - Class: 218
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 850595691
+      Script: {instanceID: 0}
+    - Class: 1953259897
+      Script: {instanceID: 0}
+  scriptHashData:
+  - hash:
+      serializedVersion: 2
+      Hash: 96f2b8fb7aef0a410fe62a9f3a4280ff
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: Plan
+  - hash:
+      serializedVersion: 2
+      Hash: bcaee4c2a83047257b5f47d6ed264b75
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Toggle
+  - hash:
+      serializedVersion: 2
+      Hash: 0ae65682f82a8e815aeed9ca6f055ff0
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: Blueprint
+  - hash:
+      serializedVersion: 2
+      Hash: aba7b2852ef61d175dd9602e7723d5e5
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Mask
+  - hash:
+      serializedVersion: 2
+      Hash: 54e52116995a73b1653d3c40c178f7fe
+    assemblyName: CityGen3D.EditorExtension.dll
+    namespaceName: CityGen3D.EditorExtension
+    className: MeshExtrusion
+  - hash:
+      serializedVersion: 2
+      Hash: c1d728126ff1918728036c59106d32b2
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 824c95e6cc2bca905fd325b128bead02
+    assemblyName: CityGen3D.EditorExtension.dll
+    namespaceName: CityGen3D.EditorExtension
+    className: Generator
+  - hash:
+      serializedVersion: 2
+      Hash: a306e12d896ddcca949923c805691027
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: InputField
+  - hash:
+      serializedVersion: 2
+      Hash: a6e561615949734e9f12f9b61661f43e
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 0df0d5fb36201a28e5b527a84892bc1c
+    assemblyName: CityGen3D.EditorExtension.dll
+    namespaceName: CityGen3D.EditorExtension
+    className: Highway
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: CityGen3D.EditorExtension.dll
+    namespaceName: 
+    className: MeshSlicer
+  - hash:
+      serializedVersion: 2
+      Hash: 699619b86d9359741a4f58540298c80b
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: 21a9c6dbf300fc1f6dc15ca7e2c39a37
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Slider
+  - hash:
+      serializedVersion: 2
+      Hash: e26414566a296c539b633d60d11dbff1
+    assemblyName: VehiclePhysics.dll
+    namespaceName: VehiclePhysics
+    className: VPAeroSurface
+  - hash:
+      serializedVersion: 2
+      Hash: 7df54e4c2ad94bef0fc153122e629765
+    assemblyName: VehiclePhysics.dll
+    namespaceName: VehiclePhysics
+    className: VPCameraController
+  - hash:
+      serializedVersion: 2
+      Hash: 0cbb65a3bf8a0aef2a06d29566e4f7a3
+    assemblyName: CityGen3D.EditorExtension.dll
+    namespaceName: CityGen3D.EditorExtension
+    className: Mapbox
+  - hash:
+      serializedVersion: 2
+      Hash: e55f38f444a92c2ac959cc43de4ca196
+    assemblyName: CityGen3D.EditorExtension.dll
+    namespaceName: CityGen3D.EditorExtension
+    className: MeshExtender
+  - hash:
+      serializedVersion: 2
+      Hash: 5a7a60d36ba22f0f739c9e23cd42b8f9
+    assemblyName: CityGen3D.EditorExtension.dll
+    namespaceName: CityGen3D.EditorExtension
+    className: PlaneExtruder
+  - hash:
+      serializedVersion: 2
+      Hash: 748dd2a2a28da4e618912da5ac45684b
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: StandaloneInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 5ab533713adae59372fb3e10a585c186
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: AnimationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LogitechSteeringWheel
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MoveTrafficSystem
+  - hash:
+      serializedVersion: 2
+      Hash: e9389e944eb81a3a9df56fcdb09ce6a9
+    assemblyName: Unity.ProBuilder.dll
+    namespaceName: UnityEngine.ProBuilder
+    className: ColliderBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: 32627091229eb86bb47dbd31e2041fe7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: Road
+  - hash:
+      serializedVersion: 2
+      Hash: 77aaaaa51f7a8d8ff333a879741e47d2
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_InputField
+  - hash:
+      serializedVersion: 2
+      Hash: 9c7c87712e298256d276eb96e02a57b1
+    assemblyName: Unity.ProBuilder.dll
+    namespaceName: UnityEngine.ProBuilder
+    className: PreferenceDictionary
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: SignalAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 0dbc3be398b4869a5c8d0d8481ee402c
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: LayoutElement
+  - hash:
+      serializedVersion: 2
+      Hash: d0987ce3e9092dbe0fa30d73f333fffa
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: Grain
+  - hash:
+      serializedVersion: 2
+      Hash: 6bc76e17f0d5e93f3eea7f5a2fe227f3
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 3164bc883ff663a5cdb32d1ef7e7c0c5
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: HorizontalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: caa533b001ae39b864ba8425019e2268
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Shadow
+  - hash:
+      serializedVersion: 2
+      Hash: 300fd99066f8c288e85f5e81ce65fe34
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_FontAsset
+  - hash:
+      serializedVersion: 2
+      Hash: e82c0521cdfe8cb6a168ef7208a98d4a
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: Vignette
+  - hash:
+      serializedVersion: 2
+      Hash: f542c1afca5bb4022f91fdda19b8d622
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: DepthOfField
+  - hash:
+      serializedVersion: 2
+      Hash: d670d16556b203fb0fdbe4ab82716bc5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: TrafficComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: VisibilityScript
+  - hash:
+      serializedVersion: 2
+      Hash: 7a76e3414546302f74fc21c9d862d3e1
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: CellulaAutomata
+  - hash:
+      serializedVersion: 2
+      Hash: 6d108780d3a35de9661e606bcdb23110
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: Coastline
+  - hash:
+      serializedVersion: 2
+      Hash: 00bcf42681b21dd4b0838f5169519dbe
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: Data
+  - hash:
+      serializedVersion: 2
+      Hash: efdc903b4eff6e32c448a235be1fe0d6
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: Database
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: DetailInstancer
+  - hash:
+      serializedVersion: 2
+      Hash: fc5903e35e0a9d8e2ecc0b3bb6f4ee0a
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: FPSDisplay
+  - hash:
+      serializedVersion: 2
+      Hash: 6de83702683b1831b760d34494f84c1b
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: FreeCam
+  - hash:
+      serializedVersion: 2
+      Hash: 797b1449a1c10b6374a69bc72e01752c
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: Landscape
+  - hash:
+      serializedVersion: 2
+      Hash: 5f0e4a696400b6ce9dbe5d01084d8ab2
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: LandscapeManager
+  - hash:
+      serializedVersion: 2
+      Hash: 5d4852510fd36a68abd24e5e15cbfa80
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: LayerCulling
+  - hash:
+      serializedVersion: 2
+      Hash: 0c17cb8186017d2d25cbb6e10d934edc
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: LayerManager
+  - hash:
+      serializedVersion: 2
+      Hash: aef0d6ec659342f8325f80e2b592ae23
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: Level
+  - hash:
+      serializedVersion: 2
+      Hash: 7b982096002eca83ac68ddfe44c4b309
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: Map
+  - hash:
+      serializedVersion: 2
+      Hash: d0124424eafa12d6627ec765bec5851e
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: MapBuilding
+  - hash:
+      serializedVersion: 2
+      Hash: 3ce05689460247a8a6b6345b40f78ff3
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: MapBuildings
+  - hash:
+      serializedVersion: 2
+      Hash: 1901d1974892fc108441cc86e59012a7
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: MapEntities
+  - hash:
+      serializedVersion: 2
+      Hash: 84ccdb182252aa85d725734ea935a943
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: MapEntity
+  - hash:
+      serializedVersion: 2
+      Hash: bd7943718e3750829a87a7e2975a283c
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: MapFeature
+  - hash:
+      serializedVersion: 2
+      Hash: 5af4d4d3b9f685615a6d09cbc0cb8b74
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: MapFeatures
+  - hash:
+      serializedVersion: 2
+      Hash: 55ceaf17a41bc72c4d78e5b34c7d95d9
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: MapRoad
+  - hash:
+      serializedVersion: 2
+      Hash: 8ccb3c1e1ba88dc58f8fc56c88a18bc4
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: MapRoads
+  - hash:
+      serializedVersion: 2
+      Hash: d38d7fc6d86114f599810623483908a1
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: MapSurface
+  - hash:
+      serializedVersion: 2
+      Hash: 22580fd7df922151a11d76bcbf9ca11d
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: MapSurfaces
+  - hash:
+      serializedVersion: 2
+      Hash: 0436f9bead420956630044166abdad37
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: MapTree
+  - hash:
+      serializedVersion: 2
+      Hash: dde2de3d0cc36a4b6e4b8d42afef61f2
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: MapTrees
+  - hash:
+      serializedVersion: 2
+      Hash: 7e001b3de998e48687cf13fb6b298897
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: OriginManager
+  - hash:
+      serializedVersion: 2
+      Hash: d97ee068cb15403d64b612cdc17e0169
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: Shape
+  - hash:
+      serializedVersion: 2
+      Hash: 02fdf8f4e846a3616dbcbf5547b24e0f
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: ShapeNode
+  - hash:
+      serializedVersion: 2
+      Hash: d90500d4f6ecb4ae7231e62b8aefb9d6
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: TreeInstancer
+  - hash:
+      serializedVersion: 2
+      Hash: ab10432419740d72647b1eaebfcba5e1
+    assemblyName: CityGen3D.dll
+    namespaceName: CityGen3D
+    className: Voronoi
+  - hash:
+      serializedVersion: 2
+      Hash: d8b619b01bd9af5e7efaf1ddc84aeb5a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.UI
+    className: Gauge
+  - hash:
+      serializedVersion: 2
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: GroupTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 800c50acba124432abb4cf0d47202e06
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_StyleSheet
+  - hash:
+      serializedVersion: 2
+      Hash: c7dd0f9003f05864915be1082d76addc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: VehicleLightsComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 6725e57c5d46d728ff8ebda334dd3182
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: PriorityIntersectionSettings
+  - hash:
+      serializedVersion: 2
+      Hash: f1d735cc1a21c3704ab52568f4fbfcf8
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools.TestRunner
+    className: PlaymodeTestsController
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DetectPlayerCollision
+  - hash:
+      serializedVersion: 2
+      Hash: ff1a8d614352af16f88ec675cd4fa495
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.UI
+    className: ShiftIndicator
+  - hash:
+      serializedVersion: 2
+      Hash: a1f19ad47d3094e235f21b74dfc423a8
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessLayer
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LogitechLCD
+  - hash:
+      serializedVersion: 2
+      Hash: 9e9ea1ddd25f83dbbccfccc44e2b77b8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.UI
+    className: InputMonitor
+  - hash:
+      serializedVersion: 2
+      Hash: a5d4839346872b740ec7e3703c196b3c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.Utility
+    className: BankedPlatform
+  - hash:
+      serializedVersion: 2
+      Hash: a1aa98c78061c6f03a8c124cda576e67
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: cf9f5cf2c3145a37ac07f00e50e460f9
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: AspectRatioFitter
+  - hash:
+      serializedVersion: 2
+      Hash: cc4274b586df3c02688bac01b88bd16c
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: EventSystem
+  - hash:
+      serializedVersion: 2
+      Hash: fe64a45214940b510a0ec79c96d43498
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: f336e086360abe49a3323e5f1583c35a
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: AudioTrack
+  - hash:
+      serializedVersion: 2
+      Hash: a74405a4829a834d107a0c6e072719ed
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 34f7cd09a73bfb02c0e790a66327886d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EventManager
+  - hash:
+      serializedVersion: 2
+      Hash: 6587c6b96b4db2a79e3ab092da500691
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.UI
+    className: InputConfigDialog
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: UIInput
+  - hash:
+      serializedVersion: 2
+      Hash: 760787567e1b60d64a3e421ab83ee14a
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: aef51bfabe43bf0aa48282638784cdbd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.UI
+    className: GenericMenu
+  - hash:
+      serializedVersion: 2
+      Hash: ca726844e94c3e1f2e35fda3c1650611
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AutonomousVehicle
+  - hash:
+      serializedVersion: 2
+      Hash: 0837267fed87523d46a3c9586839fe9d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.UI
+    className: ForceFeedbackMonitor
+  - hash:
+      serializedVersion: 2
+      Hash: d70949443ebd0a4a8553d940bee3c616
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: LayerSetup
+  - hash:
+      serializedVersion: 2
+      Hash: d6a8e9bec3160a152b9b2710593d3caa
+    assemblyName: Unity.ProBuilder.dll
+    namespaceName: UnityEngine.ProBuilder
+    className: ColorPalette
+  - hash:
+      serializedVersion: 2
+      Hash: 61b9d9b6f4b6a222dfea8b131b3d3227
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: ChromaticAberration
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestRunner.Utils
+    className: TestRunCallbackListener
+  - hash:
+      serializedVersion: 2
+      Hash: 0127fd055f8cf5c15d7d04a69c543338
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.UI
+    className: HoverHandler
+  - hash:
+      serializedVersion: 2
+      Hash: ae83e830e7a90c0aff918c4c2e520825
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GraphicRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: f40fedccd4adbc76605bea6d67537e4b
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_SelectionCaret
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 301f4da7cc3b301c161d089f9d22efed
+    assemblyName: Unity.ProBuilder.dll
+    namespaceName: UnityEngine.ProBuilder
+    className: Entity
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: TestResultRendererCallback
+  - hash:
+      serializedVersion: 2
+      Hash: a1328df13e36fb5a97da25bc1c807aa1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LogitechGKey
+  - hash:
+      serializedVersion: 2
+      Hash: f7858108331b563fb41b80b729297acd
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Scrollbar
+  - hash:
+      serializedVersion: 2
+      Hash: 5dea360fb0b147724ac344e6f399c2f3
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_SubMesh
+  - hash:
+      serializedVersion: 2
+      Hash: 32f6d1d5a09e5c94c633a32edd3e6836
+    assemblyName: Unity.ProBuilder.dll
+    namespaceName: UnityEngine.ProBuilder
+    className: BezierShape
+  - hash:
+      serializedVersion: 2
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: MarkerTrack
+  - hash:
+      serializedVersion: 2
+      Hash: c339f08edb2b887baeaa392987bf8d98
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.UI
+    className: TelemetryChartToolbar
+  - hash:
+      serializedVersion: 2
+      Hash: 8e6ceabfd38a184413d69b7db56c89cc
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools
+    className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: 69415240821be7986b27e72bf9609a30
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: UIButton
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: PositionValidator
+  - hash:
+      serializedVersion: 2
+      Hash: 0fd6822f6177297bd0eb4d83cc7a9030
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: ToggleGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 69415240821be7986b27e72bf9609a30
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
+  - hash:
+      serializedVersion: 2
+      Hash: 08ff21c5eda314fd48047de7cbb23b6c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.UI
+    className: Dashboard
+  - hash:
+      serializedVersion: 2
+      Hash: 24965972f5251e00a22a803cb5b2053f
+    assemblyName: CityGen3D.EditorExtension.dll
+    namespaceName: CityGen3D.EditorExtension
+    className: Buildings
+  - hash:
+      serializedVersion: 2
+      Hash: f2c67bfb48eb320d8116344433eace12
+    assemblyName: CityGen3D.EditorExtension.dll
+    namespaceName: CityGen3D.EditorExtension
+    className: Detail
+  - hash:
+      serializedVersion: 2
+      Hash: 8e05327104c748a68f9fa7c874db45e7
+    assemblyName: CityGen3D.EditorExtension.dll
+    namespaceName: CityGen3D.EditorExtension
+    className: Entities
+  - hash:
+      serializedVersion: 2
+      Hash: c7f637db8c9ac161f20267f82bfb9acf
+    assemblyName: CityGen3D.EditorExtension.dll
+    namespaceName: CityGen3D.EditorExtension
+    className: Features
+  - hash:
+      serializedVersion: 2
+      Hash: d1db75339ddc458734b137608ccc2226
+    assemblyName: CityGen3D.EditorExtension.dll
+    namespaceName: CityGen3D.EditorExtension
+    className: Heightmap
+  - hash:
+      serializedVersion: 2
+      Hash: f5ade9074eec7adf675b115d3f71ba5e
+    assemblyName: CityGen3D.EditorExtension.dll
+    namespaceName: CityGen3D.EditorExtension
+    className: Highways
+  - hash:
+      serializedVersion: 2
+      Hash: b5ed25527e66d1c80ea7cfd6e0ca9bee
+    assemblyName: CityGen3D.EditorExtension.dll
+    namespaceName: CityGen3D.EditorExtension
+    className: Plot
+  - hash:
+      serializedVersion: 2
+      Hash: 0cfc976b896722272feb477800aca90d
+    assemblyName: CityGen3D.EditorExtension.dll
+    namespaceName: CityGen3D.EditorExtension
+    className: PrefabSpawner
+  - hash:
+      serializedVersion: 2
+      Hash: a4b65465c337a7d68cc4af71b3fe52a1
+    assemblyName: CityGen3D.EditorExtension.dll
+    namespaceName: CityGen3D.EditorExtension
+    className: Roadside
+  - hash:
+      serializedVersion: 2
+      Hash: c25508a9533dbf90562c1a311a767097
+    assemblyName: CityGen3D.EditorExtension.dll
+    namespaceName: CityGen3D.EditorExtension
+    className: ShapeMesh
+  - hash:
+      serializedVersion: 2
+      Hash: fb75c59678b4191f6b30460dcb8ab294
+    assemblyName: CityGen3D.EditorExtension.dll
+    namespaceName: CityGen3D.EditorExtension
+    className: SplatMap
+  - hash:
+      serializedVersion: 2
+      Hash: 6517b876a2412ee20ce03769a86a965b
+    assemblyName: CityGen3D.EditorExtension.dll
+    namespaceName: CityGen3D.EditorExtension
+    className: Trees
+  - hash:
+      serializedVersion: 2
+      Hash: 24e32f872230ceb585232f928cd8713c
+    assemblyName: CityGen3D.EditorExtension.dll
+    namespaceName: CityGen3D.EditorExtension
+    className: Water
+  - hash:
+      serializedVersion: 2
+      Hash: 4fd8bf02e3089425d3502e26c44ba31a
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: IntersectionEvents
+  - hash:
+      serializedVersion: 2
+      Hash: e9389e944eb81a3a9df56fcdb09ce6a9
+    assemblyName: Unity.ProBuilder.dll
+    namespaceName: UnityEngine.ProBuilder
+    className: TriggerBehaviour
+  - hash:
+      serializedVersion: 2
+      Hash: ecbe9fe88d27f6ca34d8a593695f5632
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.UI
+    className: ConfigDialog
+  - hash:
+      serializedVersion: 2
+      Hash: a53651ee3996fbba20dfe0fce02f0b23
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: AutoExposure
+  - hash:
+      serializedVersion: 2
+      Hash: da71a2b0456c7f3957d1bc34ba1d4d95
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.Utility
+    className: FollowHeading
+  - hash:
+      serializedVersion: 2
+      Hash: e9ab5c8bbc8a4ae334051c7553508ed2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: TrafficLightsIntersectionSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: ContentSizeFitter
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LogitechArxControl
+  - hash:
+      serializedVersion: 2
+      Hash: caa533b001ae39b864ba8425019e2268
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Outline
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: DensityManager
+  - hash:
+      serializedVersion: 2
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.UI
+    className: HideOnStart
+  - hash:
+      serializedVersion: 2
+      Hash: 3164bc883ff663a5cdb32d1ef7e7c0c5
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: VerticalLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: PlayerQuitHandler
+  - hash:
+      serializedVersion: 2
+      Hash: ba799be3ea703fbeebb544db66908463
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: VehiclePool
+  - hash:
+      serializedVersion: 2
+      Hash: 48edd236b8db4b794becf6cb81344085
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.UI
+    className: VehicleSetupDialog
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: TrafficVehicles
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: BaseInput
+  - hash:
+      serializedVersion: 2
+      Hash: a1e0583dfe76070658ce7ac242ed93ac
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.Utility
+    className: CaptureScreenshot
+  - hash:
+      serializedVersion: 2
+      Hash: af8f199b0b93dcf9c53e0d3994e08379
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.UI
+    className: AidsPanel
+  - hash:
+      serializedVersion: 2
+      Hash: 18c222bef9ae745ce69ddde9b74337ca
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: Physics2DRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: a3b1b42726db27caa9271261beb9789b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: TrafficComponentMultiplayer
+  - hash:
+      serializedVersion: 2
+      Hash: da4cc51a02ce84afe2cecd27cfe6997a
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TextMeshPro
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: PlayModeRunnerCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 71f7f12b8d0f4fd73590db8bcb6d453c
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: Bloom
+  - hash:
+      serializedVersion: 2
+      Hash: bd3cf68c8964d3c66d1c43f4f98508c9
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: AnimationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: PositionAsUV1
+  - hash:
+      serializedVersion: 2
+      Hash: 52df10b1b5187c26c6921db44040130a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.UI
+    className: IgnitionKey
+  - hash:
+      serializedVersion: 2
+      Hash: f02bff117cff1d93dcfb800d450a6ea8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: CameraFollow
+  - hash:
+      serializedVersion: 2
+      Hash: 82387c8a5ac1a8056cf6bdb50298e860
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.UI
+    className: CloseOnKeyOrClick
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: IntersectionManager
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: VehiclePositioningSystem
+  - hash:
+      serializedVersion: 2
+      Hash: 87ff43d2baf3385cba327d8f803a4ebb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: AudioPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 4cab3867df867e9683d1949de15ad857
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: EngineSoundComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: UnityEngine.TestRunner.dll
+    namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
+    className: RemoteTestResultSender
+  - hash:
+      serializedVersion: 2
+      Hash: 134322c9293c1896357cce271b819ce4
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: EventTrigger
+  - hash:
+      serializedVersion: 2
+      Hash: a81d4c2c1cf3ad164d277d927a193679
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Dropdown
+  - hash:
+      serializedVersion: 2
+      Hash: 106f077939a7027729320bf69630ed31
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChunkManager
+  - hash:
+      serializedVersion: 2
+      Hash: a5781dc71a671b1ad2b38de19f24b71f
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: ActivationTrack
+  - hash:
+      serializedVersion: 2
+      Hash: f6633ace6e530c0000f2ac6da4269c52
+    assemblyName: Unity.ProBuilder.dll
+    namespaceName: UnityEngine.ProBuilder
+    className: PolyShape
+  - hash:
+      serializedVersion: 2
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: SignalTrack
+  - hash:
+      serializedVersion: 2
+      Hash: ba76f2d043bc82f41a2d1c23a247c16d
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: DebugSettings
+  - hash:
+      serializedVersion: 2
+      Hash: 0bf66a1143ec28d16b8331227bf7089b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CrashVehicle
+  - hash:
+      serializedVersion: 2
+      Hash: c6ee74a1e98af5eed35157c3d0e90352
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: VehicleComponent
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameMaster
+  - hash:
+      serializedVersion: 2
+      Hash: 4f546897f7c7634c6185bb4f926d3511
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: ApplicationCursor
+  - hash:
+      serializedVersion: 2
+      Hash: 5ca4343b45041607fbd362aafe28f578
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: ApplicationQuit
+  - hash:
+      serializedVersion: 2
+      Hash: 0d85f4fda1e0e70cd92c084d12f05cdc
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: AttachToTarget
+  - hash:
+      serializedVersion: 2
+      Hash: ad2dc5092afa4195d50a2b9285db9982
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: BindLocalRotation
+  - hash:
+      serializedVersion: 2
+      Hash: 41a165b9205b8b4361916ce4a525ced6
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: CameraFovController
+  - hash:
+      serializedVersion: 2
+      Hash: 2116caa94b1455b8e858a497a0f51695
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: CameraFovInput
+  - hash:
+      serializedVersion: 2
+      Hash: c2a6988f175a1461ab265481b57b9e33
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: CameraShift
+  - hash:
+      serializedVersion: 2
+      Hash: 77bddb8e7112f039483500a856a399c1
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: DebugMeasureDistance
+  - hash:
+      serializedVersion: 2
+      Hash: 924d93d38ad16a0107a44f6a95702f2b
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: LightGammaCorrection
+  - hash:
+      serializedVersion: 2
+      Hash: 0d85f4fda1e0e70cd92c084d12f05cdc
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: PositionAttachTo
+  - hash:
+      serializedVersion: 2
+      Hash: 147f9f1505bb0fde03496de9a632e1ee
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: PositionController
+  - hash:
+      serializedVersion: 2
+      Hash: b1b44ead83f6fee699b1034b861cc848
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: PositionInput
+  - hash:
+      serializedVersion: 2
+      Hash: cc1cd788771b3efa022938eeb4604106
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: RealtimeGraphicBase
+  - hash:
+      serializedVersion: 2
+      Hash: cb5277fb6e764ebd8ba57f823af034e7
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: RotationController
+  - hash:
+      serializedVersion: 2
+      Hash: 9e70e21c36d033b56dc1f16d927d5dd8
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: RotationInput
+  - hash:
+      serializedVersion: 2
+      Hash: 4f47f5cec905c01c6f68921ca76e2c77
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: RotationLookAt
+  - hash:
+      serializedVersion: 2
+      Hash: 08065a16de4389ebfb907da892257b5f
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: ScaleController
+  - hash:
+      serializedVersion: 2
+      Hash: d10acfde0af3deb9191561c6e8aa161d
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: SceneReload
+  - hash:
+      serializedVersion: 2
+      Hash: ad23bc4db338b7f6e07c5af3452f84ff
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: SceneTools
+  - hash:
+      serializedVersion: 2
+      Hash: 6fbe3a96b99ac8457a908973013d5115
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: ScreenBug
+  - hash:
+      serializedVersion: 2
+      Hash: 8826fa61896d58b935c4e6c0f6e9fea3
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: ScreenNotes
+  - hash:
+      serializedVersion: 2
+      Hash: dfeee9a6bf2c021b61d07abe0c986c9b
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: Spline
+  - hash:
+      serializedVersion: 2
+      Hash: 578ccd9a8e3ef1f2fd49a0fff83fbbb3
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: SplineFollower
+  - hash:
+      serializedVersion: 2
+      Hash: 0f03c541d54fe9d94d029d5348e1e3a6
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: SplineFollowerChaser
+  - hash:
+      serializedVersion: 2
+      Hash: f68b3fa414d1115c9b8da7126609600b
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: SplineRenderer
+  - hash:
+      serializedVersion: 2
+      Hash: 2b6d45cb813e3ead03a3e00ed7304426
+    assemblyName: VehiclePhysics.dll
+    namespaceName: EdyCommonTools
+    className: TimeScale
+  - hash:
+      serializedVersion: 2
+      Hash: cf52509ad51316ef69fc5fffc65e82b6
+    assemblyName: VehiclePhysics.dll
+    namespaceName: VehiclePhysics
+    className: VPAntiRollBar
+  - hash:
+      serializedVersion: 2
+      Hash: 1d2730d170f9a30a539440ba063c96f1
+    assemblyName: VehiclePhysics.dll
+    namespaceName: VehiclePhysics
+    className: VPAudio
+  - hash:
+      serializedVersion: 2
+      Hash: aa717e44eff2c548485186d35d89438a
+    assemblyName: VehiclePhysics.dll
+    namespaceName: VehiclePhysics
+    className: VPCameraTarget
+  - hash:
+      serializedVersion: 2
+      Hash: 7d477beac7486177b2c8a99591d56749
+    assemblyName: VehiclePhysics.dll
+    namespaceName: VehiclePhysics
+    className: VPForceCones
+  - hash:
+      serializedVersion: 2
+      Hash: 21c9e62770a3082fb4b806a0030841c6
+    assemblyName: VehiclePhysics.dll
+    namespaceName: VehiclePhysics
+    className: VPResetVehicle
+  - hash:
+      serializedVersion: 2
+      Hash: 7f73773f939e5cef5ce55d2571ee5cd5
+    assemblyName: VehiclePhysics.dll
+    namespaceName: VehiclePhysics
+    className: VPRollingFriction
+  - hash:
+      serializedVersion: 2
+      Hash: 92b79c1656aa9fdacb1a4c1b0cc0473f
+    assemblyName: VehiclePhysics.dll
+    namespaceName: VehiclePhysics
+    className: VPStandardInput
+  - hash:
+      serializedVersion: 2
+      Hash: e83b792ef9e7320bb4333a575d663b91
+    assemblyName: VehiclePhysics.dll
+    namespaceName: VehiclePhysics
+    className: VPTelemetry
+  - hash:
+      serializedVersion: 2
+      Hash: 8a7d14a4307566d8c9acd88be9de5401
+    assemblyName: VehiclePhysics.dll
+    namespaceName: VehiclePhysics
+    className: VPVehicleController
+  - hash:
+      serializedVersion: 2
+      Hash: 1aa82d94c6be296c71812de5713cd39d
+    assemblyName: VehiclePhysics.dll
+    namespaceName: VehiclePhysics
+    className: VPVehicleToolkit
+  - hash:
+      serializedVersion: 2
+      Hash: 508903dfd3e8414fb3352f789edd213d
+    assemblyName: VehiclePhysics.dll
+    namespaceName: VehiclePhysics
+    className: VPVisualEffects
+  - hash:
+      serializedVersion: 2
+      Hash: 4485bd956a4f2db0b05a1b85a581e197
+    assemblyName: VehiclePhysics.dll
+    namespaceName: VehiclePhysics
+    className: VPWheelCollider
+  - hash:
+      serializedVersion: 2
+      Hash: 26f2d309edfbb8fa0c97389b26d52043
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.Utility
+    className: EndlessMovingSurface
+  - hash:
+      serializedVersion: 2
+      Hash: 7e6ed836cbaa230e56d6a2bbae1b9bb5
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessEffectSettings
+  - hash:
+      serializedVersion: 2
+      Hash: c3d3430df9e3ea95e3e3d587961390fb
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: ControlTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 38bcb4d3f9a1812fd650f92e87a4cf64
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessProfile
+  - hash:
+      serializedVersion: 2
+      Hash: 571287437e69abb53e3738e894ad10e0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InfoScreen
+  - hash:
+      serializedVersion: 2
+      Hash: fb7ddd1191173ec3aef8a47c9322b892
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LogitechLed
+  - hash:
+      serializedVersion: 2
+      Hash: 50c443b12ccc0b475183318b5088bcc5
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessDebug
+  - hash:
+      serializedVersion: 2
+      Hash: 3165968ba45c74472d279ba04455fccb
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_ColorGradient
+  - hash:
+      serializedVersion: 2
+      Hash: 908b3077da284d11de0450423ca1808e
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: SignalReceiver
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShowNearestRoad
+  - hash:
+      serializedVersion: 2
+      Hash: 040dd48e3a027d5424519a5fa2009df4
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: 18c222bef9ae745ce69ddde9b74337ca
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: PhysicsRaycaster
+  - hash:
+      serializedVersion: 2
+      Hash: 5fed37ca517ba9717721d097bf999aba
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: CurrentSceneData
+  - hash:
+      serializedVersion: 2
+      Hash: 0fb27be807aa299702f28ad0bcad1f46
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: ControlPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: ef5c43f921427d03730f6ea4c848f07d
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: RectMask2D
+  - hash:
+      serializedVersion: 2
+      Hash: 87ad3705a58f19c47136728d4a6e9c47
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_Settings
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: DrivingAI
+  - hash:
+      serializedVersion: 2
+      Hash: 986da79c1b3ee1d313843ec53de6e1b8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: ConnectionPool
+  - hash:
+      serializedVersion: 2
+      Hash: 5ec062a3305816582724cc6de5d4972b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics
+    className: PauseVehicle
+  - hash:
+      serializedVersion: 2
+      Hash: 6980e81ddc615a861309d2d659cc3760
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_SubMeshUI
+  - hash:
+      serializedVersion: 2
+      Hash: 43cfa275fe7cdf9349e1cb77ec673770
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.UI
+    className: DeviceDebugInfo
+  - hash:
+      serializedVersion: 2
+      Hash: 726fcf7961cbb4108aa5be5e55b8c8bf
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: ColorGrading
+  - hash:
+      serializedVersion: 2
+      Hash: af93f9c42e90877a9ba31e37adfd900c
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: MotionBlur
+  - hash:
+      serializedVersion: 2
+      Hash: 153c140b36602bbcd471b4af1e37ae50
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.UI
+    className: MultiToggle
+  - hash:
+      serializedVersion: 2
+      Hash: b13de7a0a457cb8e026d4237dc1b5797
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: LensDistortion
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: WaypointManager
+  - hash:
+      serializedVersion: 2
+      Hash: fd68d84f33fad85aac38f2739c0ee270
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_SpriteAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.UI
+    className: CloseOnStart
+  - hash:
+      serializedVersion: 2
+      Hash: e7a73f5f78ba6445195ec23b74a1ce2d
+    assemblyName: Unity.TextMeshPro.dll
+    namespaceName: TMPro
+    className: TMP_ScrollbarEventHandler
+  - hash:
+      serializedVersion: 2
+      Hash: 7618c3bcdd9845712c890b2092c1b9c6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: WaypointSettings
+  - hash:
+      serializedVersion: 2
+      Hash: de2165f566c87bf5b80b18a7b6797484
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.UI
+    className: ShowValueFromSlider
+  - hash:
+      serializedVersion: 2
+      Hash: 63d7b9b64a11859f416d72ba9a3c3fec
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: ScreenSpaceReflections
+  - hash:
+      serializedVersion: 2
+      Hash: 447ac3d49e40469d546404c301d27313
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.UI
+    className: MenuOverlay
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: TrafficManager
+  - hash:
+      serializedVersion: 2
+      Hash: 1800ca5ad08ac6358f4878d3de6c6c34
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: CityGen3D
+    className: Screenshot
+  - hash:
+      serializedVersion: 2
+      Hash: d5630f96bd5a6a6eed7e1754c3fb8703
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessVolume
+  - hash:
+      serializedVersion: 2
+      Hash: 377106f5962804e47ceeb191ac5d03c5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.UI
+    className: EscapeDialog
+  - hash:
+      serializedVersion: 2
+      Hash: 8882a17f29db454aaf56ec1257267fd3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.Utility
+    className: MovableObject
+  - hash:
+      serializedVersion: 2
+      Hash: 8220b46879dc5e37db1b940c938f5744
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: SignalEmitter
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: ActivationPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 05655f7deb066a961c41619ac9e98263
+    assemblyName: Unity.ProBuilder.dll
+    namespaceName: UnityEngine.ProBuilder
+    className: ProBuilderMesh
+  - hash:
+      serializedVersion: 2
+      Hash: 7ab0e790220bdca831fdd886b339039d
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: GridLayoutGroup
+  - hash:
+      serializedVersion: 2
+      Hash: aefc5fd1c6c351a1eaf77a7a2d14a363
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: GleyTrafficSystem
+    className: PlayerCar
+  - hash:
+      serializedVersion: 2
+      Hash: abf1930d8126d0b2e00e9449129a0190
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: 2a18de56a7372dcd5ba319cfbfc5c87f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: VehiclePhysics.UI
+    className: GearModeSelector
+  - hash:
+      serializedVersion: 2
+      Hash: 4a8f521d256c18cd3c3319d339262bef
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: CityGen3D
+    className: RoadInfo
+  - hash:
+      serializedVersion: 2
+      Hash: d6fc8d3165070298511ec776ea575626
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: PostProcessResources
+  - hash:
+      serializedVersion: 2
+      Hash: ac6acd886c54c48c599ab5fed5781ea7
+    assemblyName: Unity.Postprocessing.Runtime.dll
+    namespaceName: UnityEngine.Rendering.PostProcessing
+    className: AmbientOcclusion
+  platform: 19
+  scenePathNames:
+  - Assets/Scenes/KeyBiscayne.unity
+  playerPath: C:/Users/yha088/OneDrive - The University of Texas-Rio Grande Valley/Documents/UnityApps/AutonomousV4/DrivingSimulation.exe

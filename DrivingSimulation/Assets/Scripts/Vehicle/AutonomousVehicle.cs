@@ -129,6 +129,7 @@ public class AutonomousVehicle : MonoBehaviour
         if(LogitechGSDK.LogiButtonTriggered(LOGITECH_STEERING_WHEEL_INDEX, LOGITECH_STEERING_WHEEL_CROSS))
         {
             Resume();
+            AudioListener.pause = false;
         }
 
         // Due to limitations with the Vehicle Physics Pro package, we must simulate keyboard presses when

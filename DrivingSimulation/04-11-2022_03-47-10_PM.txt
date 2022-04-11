@@ -1,0 +1,6 @@
+4/11/2022 3:47:22 PM: AutonomousVehicle: Driver used the STEERING WHEEL - RIGHT to take over the vehicle outside of event.
+4/11/2022 3:48:50 PM: AutonomousVehicle: Driver used the TOGGLE BUTTON to enable autonomous mode.
+4/11/2022 3:48:55 PM: MergeFailEvent: Vehicle pathing to merge fail event location.
+4/11/2022 3:48:57 PM: CrashEvent: Vehicle pathing to crash event location.
+4/11/2022 3:49:07 PM: AutonomousVehicle: Driver used the BRAKE to take over the vehicle outside of event.
+4/11/2022 3:49:07 PM: AutonomousVehicle: Pausing pathing to event.

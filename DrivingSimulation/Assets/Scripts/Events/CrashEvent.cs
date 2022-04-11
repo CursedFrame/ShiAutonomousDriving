@@ -15,6 +15,19 @@ public class CrashEvent : AutonomousEvent
     private BoxCollider carTwoBody;
     private GameObject despawnTrafficVehicles;
     private GameObject despawnCrashVehicles;
+    string URL = "https://docs.google.com/forms/d/e/1FAIpQLScwoRFutUp8B3sBv-I-GMDwjxyAYOwAu-gxCrWfx4gDzEQ4qg/viewform?usp=sf_link";
+    public void Pause()
+    {
+        Time.timeScale = 0;
+    }
+    public void Resume()
+    {
+        Time.timeScale = 1;
+    }
+    public void OpenURL()
+    {
+        Application.OpenURL(URL);
+    }
 
     public override void StartEvent()
     {
@@ -121,6 +134,13 @@ public class CrashEvent : AutonomousEvent
         if (despawnTrafficVehicles) UnityEngine.Object.Destroy(despawnTrafficVehicles);
         if (despawnCrashVehicles) UnityEngine.Object.Destroy(despawnCrashVehicles);
         GleyTrafficSystem.Manager.SetTrafficDensity(20);
+
+        if(despawnCrashVehicles) 
+        {
+            Pause();
+            OpenURL();  
+            AudioListener.pause =true;
+        }
     }
 
     private void OnAtEventPosition()
@@ -160,19 +180,7 @@ public class CrashEvent : AutonomousEvent
         yield break;
     }
 
-    string URL = "https://docs.google.com/forms/d/e/1FAIpQLScwoRFutUp8B3sBv-I-GMDwjxyAYOwAu-gxCrWfx4gDzEQ4qg/viewform?usp=sf_link";
-    public void Pause()
-    {
-        Time.timeScale = 0;
-    }
-    public void Resume()
-    {
-        Time.timeScale = 1;
-    }
-    public void OpenURL()
-    {
-        Application.OpenURL(URL);
-    }
+
     private void DespawnTraffic()
     {
         Vector3 crashEpicenter = new Vector3(1609.12f, 52.06f, 2839.1f);
@@ -182,8 +190,6 @@ public class CrashEvent : AutonomousEvent
         GleyTrafficSystem.Manager.SetTrafficDensity(1);
 
         UnityEngine.Debug.Log(Tag + ": Traffic cleared.");
-        Pause();
-        OpenURL();
-        AudioListener.pause =true;
+
     }
 }

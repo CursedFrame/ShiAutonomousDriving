@@ -1,0 +1,16 @@
+4/11/2022 3:40:47 PM: EventManager: Events order shuffled. Order of events are...
+4/11/2022 3:40:47 PM: EventManager: 4: CrashEvent
+4/11/2022 3:40:47 PM: EventManager: 3: MergeFailEvent
+4/11/2022 3:40:47 PM: EventManager: 2: ControlLossEvent
+4/11/2022 3:40:47 PM: EventManager: 1: IndicatorEvent
+4/11/2022 3:40:47 PM: EventManager: Waiting for at least 0 seconds until queueing next event.
+4/11/2022 3:40:47 PM: IndicatorEvent: [000:000] Event and stopwatch started.
+4/11/2022 3:40:49 PM: IndicatorEvent: [002:084] Event stopped. Driver took control of autonomous vehicle using STEERING WHEEL - LEFT.
+4/11/2022 3:40:49 PM: EventManager: Waiting for at least 0 seconds until queueing next event.
+4/11/2022 3:40:49 PM: EventManager: Vehicle is not in autonomous mode. Waiting for user to enable autonomous before starting next event.
+4/11/2022 3:40:52 PM: AutonomousVehicle: Driver used the TOGGLE BUTTON to enable autonomous mode.
+4/11/2022 3:40:52 PM: EventManager: User has enabled autonomous mode, now waiting 15 seconds before starting next event.
+4/11/2022 3:41:08 PM: ControlLossEvent: [000:000] Event and stopwatch started.
+4/11/2022 3:41:09 PM: ControlLossEvent: [001:339] Event stopped. Driver took control of autonomous vehicle using STEERING WHEEL - LEFT.
+4/11/2022 3:41:09 PM: EventManager: Waiting for at least 0 seconds until queueing next event.
+4/11/2022 3:41:09 PM: EventManager: Vehicle is not in autonomous mode. Waiting for user to enable autonomous before starting next event.
