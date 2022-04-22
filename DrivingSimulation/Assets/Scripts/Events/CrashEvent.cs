@@ -33,7 +33,7 @@ public class CrashEvent : AutonomousEvent
     {
         Vector3 crashEventPosition = new Vector3(1609.96f, 52.06f, 2793.8f);
         Vector3 despawnTrafficVehiclesPosition = new Vector3(1610.65f, 52.06f, 2741.06f);
-        Vector3 despawnCrashVehiclesPosition = new Vector3(1529.82f, 53.07f, 2838.74f);
+        Vector3 despawnCrashVehiclesPosition = new Vector3(/*1529.82f*/1535.31f, 53.07f, /*2838.74f*/2840.84f);
 
         // start pathing job to event location and spawn crash event via callback
         EventManager.Instance.PlayerVehicleAutonomous.StartPathing(TrafficManager.Instance.GetForwardWaypoint(
@@ -61,7 +61,7 @@ public class CrashEvent : AutonomousEvent
             despawnCrashVehicles = new GameObject("DespawnCrashVehicles");
             BoxCollider despawnCrashVehiclesCollider = despawnCrashVehicles.AddComponent<BoxCollider>();
             despawnCrashVehiclesCollider.center = despawnCrashVehiclesPosition;
-            despawnCrashVehiclesCollider.size = new Vector3(6f, 6f, 6f);
+            despawnCrashVehiclesCollider.size = new Vector3(1f, 1f, 1f); // nick used 6
             despawnCrashVehiclesCollider.isTrigger = true;
             DetectPlayerCollision detectPlayerCollisionCrashVehicles = despawnCrashVehicles.AddComponent<DetectPlayerCollision>();
             detectPlayerCollisionCrashVehicles.EnterAction = OnEventFinish;
@@ -135,12 +135,9 @@ public class CrashEvent : AutonomousEvent
         if (despawnCrashVehicles) UnityEngine.Object.Destroy(despawnCrashVehicles);
         GleyTrafficSystem.Manager.SetTrafficDensity(20);
 
-        if(despawnCrashVehicles) 
-        {
-            Pause();
-            OpenURL();  
-            AudioListener.pause =true;
-        }
+        Pause();
+        OpenURL();  
+        AudioListener.pause =true;
     }
 
     private void OnAtEventPosition()
@@ -154,7 +151,7 @@ public class CrashEvent : AutonomousEvent
 
         // car spawning
         Vector3 carOnePosition = new Vector3(1576.75f, 52.06f, 2837.51f), carOneQuaternion = new Vector3(0, 90f, 0);
-        Vector3 carTwoPosition = new Vector3(1649.75f, 52.06f, 2840.94f), carTwoQuaternion = new Vector3(0, 265f, 0);
+        Vector3 carTwoPosition = new Vector3(1649.75f, 52.06f, 2840.94f), carTwoQuaternion = new Vector3(0, 264f, 0);
 
         carOne = GameObject.Instantiate(Resources.Load<GameObject>("Prefabs/CrashVehicles/CrashVehicle_Blue"), carOnePosition, Quaternion.Euler(carOneQuaternion));
         carOneBody = carOne.transform.GetComponentInChildren<BoxCollider>();

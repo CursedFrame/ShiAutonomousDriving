@@ -1,0 +1,8 @@
+4/13/2022 2:10:03 PM: EventManager: Events order shuffled. Order of events are...
+4/13/2022 2:10:03 PM: EventManager: 4: ControlLossEvent
+4/13/2022 2:10:03 PM: EventManager: 3: MergeFailEvent
+4/13/2022 2:10:03 PM: EventManager: 2: CrashEvent
+4/13/2022 2:10:03 PM: EventManager: 1: IndicatorEvent
+4/13/2022 2:10:03 PM: EventManager: Waiting for at least 150 seconds until queueing next event.
+4/13/2022 2:10:10 PM: AutonomousVehicle: Driver used the STEERING WHEEL - RIGHT to take over the vehicle outside of event.
+4/13/2022 2:10:14 PM: AutonomousVehicle: Driver used the TOGGLE BUTTON to enable autonomous mode.

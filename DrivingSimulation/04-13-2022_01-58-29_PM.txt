@@ -1,0 +1,6 @@
+4/13/2022 1:58:34 PM: CrashEvent: Vehicle pathing to crash event location.
+4/13/2022 2:00:35 PM: CrashEvent: [000:000] Event and stopwatch started.
+4/13/2022 2:00:36 PM: CrashEvent: [001:015] Distance from vehicle to crash epicenter: 40.20665 m / 131.9116 ft
+4/13/2022 2:00:36 PM: CrashEvent: [001:015] Crash vehicles now spawned and moving toward each other.
+4/13/2022 2:00:37 PM: CrashEvent: [001:859] One or more crash vehicles are visible.
+4/13/2022 2:00:40 PM: CrashEvent: [004:934] Event stopped. Driver took control of autonomous vehicle using STEERING WHEEL - LEFT.

@@ -1,0 +1,18 @@
+4/22/2022 2:52:14 PM: CrashEvent: Vehicle pathing to crash event location.
+4/22/2022 2:53:56 PM: CrashEvent: [000:000] Event and stopwatch started.
+4/22/2022 2:53:57 PM: CrashEvent: [000:998] Distance from vehicle to crash epicenter: 40.37625 m / 132.468 ft
+4/22/2022 2:53:57 PM: CrashEvent: [000:999] Crash vehicles now spawned and moving toward each other.
+4/22/2022 2:53:57 PM: CrashEvent: [001:853] One or more crash vehicles are visible.
+4/22/2022 2:53:59 PM: CrashEvent: [003:242] Event stopped. Driver took control of autonomous vehicle using STEERING WHEEL - LEFT.
+4/22/2022 2:54:42 PM: AutonomousVehicle: Driver used the TOGGLE BUTTON to enable autonomous mode.
+4/22/2022 2:54:48 PM: CrashEvent: Vehicle pathing to crash event location.
+4/22/2022 2:56:17 PM: CrashEvent: [000:000] Event and stopwatch started.
+4/22/2022 2:56:18 PM: CrashEvent: [001:008] Distance from vehicle to crash epicenter: 40.33599 m / 132.3359 ft
+4/22/2022 2:56:18 PM: CrashEvent: [001:009] Crash vehicles now spawned and moving toward each other.
+4/22/2022 2:56:21 PM: CrashEvent: [004:811] Event stopped. Driver took control of autonomous vehicle using BRAKE.
+4/22/2022 2:56:52 PM: AutonomousVehicle: Driver used the TOGGLE BUTTON to enable autonomous mode.
+4/22/2022 2:57:00 PM: CrashEvent: Vehicle pathing to crash event location.
+4/22/2022 2:59:02 PM: CrashEvent: [000:000] Event and stopwatch started.
+4/22/2022 2:59:03 PM: CrashEvent: [001:010] Distance from vehicle to crash epicenter: 40.30206 m / 132.2246 ft
+4/22/2022 2:59:03 PM: CrashEvent: [001:011] Crash vehicles now spawned and moving toward each other.
+4/22/2022 2:59:06 PM: CrashEvent: [004:019] Event stopped. Driver took control of autonomous vehicle using STEERING WHEEL - LEFT.

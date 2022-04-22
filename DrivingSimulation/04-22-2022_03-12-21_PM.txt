@@ -1,0 +1,10 @@
+4/22/2022 3:12:42 PM: CrashEvent: Vehicle pathing to crash event location.
+4/22/2022 3:12:46 PM: AutonomousVehicle: Driver used the BRAKE to take over the vehicle outside of event.
+4/22/2022 3:12:46 PM: AutonomousVehicle: Pausing pathing to event.
+4/22/2022 3:13:01 PM: AutonomousVehicle: Driver used the TOGGLE BUTTON to enable autonomous mode.
+4/22/2022 3:13:02 PM: AutonomousVehicle: Continuing pathing to event.
+4/22/2022 3:14:55 PM: CrashEvent: [000:000] Event and stopwatch started.
+4/22/2022 3:14:56 PM: CrashEvent: [001:004] Distance from vehicle to crash epicenter: 40.3416 m / 132.3543 ft
+4/22/2022 3:14:56 PM: CrashEvent: [001:004] Crash vehicles now spawned and moving toward each other.
+4/22/2022 3:14:57 PM: CrashEvent: [001:860] One or more crash vehicles are visible.
+4/22/2022 3:14:59 PM: CrashEvent: [003:358] Event stopped. Driver took control of autonomous vehicle using GAS PEDAL.
